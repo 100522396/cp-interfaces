@@ -1,15 +1,16 @@
 /* style/main.css */
 
 :root {
-    /* Paleta de colores MoSinFron */
-    --primary-orange: #F2A900; /* Naranja/Amarillo botones */
-    --accent-color: #E87C41;   /* Naranja fuerte textos */
+    /* Project Colors */
+    --primary-orange: #F2A900; /* Main orange */
+    --accent-color: #E87C41;   /* Text accent */
     --dark-text: #333333;
     --light-gray: #f4f4f4;
     --white: #ffffff;
-    --footer-bg: #F49E4C;      /* Fondo del footer */
+    --footer-bg: #F49E4C;      /* Footer background */
 }
 
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +18,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Body setup */
 body {
     background-color: #fafafa;
     color: var(--dark-text);
@@ -25,7 +27,7 @@ body {
     min-height: 100vh;
 }
 
-/* --- HEADER / NAVEGACIÓN --- */
+/* --- HEADER & NAVIGATION --- */
 .site-header {
     background-color: var(--white);
     padding: 1rem 2rem;
@@ -36,7 +38,7 @@ body {
 }
 
 .logo-img {
-    height: 40px; /* Ajusta según tu logo real */
+    height: 40px; /* Logo size */
 }
 
 .main-nav ul {
@@ -45,6 +47,7 @@ body {
     gap: 1.5rem;
 }
 
+/* Navigation links */
 .main-nav a {
     text-decoration: none;
     color: #666;
@@ -58,6 +61,7 @@ body {
     color: var(--primary-orange);
 }
 
+/* User buttons section */
 .user-controls {
     display: flex;
     gap: 10px;

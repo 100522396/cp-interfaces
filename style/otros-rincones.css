@@ -1,5 +1,6 @@
 /* style/otros-rincones.css */
 
+/* Main layout wrapper */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -7,6 +8,7 @@ main {
     width: 100%;
 }
 
+/* Page header style */
 .page-title {
     text-align: center;
     color: var(--accent-color);
@@ -14,11 +16,12 @@ main {
     font-size: 2.5rem;
 }
 
-/* --- FILTROS (CHIPS) --- */
+/* --- FILTERS SECTION --- */
 .filters-section {
     margin-bottom: 3rem;
 }
 
+/* Flex container for chips */
 .filters-wrapper {
     display: flex;
     justify-content: center;
@@ -26,6 +29,7 @@ main {
     gap: 1rem;
 }
 
+/* Filter button style */
 .filter-chip {
     padding: 0.6rem 1.5rem;
     border-radius: 50px;
@@ -42,23 +46,24 @@ main {
     color: var(--accent-color);
 }
 
+/* Active state for selected filter */
 .filter-chip.active {
-    background-color: var(--accent-color); /* Naranja si está activo */
+    background-color: var(--accent-color);
     color: var(--white);
     border-color: var(--accent-color);
     box-shadow: 0 4px 6px rgba(232, 124, 65, 0.2);
 }
 
-/* --- GRID DE RESULTADOS --- */
+/* --- RESULTS GRID --- */
 .results-grid {
     display: grid;
-    /* Esto hace la magia responsive automática: */
+    /* Automatic responsive columns */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
     gap: 2rem;
     margin-bottom: 3rem;
 }
 
-/* --- TARJETA (CARD) --- */
+/* --- CARD STYLES --- */
 .card {
     background: var(--white);
     border-radius: 12px;
@@ -69,8 +74,9 @@ main {
     flex-direction: column;
 }
 
+/* Lift effect on hover */
 .card:hover {
-    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+    transform: translateY(-5px); 
 }
 
 .card-img-container {
@@ -82,7 +88,7 @@ main {
 .card-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Importante para que las fotos no se deformen */
+    object-fit: cover; /* Prevent image distortion */
 }
 
 .card-content {
@@ -92,6 +98,7 @@ main {
     flex: 1;
 }
 
+/* Country tag style */
 .card-tag {
     color: var(--accent-color);
     font-size: 0.75rem;
@@ -111,14 +118,14 @@ main {
     font-size: 0.9rem;
     color: #666;
     line-height: 1.5;
-    /* Cortar texto con puntos suspensivos si es muy largo */
+    /* Limit text to 3 lines */
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-/* --- BOTÓN CARGAR MÁS --- */
+/* --- LOAD MORE BUTTON --- */
 .load-more-wrapper {
     text-align: center;
     margin-top: 2rem;
