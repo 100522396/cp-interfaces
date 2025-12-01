@@ -146,3 +146,35 @@ main {
     background: var(--accent-color);
     color: var(--white);
 }
+
+/* === FOOTER ADJUSTMENTS === */
+.site-footer .footer-content {
+    align-items: flex-start;
+}
+
+.footer-links-col strong, 
+.footer-info-col strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.footer-links-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.footer-info-col p {
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.socials {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+}
