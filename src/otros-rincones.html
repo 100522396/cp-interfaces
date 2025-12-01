@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otros Rincones | MoSinFron</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/otros-rincones.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="../images/logo.png" alt="Logo MoSinFron" class="logo-img">
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Destinos</a></li>
+                <li><a href="otros-rincones.html" class="active">Otros Rincones</a></li>
+                <li><a href="comunidad.html">Comunidad</a></li>
+                <li><a href="mi-cuenta.html">Mi Cuenta</a></li>
+                <li><a href="compra.html">Compra</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-controls">
+            <button class="btn-login">Iniciar sesión</button>
+            <button class="btn-signup">Únete</button>
+            <span class="lang-selector">ES | US</span>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="page-title">Otros Rincones</h1>
+
+        <section class="filters-section" aria-label="Filtros de búsqueda">
+            <div id="filters-container" class="filters-wrapper">
+                <button class="filter-chip active" data-category="all">Todos</button>
+                <button class="filter-chip" data-category="Europa">Europa</button>
+                <button class="filter-chip" data-category="Asia">Asia</button>
+                <button class="filter-chip" data-category="África">África</button>
+                <button class="filter-chip" data-category="Oceanía">Oceanía</button>
+                <button class="filter-chip" data-category="América del Norte">América del Norte</button>
+                <button class="filter-chip" data-category="América del Sur">América del Sur</button>
+            </div>
+        </section>
+
+        <section class="results-grid" id="destinations-grid">
+            </section>
+
+        <div class="load-more-wrapper">
+            <button id="btn-load-more" class="btn-outline">Cargar más destinos</button>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <strong>MoSinFron</strong>
+                <p>info@mochilerossinfronteras.com</p>
+                <p>Calle Sirio, N66, 28007 Madrid</p>
+                <p>91-993-3578</p>
+            </div>
+            <div class="footer-links">
+               <a href="#">Home</a>
+               <a href="#">Destinos</a>
+               <a href="#">Otros Rincones</a>
+               <a href="#">Comunidad</a>
+            </div>
+            <div class="social-icons">
+                <span>FB</span> <span>TW</span> <span>LN</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/otros-rincones.js"></script>
+</body>
+</html>
