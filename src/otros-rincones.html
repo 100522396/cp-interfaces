@@ -1,85 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Otros Rincones | MoSinFron</title>
-    <link rel="stylesheet" href="../style/main.css">
-    <link rel="stylesheet" href="../style/otros-rincones.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/otros-rincones.css" />
+  </head>
+  <body>
     <header class="site-header">
-        <div class="logo-container">
-            <img src="../images/black-logo.png" alt="Logo MoSinFron" class="logo-img">
-        </div>
+      <div class="logo-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="../images/black-logo.png"
+            alt="Volver al inicio"
+            class="logo-img"
+          />
+        </a>
+      </div>
 
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Destinos</a></li>
-                <li><a href="otros-rincones.html" class="active">Otros Rincones</a></li>
-                <li><a href="comunidad.html">Comunidad</a></li>
-                <li><a href="mi-cuenta.html">Mi Cuenta</a></li>
-                <li><a href="compra.html">Compra</a></li>
-                <li><a href="soporte.html">Soporte</a></li>
-            </ul>
-        </nav>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Destinos</a></li>
+          <li>
+            <a href="otros-rincones.html" class="active">Otros Rincones</a>
+          </li>
+          <li><a href="comunidad.html">Comunidad</a></li>
+          <li><a href="mi-cuenta.html">Mi Cuenta</a></li>
+          <li><a href="compra.html">Compra</a></li>
+          <li><a href="soporte.html">Soporte</a></li>
+        </ul>
+      </nav>
 
-        <div class="user-controls">
-            <button class="btn-login">Iniciar sesión</button>
-            <button class="btn-signup">Únete</button>
-            <span class="lang-selector">ES | US</span>
-        </div>
+      <div class="user-controls">
+        <button class="btn-login">Iniciar sesión</button>
+        <button class="btn-signup">Únete</button>
+        <span class="lang-selector">ES | US</span>
+      </div>
     </header>
 
     <main>
-        <h1 class="page-title">Otros Rincones</h1>
+      <h1 class="page-title">Otros Rincones</h1>
 
-        <section class="filters-section" aria-label="Filtros de búsqueda">
-            <div id="filters-container" class="filters-wrapper">
-                <button class="filter-chip active" data-category="all">Todos</button>
-                <button class="filter-chip" data-category="Europa">Europa</button>
-                <button class="filter-chip" data-category="Asia">Asia</button>
-                <button class="filter-chip" data-category="África">África</button>
-                <button class="filter-chip" data-category="Oceanía">Oceanía</button>
-                <button class="filter-chip" data-category="América del Norte">América del Norte</button>
-                <button class="filter-chip" data-category="América del Sur">América del Sur</button>
-            </div>
-        </section>
-
-        <section class="results-grid" id="destinations-grid">
-            </section>
-
-        <div class="load-more-wrapper">
-            <button id="btn-load-more" class="btn-outline">Cargar más destinos</button>
+      <section class="filters-section" aria-label="Filtros de búsqueda">
+        <div id="filters-container" class="filters-wrapper">
+          <button class="filter-chip active" data-category="all">Todos</button>
+          <button class="filter-chip" data-category="Europa">Europa</button>
+          <button class="filter-chip" data-category="Asia">Asia</button>
+          <button class="filter-chip" data-category="África">África</button>
+          <button class="filter-chip" data-category="Oceanía">Oceanía</button>
+          <button class="filter-chip" data-category="América del Norte">
+            América del Norte
+          </button>
+          <button class="filter-chip" data-category="América del Sur">
+            América del Sur
+          </button>
         </div>
+      </section>
+
+      <section class="results-grid" id="destinations-grid"></section>
+
+      <div class="load-more-wrapper">
+        <button id="btn-load-more" class="btn-outline">
+          Cargar más destinos
+        </button>
+      </div>
     </main>
 
     <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-links-col">
-                <strong>HOME</strong>
-                <strong>DESTINOS</strong>
-                <strong>OTROS RINCONES</strong>
-                <strong>COMUNIDAD</strong>
-                <strong>MI CUENTA</strong>
-                <strong>COMPRA</strong>
-                <strong>SOPORTE</strong>
-            </div>
-            <div class="footer-info-col">
-                <strong>INFO@MOCHILEROSSINFRONTERAS.COM</strong>
-                <p>CALLE SIRIO, N66, 28007 MADRID</p>
-                <p>91-993-3578</p>
-                <div class="socials">
-                    <a href="#"><img src="../images/icon-fb.png" alt="Facebook"></a>
-                    <a href="#"><img src="../images/icon-tw.png" alt="Twitter"></a>
-                    <a href="#"><img src="../images/icon-li.png" alt="LinkedIn"></a>
-                </div>
-            </div>
-            </div>
+      <div class="footer-content">
+        <div class="footer-links-col">
+          <a href="index.html"><strong>HOME</strong></a>
+          <a href="index.html"><strong>DESTINOS</strong></a>
+          <a href="otros-rincones.html"><strong>OTROS RINCONES</strong></a>
+          <a href="comunidad.html"><strong>COMUNIDAD</strong></a>
+          <a href="mi-cuenta.html"><strong>MI CUENTA</strong></a>
+          <a href="compra.html"><strong>COMPRA</strong></a>
+          <a href="soporte.html"><strong>SOPORTE</strong></a>
         </div>
+
+        <div class="footer-info-col">
+          <strong>INFO@MOCHILEROSSINFRONTERAS.COM</strong>
+          <p>CALLE SIRIO, N66, 28007 MADRID</p>
+          <p>91-993-3578</p>
+          <div class="socials">
+            <a href="#"><img src="../images/icon-fb.png" alt="Facebook" /></a>
+            <a href="#"><img src="../images/icon-tw.png" alt="Twitter" /></a>
+            <a href="#"><img src="../images/icon-li.png" alt="LinkedIn" /></a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="../script/otros-rincones.js"></script>
-</body>
+  </body>
 </html>
