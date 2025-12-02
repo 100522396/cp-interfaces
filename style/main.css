@@ -76,6 +76,9 @@ body {
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
 .btn-login {

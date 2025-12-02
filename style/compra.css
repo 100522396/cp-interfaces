@@ -1,0 +1,195 @@
+/* style/compra.css */
+
+/* === PAGE BACKGROUND === */
+body {
+  /* Background image configuration */
+  background-image: url("../images/checkout-bg.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* === HEADER STYLES === */
+.checkout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Back link style */
+.back-link {
+  text-decoration: none;
+  color: #111;
+  font-weight: 800;
+  font-size: 1.2rem;
+  font-family: "Arial Black", sans-serif;
+}
+
+.logo-img {
+  height: 30px;
+}
+
+/* === MAIN CONTAINER === */
+.checkout-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+/* === FORM CARDS === */
+.form-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+/* === INPUT FIELDS === */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+/* Read-only inputs (line style) */
+.input-line {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Editable inputs (box style) */
+.input-bg {
+  width: 100%;
+  border: none;
+  background: #f0f2f5;
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Date row layout */
+.form-row {
+  display: flex;
+  gap: 2rem;
+}
+
+.half {
+  width: 50%;
+}
+
+/* === CHECKBOX STYLES === */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  accent-color: var(--primary-orange);
+  transform: scale(1.2);
+}
+
+.checkbox-group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* Hidden/Conditional sections */
+.conditional-section {
+  padding-left: 1.5rem;
+  border-left: 2px solid #eee;
+}
+
+.small-label {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.input-list {
+  list-style: none;
+  padding: 0;
+}
+
+.input-list li {
+  background: #f0f2f5;
+  padding: 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.separator {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 1.5rem 0;
+}
+
+.small-input {
+  width: 80px;
+}
+
+.radio-list div {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* === PAYMENT BUTTON === */
+.pay-button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-pay {
+  background-color: #f2a900;
+  color: #111;
+  border: none;
+  padding: 1rem 4rem;
+  font-size: 1rem;
+  font-weight: 800;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.btn-pay:hover {
+  transform: scale(1.05);
+}

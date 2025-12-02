@@ -1,0 +1,75 @@
+/* style/soporte.css */
+
+/* Main container */
+.support-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  min-height: 60vh; /* Ensure footer stays down if little content */
+}
+
+/* Title style */
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: #000;
+}
+
+/* FAQ List wrapper */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual FAQ item */
+.faq-item {
+  border-top: 1px solid #d0d7de; /* Light blue-grey line */
+  padding: 1.5rem 0;
+}
+
+/* Last item needs bottom border too */
+.faq-item:last-child {
+  border-bottom: 1px solid #d0d7de;
+}
+
+/* The clickable question part */
+.faq-question {
+  list-style: none; /* Hide default triangle */
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+}
+
+/* Remove default marker in some browsers */
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+/* The "X" or "+" icon */
+.icon {
+  color: var(--primary-orange); /* Orange from main.css */
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+/* Rotate icon when closed (optional effect) */
+details:not([open]) .icon {
+  transform: rotate(
+    45deg
+  ); /* Make it look like a + if you want, or just static X */
+}
+
+/* The answer text */
+.faq-answer {
+  margin-top: 1rem;
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}

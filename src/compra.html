@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Completar Reserva | MoSinFron</title>
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/compra.css" />
+  </head>
+  <body>
+    <header class="checkout-header">
+      <div class="header-left">
+        <a href="destinos.html" class="back-link"> &lt;&lt; Volver </a>
+        <a href="index.html" class="logo-link">
+          <img
+            src="../images/black-logo.png"
+            alt="MoSinFron"
+            class="logo-img"
+          />
+        </a>
+      </div>
+
+      <div class="header-right">
+        <span class="lang-selector">ES | US</span>
+      </div>
+    </header>
+
+    <main class="checkout-container">
+      <h1 class="page-title">Completa tu reserva</h1>
+
+      <form action="#" method="POST" class="checkout-form">
+        <section class="form-card">
+          <h2>Datos del viaje</h2>
+
+          <div class="form-group">
+            <label>Origen</label>
+            <input
+              type="text"
+              value="Madrid, España"
+              readonly
+              class="input-line"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Destino</label>
+            <input
+              type="text"
+              value="Bangkok, Tailandia"
+              readonly
+              class="input-line"
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group half">
+              <label>Fecha de salida</label>
+              <input
+                type="text"
+                value="13.11.2025"
+                readonly
+                class="input-line"
+              />
+            </div>
+            <div class="form-group half">
+              <label>Fecha de regreso</label>
+              <input
+                type="text"
+                value="20.11.2025"
+                readonly
+                class="input-line"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Número de pasajeros</label>
+            <input type="text" value="3" readonly class="input-line" />
+          </div>
+        </section>
+
+        <section class="form-card">
+          <h2>Datos personales</h2>
+
+          <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" value="John" class="input-bg" />
+          </div>
+
+          <div class="form-group">
+            <label>Apellidos</label>
+            <input type="text" value="Doe" class="input-bg" />
+          </div>
+
+          <div class="form-group">
+            <label>Correo electrónico</label>
+            <input type="email" value="johndoe@gmail.com" class="input-bg" />
+          </div>
+
+          <div class="form-group">
+            <label>Número de teléfono</label>
+            <input type="tel" value="668 123 456" class="input-bg" />
+          </div>
+
+          <div class="form-group">
+            <label>DNI / Pasaporte</label>
+            <input type="text" value="53644103F" class="input-bg" />
+          </div>
+        </section>
+
+        <section class="form-card">
+          <h2>¿Algún pasajero tiene alergias o intolerancias alimentarias?</h2>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="check-allergies" checked />
+            <label for="check-allergies">Sí, hay pasajeros con alergias</label>
+          </div>
+
+          <div id="allergies-details" class="conditional-section">
+            <label class="small-label"
+              >Describe las alergias o intolerancias</label
+            >
+            <ul class="input-list">
+              <li>• Alergia a frutos secos</li>
+              <li>• Intolerancia al gluten</li>
+            </ul>
+            <textarea
+              class="input-bg"
+              placeholder="Escribe aquí..."
+              style="display: none"
+            ></textarea>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <h2>¿Viajas con acompañantes?</h2>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="check-companions" checked />
+            <label for="check-companions">Sí, viajo con acompañantes</label>
+          </div>
+
+          <div id="companions-details" class="conditional-section">
+            <div class="form-group">
+              <label>¿Cuantos acompañantes tienes?</label>
+              <input type="number" value="1" class="input-bg small-input" />
+            </div>
+
+            <hr class="separator" />
+
+            <div class="form-group">
+              <label>Nombre del acompañante 1</label>
+              <input type="text" value="John" class="input-bg" />
+            </div>
+            <div class="form-group">
+              <label>Apellido del acompañante 1</label>
+              <input type="text" value="Doe" class="input-bg" />
+            </div>
+            <div class="form-group">
+              <label>Correo electrónico del acompañante 1</label>
+              <input type="email" value="johndoe@gmail.com" class="input-bg" />
+            </div>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <h2>¿Viajas con mascotas?</h2>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="check-pets" checked />
+            <label for="check-pets">Sí, viajo con mascotas</label>
+          </div>
+
+          <div id="pets-details" class="conditional-section">
+            <div class="form-group">
+              <label>¿Número de mascotas?</label>
+              <input type="number" value="2" class="input-bg small-input" />
+            </div>
+
+            <div class="form-group">
+              <label>¿Tipo de mascota?</label>
+              <div class="radio-list">
+                <div>▼ Perro</div>
+                <div>▼ Gato</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="pay-button-container">
+          <button type="submit" class="btn-pay">Realizar pago</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+/* style/registro.css */
+
+/* === PAGE SETUP === */
+body {
+  background-color: #ffffff; /* White background as seen in image */
+}
+
+/* Header with Logo only */
+.auth-header {
+  padding: 2rem 5%;
+}
+
+/* === MAIN LAYOUT (Split Screen) === */
+.auth-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  gap: 4rem;
+  align-items: center; /* Center vertically */
+  min-height: 80vh;
+}
+
+/* Left Side: Image */
+.auth-image-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.side-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px; /* Rounded corners for the image */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Right Side: Form */
+.auth-form-side {
+  flex: 1;
+  max-width: 550px;
+}
+
+/* Titles */
+.auth-title {
+  font-size: 2.5rem;
+  font-weight: 400; /* Thinner font like in design */
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.auth-subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+/* === FORM STYLES === */
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.half {
+  width: 50%;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+  background: white;
+  width: fit-content;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  border-color: var(--primary-orange);
+}
+
+/* Password eye icon */
+.password-wrapper {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* Terms Checkbox */
+.terms-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.terms-group a {
+  color: #ff6b6b; /* Red/Salmon color for links */
+  text-decoration: none;
+}
+
+/* Main Button */
+.btn-auth {
+  width: 100%;
+  background-color: #f2a900; /* Yellow/Orange */
+  color: #111;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.btn-auth:hover {
+  background-color: #e08e43;
+}
+
+/* Login Redirect Link */
+.login-redirect {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.login-redirect a {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Divider "O regístrate con" */
+.divider {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  line-height: 0.1em;
+  margin: 20px 0 30px;
+}
+
+.divider span {
+  background: #fff;
+  padding: 0 10px;
+  color: #999;
+  font-size: 0.8rem;
+}
+
+/* Social Buttons Row */
+.social-auth {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.social-btn {
+  flex: 1;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btn:hover {
+  background: #f9f9f9;
+}
+
+.social-btn img {
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .auth-image-side {
+    display: none; /* Hide image on mobile for simplicity */
+  }
+
+  .auth-form-side {
+    width: 100%;
+  }
+}

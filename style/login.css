@@ -1,0 +1,231 @@
+/* style/login.css */
+
+/* === PAGE SETUP === */
+body {
+  background-color: #ffffff;
+}
+
+/* Header style */
+.auth-header {
+  padding: 2rem 5%;
+}
+
+/* === MAIN LAYOUT === */
+.auth-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  gap: 4rem;
+  align-items: center;
+  min-height: 80vh;
+}
+
+/* Left Side: Form */
+.auth-form-side {
+  flex: 1;
+  max-width: 450px; /* Slightly narrower for login */
+}
+
+/* Right Side: Image */
+.auth-image-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative; /* For carousel dots positioning */
+}
+
+.side-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Titles */
+.auth-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.auth-subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+/* === FORM STYLES === */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+  background: white;
+  width: fit-content;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  border-color: var(--primary-orange);
+}
+
+/* Password eye icon */
+.password-wrapper {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* Options Row: Remember & Forgot Password */
+.options-row {
+  display: flex;
+  justify-content: space-between; /* Pushes items to edges */
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+}
+
+.forgot-link {
+  color: #ff6b6b; /* Salmon color */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Main Button */
+.btn-auth {
+  width: 100%;
+  background-color: #f2a900;
+  color: #111;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.btn-auth:hover {
+  background-color: #e08e43;
+}
+
+/* Register Redirect Link */
+.register-redirect {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.register-redirect a {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Divider style */
+.divider {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  line-height: 0.1em;
+  margin: 20px 0 30px;
+}
+
+.divider span {
+  background: #fff;
+  padding: 0 10px;
+  color: #999;
+  font-size: 0.8rem;
+}
+
+/* Social Buttons */
+.social-auth {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.social-btn {
+  flex: 1;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btn:hover {
+  background: #f9f9f9;
+}
+
+.social-btn img {
+  height: 20px;
+}
+
+/* === CAROUSEL DOTS (Decorative) === */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.dot.active {
+  background-color: #f2a900; /* Active dot is orange */
+  width: 20px; /* Active dot is wider */
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .auth-container {
+    flex-direction: column;
+  }
+  .auth-image-side {
+    display: none;
+  }
+  .auth-form-side {
+    width: 100%;
+  }
+}

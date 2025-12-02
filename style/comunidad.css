@@ -1,0 +1,251 @@
+/* style/comunidad.css */
+
+/* === HEADER OVERRIDES === */
+/* Style for logged in user pill */
+.logged-in {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icon-btn {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.profile-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f0f2f5;
+  padding: 5px 15px 5px 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  font-weight: 600;
+}
+
+.avatar-small {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* === SUB NAVIGATION === */
+.sub-nav {
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 0 2rem;
+}
+
+.sub-nav .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.sub-nav a {
+  text-decoration: none;
+  color: #666;
+  padding: 1rem 0;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+}
+
+.sub-nav a.active {
+  color: var(--primary-orange);
+  border-bottom-color: var(--primary-orange);
+}
+
+/* === MAIN GRID LAYOUT === */
+.community-grid {
+  display: grid;
+  /* 3 Columns: Left Sidebar (fixed), Feed (flex), Right Sidebar (fixed) */
+  grid-template-columns: 260px 1fr 280px;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  align-items: start; /* Align items to top */
+}
+
+/* === SIDEBARS STYLES === */
+.sidebar-section {
+  margin-bottom: 2rem;
+}
+
+.sidebar-section h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-items {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.item-img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+
+.item-img.rounded {
+  border-radius: 8px;
+}
+.item-img.circle {
+  border-radius: 50%;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-info h4 {
+  font-size: 0.9rem;
+  color: #111;
+}
+
+.meta,
+.subtext,
+.date {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.meta {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* === FEED COLUMN === */
+
+/* Input Box */
+.post-input-box {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.avatar-medium {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.input-fake {
+  flex: 1;
+  background: #f0f2f5;
+  padding: 0.8rem 1rem;
+  border-radius: 20px;
+  color: #666;
+  font-size: 0.9rem;
+  cursor: text;
+}
+
+.input-icons {
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+
+/* Post Card */
+.post-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.post-header {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.post-meta h4 {
+  font-size: 1rem;
+}
+
+.author {
+  color: var(--primary-orange); /* Link color for user */
+  font-weight: bold;
+}
+
+.time {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.post-body {
+  padding: 0 1rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-stats {
+  padding: 0.8rem 1rem;
+  font-size: 0.8rem;
+  color: #666;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem;
+}
+
+.action-btn {
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.action-btn:hover {
+  background: #f0f2f5;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .community-grid {
+    grid-template-columns: 1fr; /* Stack everything */
+  }
+
+  /* Hide sidebars on mobile for simplicity, or stack them below */
+  .sidebar-left,
+  .sidebar-right {
+    display: none;
+  }
+}
