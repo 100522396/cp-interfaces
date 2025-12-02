@@ -1,0 +1,173 @@
+/* style/destinos.css */
+
+/* Page Titles */
+.page-title {
+  text-align: center;
+  color: #111;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- GRID LAYOUT --- */
+.destinations-grid {
+  display: grid;
+  /* 3 Columns as shown in design */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 1000px) {
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- RICH CARD STYLES --- */
+.rich-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f0f0f0;
+}
+
+/* Image container with relative position for the rating pill */
+.card-header {
+  position: relative;
+  height: 250px;
+}
+
+.card-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Rating Pill (Top Right) */
+.rating-pill {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Content Area */
+.card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-body h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.location-row {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.card-desc {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+/* Price and Date row */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.duration {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.price-col {
+  text-align: right;
+}
+
+.price-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.price-value {
+  color: #00b4d8; /* Cyan color from design */
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+/* Buy Button */
+.btn-buy {
+  display: block;
+  width: 100%;
+  background-color: #f49e4c; /* Orange */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-buy:hover {
+  background-color: #e08e43;
+}
+
+/* --- BOTTOM ACTION BUTTON --- */
+.action-wrapper {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.btn-yellow {
+  background-color: #f2a900; /* Yellow */
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #111;
+}
