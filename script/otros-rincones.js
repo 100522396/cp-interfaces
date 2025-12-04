@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // El JSON viene anidado (Continente -> País -> Ciudad)
             // Necesitamos "aplanarlo" para tener una lista simple de ciudades
             allCities = flattenData(data);
-            
+
             // Inicialmente mostramos todas
             currentCities = allCities;
             renderGrid();
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Transforma la estructura compleja en un array simple de objetos ciudad
     function flattenData(data) {
         const citiesArray = [];
-        
+
         // Recorremos continentes
         data.continents.forEach(continent => {
             // Recorremos países
@@ -49,12 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         description: city.description,
                         image: city.image.url, // URL de la imagen
                         country: country.name, // Añadimos el país
-                        continent: continent.name // Añadimos el continente para filtrar
+                        continent: continent.name, // Añadimos el continente para filtrar
+                        price: city.price // Añadimos el precio
                     });
                 });
             });
         });
-        
+
         return citiesArray;
     }
 
@@ -77,11 +78,28 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="card-tag">${city.country}</span>
                         <h3 class="card-title">${city.name}</h3>
                         <p class="card-desc">${city.description}</p>
+                        <div class="card-footer">
+                            <span class="card-price">€${city.price}</span>
+                            <button class="btn-buy" data-city="${city.name}" data-country="${city.country}" data-price="${city.price}">Comprar</button>
+                        </div>
                     </div>
                 </article>
             `;
             // Insertamos el HTML en el grid
             gridContainer.insertAdjacentHTML('beforeend', cardHTML);
+        });
+
+        // Agregar event listeners a los botones de compra
+        const buyButtons = gridContainer.querySelectorAll('.btn-buy');
+        buyButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const city = e.target.getAttribute('data-city');
+                const country = e.target.getAttribute('data-country');
+                const price = e.target.getAttribute('data-price');
+
+                // Navegar a compra.html con parámetros
+                window.location.href = `compra.html?destino=${encodeURIComponent(city)}&pais=${encodeURIComponent(country)}&precio=${price}`;
+            });
         });
 
         // Lógica del botón "Cargar más"
