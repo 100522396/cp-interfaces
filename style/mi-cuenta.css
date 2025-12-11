@@ -47,6 +47,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  z-index: 10; /* Ensure button is clickable above other elements */
 }
 
 /* === PROFILE INFO (Overlapping) === */
@@ -198,4 +199,42 @@
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+/* ========================================
+   MODO DALTÓNICO (DEUTERANOPIA) - MI CUENTA
+   ======================================== */
+
+/* Banner con gradiente adaptado */
+body.deuteranopia-mode .banner-bg {
+  background: linear-gradient(
+    135deg,
+    #114b5f 30%,
+    #4a9eff 30%,
+    #4a9eff 70%,
+    #0077be 70%
+  );
+}
+
+/* Botón de accesibilidad en modo activo */
+body.deuteranopia-mode .btn-accessibility {
+  background: #0077be;
+  color: white;
+  font-weight: bold;
+}
+
+/* Pestaña activa con amarillo en lugar de verde */
+body.deuteranopia-mode .tab-link.active {
+  border-bottom-color: #ffd700; /* Amarillo dorado */
+}
+
+/* Botón de editar avatar */
+body.deuteranopia-mode .btn-edit-avatar {
+  background: #9b59b6; /* Púrpura para mejor contraste */
+}
+
+/* Botones de acción */
+body.deuteranopia-mode .btn-yellow {
+  background-color: #0077be;
+  color: white;
 }

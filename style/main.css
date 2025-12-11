@@ -198,3 +198,52 @@ body {
   background: var(--primary-orange);
   color: var(--white);
 }
+
+/* ========================================
+   MODO DALTÓNICO (DEUTERANOPIA)
+   ======================================== */
+/* 
+  Paleta de colores adaptada para personas con deuteranopia
+  - Reemplaza naranjas/rojos con azules
+  - Reemplaza verdes con amarillos/cian
+  - Mantiene alto contraste y legibilidad
+*/
+
+body.deuteranopia-mode {
+  /* Reemplazar variables de color primarias */
+  --primary-orange: #0077be; /* Azul brillante */
+  --accent-color: #005a8c; /* Azul oscuro */
+  --footer-bg: #4a9eff; /* Azul claro */
+}
+
+/* Navegación en modo deuteranopia */
+body.deuteranopia-mode .main-nav a:hover,
+body.deuteranopia-mode .main-nav a.active {
+  color: #0077be;
+}
+
+/* Botones en modo deuteranopia */
+body.deuteranopia-mode .btn-signup {
+  background-color: #0077be;
+  color: var(--white);
+}
+
+body.deuteranopia-mode .lang-btn.active {
+  background: #0077be;
+  color: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 119, 190, 0.3);
+}
+
+body.deuteranopia-mode .lang-toggle.lang-white .lang-btn.active {
+  background: #0077be;
+  color: var(--white);
+}
+
+/* Footer en modo deuteranopia */
+body.deuteranopia-mode .site-footer {
+  background-color: #4a9eff;
+}
+
+body.deuteranopia-mode .footer-links-col a:hover strong {
+  color: #e0f0ff;
+}
