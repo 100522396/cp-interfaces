@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="card-desc">${city.description}</p>
                         <div class="card-footer">
                             <span class="card-price">€${city.price}</span>
-                            <button class="btn-buy" data-city="${city.name}" data-country="${city.country}" data-price="${city.price}">Comprar</button>
+                            <button class="btn-buy" data-i18n="destinos.btn-buy" data-city="${city.name}" data-country="${city.country}" data-price="${city.price}">Comprar</button>
                         </div>
                     </div>
                 </article>
@@ -101,6 +101,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = `compra.html?destino=${encodeURIComponent(city)}&pais=${encodeURIComponent(country)}&precio=${price}`;
             });
         });
+
+        // Re-aplicar traducciones a los botones recién generados
+        if (typeof translatePage === 'function') {
+            const currentLang = localStorage.getItem('language') || 'es';
+            translatePage(currentLang);
+        }
 
         // Lógica del botón "Cargar más"
         // Si mostramos todas las que hay, ocultamos el botón

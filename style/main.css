@@ -2,12 +2,15 @@
 
 :root {
   /* Project Colors */
-  --primary-orange: #f2a900; /* Main orange */
-  --accent-color: #e87c41; /* Text accent */
+  --primary-orange: #f2a900;
+  /* Main orange */
+  --accent-color: #e87c41;
+  /* Text accent */
   --dark-text: #333333;
   --light-gray: #f4f4f4;
   --white: #ffffff;
-  --footer-bg: #f49e4c; /* Footer background */
+  --footer-bg: #f49e4c;
+  /* Footer background */
 }
 
 /* Global Reset */
@@ -38,7 +41,8 @@ body {
 }
 
 .logo-img {
-  height: 40px; /* Logo size */
+  height: 40px;
+  /* Logo size */
 }
 
 .main-nav ul {
@@ -135,4 +139,62 @@ body {
 
 .logo-container a:hover {
   opacity: 0.8;
+}
+
+/* --- LANGUAGE TOGGLE BUTTON --- */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  padding: 4px;
+  gap: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.lang-btn {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  color: #666;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lang-btn:hover {
+  color: var(--dark-text);
+}
+
+.lang-btn.active {
+  background: var(--primary-orange);
+  color: var(--white);
+  box-shadow: 0 2px 8px rgba(242, 169, 0, 0.3);
+}
+
+/* White theme for specific headers */
+.lang-toggle.lang-white {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(51, 51, 51, 0.1);
+}
+
+.lang-toggle.lang-white .lang-btn {
+  color: #666;
+}
+
+.lang-toggle.lang-white .lang-btn.active {
+  background: var(--primary-orange);
+  color: var(--white);
 }

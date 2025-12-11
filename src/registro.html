@@ -1,110 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Regístrate | MoSinFron</title>
-    <link rel="stylesheet" href="../style/main.css" />
-    <link rel="stylesheet" href="../style/registro.css" />
-  </head>
-  <body>
-    <header class="auth-header">
-      <div class="logo-container">
-        <a href="index.html" class="logo-link">
-          <img
-            src="../images/black-logo.png"
-            alt="MoSinFron"
-            class="logo-img"
-          />
-        </a>
-      </div>
-    </header>
 
-    <main class="auth-container">
-      <div class="auth-image-side">
-        <img src="../images/register.png" alt="Resort" class="side-img" />
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regístrate | MoSinFron</title>
+  <link rel="stylesheet" href="../style/main.css" />
+  <link rel="stylesheet" href="../style/registro.css" />
+</head>
 
-      <div class="auth-form-side">
-        <h1 class="auth-title">Regístrate</h1>
-        <p class="auth-subtitle">
-          Vamos a dejar todo listo para que crees tu cuenta de mochilero
+<body>
+  <header class="auth-header">
+    <div class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="../images/black-logo.png" alt="MoSinFron" class="logo-img" />
+      </a>
+    </div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="lang-es">ES</button>
+      <button class="lang-btn" id="lang-en">EN</button>
+    </div>
+  </header>
+
+  <main class="auth-container">
+    <div class="auth-image-side">
+      <img src="../images/register.png" alt="Resort" class="side-img" />
+    </div>
+
+    <div class="auth-form-side">
+      <h1 class="auth-title" data-i18n="registro.title">Regístrate</h1>
+      <p class="auth-subtitle" data-i18n="registro.subtitle">
+        Vamos a dejar todo listo para que crees tu cuenta de mochilero
+      </p>
+
+      <form action="#" class="register-form">
+        <div class="form-row">
+          <div class="form-group half">
+            <label data-i18n="registro.nombre">Nombre</label>
+            <input type="text" value="John" class="input-field" />
+          </div>
+          <div class="form-group half">
+            <label data-i18n="registro.apellidos">Apellidos</label>
+            <input type="text" value="Doe" class="input-field" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half">
+            <label data-i18n="registro.email">Email</label>
+            <input type="email" value="john.doe@gmail.com" class="input-field" />
+          </div>
+          <div class="form-group half">
+            <label data-i18n="registro.telefono">Número de teléfono</label>
+            <input type="tel" value="123 456 789" class="input-field" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="registro.password">Contraseña</label>
+          <div class="password-wrapper">
+            <input type="password" value="password123" class="input-field" />
+            <span class="eye-icon">👁️</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="registro.confirm">Confirmar Contraseña</label>
+          <div class="password-wrapper">
+            <input type="password" value="password123" class="input-field" />
+            <span class="eye-icon">👁️</span>
+          </div>
+        </div>
+
+        <div class="terms-group">
+          <input type="checkbox" id="terms" />
+          <label for="terms"><span data-i18n="registro.terms">Acepto los</span> <a href="#"
+              data-i18n="registro.terms-link">Términos</a> <span data-i18n="registro.privacy">y he leído la</span>
+            <a href="#" data-i18n="registro.privacy-link">Política de privacidad</a></label>
+        </div>
+
+        <button type="submit" class="btn-auth" data-i18n="registro.btn-create">Crear cuenta</button>
+
+        <p class="login-redirect">
+          <span data-i18n="registro.have-account">¿Ya tienes una cuenta?</span> <a href="login.html"
+            data-i18n="registro.login-link">Inicia Sesión</a>
         </p>
 
-        <form action="#" class="register-form">
-          <div class="form-row">
-            <div class="form-group half">
-              <label>Nombre</label>
-              <input type="text" value="John" class="input-field" />
-            </div>
-            <div class="form-group half">
-              <label>Apellidos</label>
-              <input type="text" value="Doe" class="input-field" />
-            </div>
-          </div>
+        <div class="divider">
+          <span data-i18n="registro.or">O regístrate con</span>
+        </div>
 
-          <div class="form-row">
-            <div class="form-group half">
-              <label>Email</label>
-              <input
-                type="email"
-                value="john.doe@gmail.com"
-                class="input-field"
-              />
-            </div>
-            <div class="form-group half">
-              <label>Número de teléfono</label>
-              <input type="tel" value="123 456 789" class="input-field" />
-            </div>
-          </div>
+        <div class="social-auth">
+          <button type="button" class="social-btn">
+            <img src="../images/facebook.png" alt="Facebook" />
+          </button>
+          <button type="button" class="social-btn">
+            <img src="../images/google.svg" alt="Google" />
+          </button>
+          <button type="button" class="social-btn">
+            <img src="../images/apple.svg" alt="Apple" />
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="../script/translate.js"></script>
+</body>
 
-          <div class="form-group">
-            <label>Contraseña</label>
-            <div class="password-wrapper">
-              <input type="password" value="password123" class="input-field" />
-              <span class="eye-icon">👁️</span>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>Confirmar Contraseña</label>
-            <div class="password-wrapper">
-              <input type="password" value="password123" class="input-field" />
-              <span class="eye-icon">👁️</span>
-            </div>
-          </div>
-
-          <div class="terms-group">
-            <input type="checkbox" id="terms" />
-            <label for="terms"
-              >Acepto los <a href="#">Términos</a> y he leído la
-              <a href="#">Política de privacidad</a></label
-            >
-          </div>
-
-          <button type="submit" class="btn-auth">Crear cuenta</button>
-
-          <p class="login-redirect">
-            ¿Ya tienes una cuenta? <a href="login.html">Inicia Sesión</a>
-          </p>
-
-          <div class="divider">
-            <span>O regístrate con</span>
-          </div>
-
-          <div class="social-auth">
-            <button type="button" class="social-btn">
-              <img src="../images/facebook.png" alt="Facebook" />
-            </button>
-            <button type="button" class="social-btn">
-              <img src="../images/google.svg" alt="Google" />
-            </button>
-            <button type="button" class="social-btn">
-              <img src="../images/apple.svg" alt="Apple" />
-            </button>
-          </div>
-        </form>
-      </div>
-    </main>
-  </body>
 </html>
