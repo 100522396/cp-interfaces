@@ -67,45 +67,38 @@
 
         <div class="form-group">
           <label data-i18n="compra.nombre">Nombre</label>
-          <input type="text" value="John" class="input-bg" />
+          <input type="text" id="compra-nombre" class="input-bg" />
         </div>
 
         <div class="form-group">
           <label data-i18n="compra.apellidos">Apellidos</label>
-          <input type="text" value="Doe" class="input-bg" />
+          <input type="text" id="compra-apellidos" class="input-bg" />
         </div>
 
         <div class="form-group">
           <label data-i18n="compra.email">Correo electrónico</label>
-          <input type="email" value="johndoe@gmail.com" class="input-bg" />
+          <input type="email" id="compra-email" class="input-bg" />
         </div>
 
         <div class="form-group">
           <label data-i18n="compra.telefono">Número de teléfono</label>
-          <input type="tel" value="668 123 456" class="input-bg" />
+          <input type="tel" id="compra-telefono" class="input-bg" />
         </div>
 
-        <div class="form-group">
-          <label data-i18n="compra.dni">DNI / Pasaporte</label>
-          <input type="text" value="53644103F" class="input-bg" />
-        </div>
+
       </section>
 
       <section class="form-card">
         <h2 data-i18n="compra.section3">¿Algún pasajero tiene alergias o intolerancias alimentarias?</h2>
 
         <div class="checkbox-group">
-          <input type="checkbox" id="check-allergies" checked />
+          <input type="checkbox" id="check-allergies" />
           <label for="check-allergies" data-i18n="compra.alergias-si">Sí, hay pasajeros con alergias</label>
         </div>
 
-        <div id="allergies-details" class="conditional-section">
+        <div id="allergies-details" class="conditional-section" style="display: none;">
           <label class="small-label" data-i18n="compra.alergias-desc">Describe las alergias o intolerancias</label>
-          <ul class="input-list">
-            <li>• Alergia a frutos secos</li>
-            <li>• Intolerancia al gluten</li>
-          </ul>
-          <textarea class="input-bg" placeholder="Escribe aquí..." style="display: none"></textarea>
+          <textarea class="input-bg" placeholder="Escribe aquí..." rows="4"></textarea>
         </div>
       </section>
 
@@ -113,29 +106,29 @@
         <h2 data-i18n="compra.section4">¿Viajas con acompañantes?</h2>
 
         <div class="checkbox-group">
-          <input type="checkbox" id="check-companions" checked />
+          <input type="checkbox" id="check-companions" />
           <label for="check-companions" data-i18n="compra.acompanantes-si">Sí, viajo con acompañantes</label>
         </div>
 
-        <div id="companions-details" class="conditional-section">
+        <div id="companions-details" class="conditional-section" style="display: none;">
           <div class="form-group">
             <label data-i18n="compra.cuantos">¿Cuantos acompañantes tienes?</label>
-            <input type="number" value="1" class="input-bg small-input" />
+            <input type="number" min="1" max="10" class="input-bg small-input" />
           </div>
 
           <hr class="separator" />
 
           <div class="form-group">
             <label data-i18n="compra.nombre-acomp">Nombre del acompañante 1</label>
-            <input type="text" value="John" class="input-bg" />
+            <input type="text" class="input-bg" />
           </div>
           <div class="form-group">
             <label data-i18n="compra.apellido-acomp">Apellido del acompañante 1</label>
-            <input type="text" value="Doe" class="input-bg" />
+            <input type="text" class="input-bg" />
           </div>
           <div class="form-group">
             <label data-i18n="compra.email-acomp">Correo electrónico del acompañante 1</label>
-            <input type="email" value="johndoe@gmail.com" class="input-bg" />
+            <input type="email" class="input-bg" />
           </div>
         </div>
       </section>
@@ -144,22 +137,24 @@
         <h2 data-i18n="compra.section5">¿Viajas con mascotas?</h2>
 
         <div class="checkbox-group">
-          <input type="checkbox" id="check-pets" checked />
+          <input type="checkbox" id="check-pets" />
           <label for="check-pets" data-i18n="compra.mascotas-si">Sí, viajo con mascotas</label>
         </div>
 
-        <div id="pets-details" class="conditional-section">
+        <div id="pets-details" class="conditional-section" style="display: none;">
           <div class="form-group">
             <label data-i18n="compra.num-mascotas">¿Número de mascotas?</label>
-            <input type="number" value="2" class="input-bg small-input" />
+            <input type="number" min="1" max="5" class="input-bg small-input" />
           </div>
 
           <div class="form-group">
             <label data-i18n="compra.tipo-mascota">¿Tipo de mascota?</label>
-            <div class="radio-list">
-              <div>▼ Perro</div>
-              <div>▼ Gato</div>
-            </div>
+            <select class="input-bg">
+              <option value="">Selecciona...</option>
+              <option value="perro">Perro</option>
+              <option value="gato">Gato</option>
+              <option value="otro">Otro</option>
+            </select>
           </div>
         </div>
       </section>
@@ -173,6 +168,9 @@
   <script src="../script/translate.js"></script>
   <script src="../script/daltonismo.js"></script>
   <script src="../script/font-size.js"></script>
+  <script src="../script/auth-system.js"></script>
+  <script src="../script/session-manager.js"></script>
+  <script src="../script/compra-handler.js"></script>
 </body>
 
 </html>

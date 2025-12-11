@@ -50,11 +50,12 @@
 
       <div class="profile-info">
         <div class="avatar-wrapper">
-          <img src="../images/avatar-john.jpg" alt="John Doe" class="avatar-large" />
-          <button class="btn-edit-avatar">✏️</button>
+          <img id="profile-avatar" src="../images/avatar-john.jpg" alt="Avatar" class="avatar-large" />
+          <button class="btn-edit-avatar" id="btn-edit-avatar">✏️</button>
+          <input type="file" id="avatar-file-input" accept="image/*" style="display: none;" />
         </div>
-        <h1>John Doe.</h1>
-        <p>john.doe@gmail.com</p>
+        <h1 id="profile-name">Usuario</h1>
+        <p id="profile-email">email@example.com</p>
       </div>
     </div>
 
@@ -71,7 +72,7 @@
         <div class="detail-row">
           <div class="detail-info">
             <span class="label" data-i18n="cuenta.nombre">Nombre</span>
-            <span class="value">John Doe</span>
+            <span class="value" id="detail-nombre">-</span>
           </div>
           <button class="btn-edit" data-i18n="cuenta.btn-edit">📝 Editar</button>
         </div>
@@ -79,7 +80,7 @@
         <div class="detail-row">
           <div class="detail-info">
             <span class="label" data-i18n="cuenta.email">Email</span>
-            <span class="value">john.doe@gmail.com</span>
+            <span class="value" id="detail-email">-</span>
           </div>
           <div class="actions">
             <button class="btn-add" data-i18n="cuenta.btn-add-email">➕ Añadir otro email</button>
@@ -98,26 +99,12 @@
         <div class="detail-row">
           <div class="detail-info">
             <span class="label" data-i18n="cuenta.telefono">Número de teléfono</span>
-            <span class="value">+1 000-000-0000</span>
+            <span class="value" id="detail-telefono">-</span>
           </div>
           <button class="btn-edit" data-i18n="cuenta.btn-edit">📝 Editar</button>
         </div>
 
-        <div class="detail-row">
-          <div class="detail-info">
-            <span class="label" data-i18n="cuenta.direccion">Dirección</span>
-            <span class="value">St 32 main downtown, Los Angeles, California, USA</span>
-          </div>
-          <button class="btn-edit" data-i18n="cuenta.btn-edit">📝 Editar</button>
-        </div>
 
-        <div class="detail-row">
-          <div class="detail-info">
-            <span class="label" data-i18n="cuenta.nacimiento">Fecha de nacimiento</span>
-            <span class="value">01-01-1992</span>
-          </div>
-          <button class="btn-edit" data-i18n="cuenta.btn-edit">📝 Editar</button>
-        </div>
       </div>
     </section>
   </main>
@@ -149,6 +136,9 @@
   <script src="../script/translate.js"></script>
   <script src="../script/daltonismo.js"></script>
   <script src="../script/font-size.js"></script>
+  <script src="../script/auth-system.js"></script>
+  <script src="../script/session-manager.js"></script>
+  <script src="../script/mi-cuenta-handler.js"></script>
 </body>
 
 </html>

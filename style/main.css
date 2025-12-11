@@ -265,6 +265,49 @@ html.font-size-large {
   zoom: 1.25;
 }
 
+/* ========================================
+   USUARIO LOGUEADO (UI)
+   ======================================== */
+
+.user-welcome {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 16px;
+  border-radius: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.welcome-text strong {
+  color: var(--dark-text);
+  font-weight: 700;
+}
+
+.btn-logout {
+  background: #ff6b6b;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+  background: #ee5a52;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
 /* Botón de control de tamaño de fuente */
 .btn-font-size {
   background: rgba(255, 255, 255, 0.95);

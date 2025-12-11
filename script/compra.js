@@ -29,3 +29,33 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(`Viaje seleccionado: ${destino}, ${pais} - €${precio}`);
     }
 });
+
+// Toggle functionality for conditional sections
+document.addEventListener('DOMContentLoaded', function() {
+  // Alergias
+  var checkAllergies = document.getElementById('check-allergies');
+  var allergiesDetails = document.getElementById('allergies-details');
+  if (checkAllergies && allergiesDetails) {
+    checkAllergies.addEventListener('change', function() {
+      allergiesDetails.style.display = this.checked ? 'block' : 'none';
+    });
+  }
+
+  // Acompañantes
+  var checkCompanions = document.getElementById('check-companions');
+  var companionsDetails = document.getElementById('companions-details');
+  if (checkCompanions && companionsDetails) {
+    checkCompanions.addEventListener('change', function() {
+      companionsDetails.style.display = this.checked ? 'block' : 'none';
+    });
+  }
+
+  // Mascotas
+  var checkPets = document.getElementById('check-pets');
+  var petsDetails = document.getElementById('pets-details');
+  if (checkPets && petsDetails) {
+    checkPets.addEventListener('change', function() {
+      petsDetails.style.display = this.checked ? 'block' : 'none';
+    });
+  }
+});

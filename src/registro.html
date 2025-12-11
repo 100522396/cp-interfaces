@@ -39,29 +39,29 @@
         <div class="form-row">
           <div class="form-group half">
             <label data-i18n="registro.nombre">Nombre</label>
-            <input type="text" value="John" class="input-field" />
+            <input type="text" id="reg-nombre" class="input-field" />
           </div>
           <div class="form-group half">
             <label data-i18n="registro.apellidos">Apellidos</label>
-            <input type="text" value="Doe" class="input-field" />
+            <input type="text" id="reg-apellidos" class="input-field" />
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group half">
             <label data-i18n="registro.email">Email</label>
-            <input type="email" value="john.doe@gmail.com" class="input-field" />
+            <input type="email" id="reg-email" class="input-field" />
           </div>
           <div class="form-group half">
             <label data-i18n="registro.telefono">Número de teléfono</label>
-            <input type="tel" value="123 456 789" class="input-field" />
+            <input type="tel" id="reg-telefono" class="input-field" />
           </div>
         </div>
 
         <div class="form-group">
           <label data-i18n="registro.password">Contraseña</label>
           <div class="password-wrapper">
-            <input type="password" value="password123" class="input-field" />
+            <input type="password" id="reg-password" class="input-field" />
             <span class="eye-icon">👁️</span>
           </div>
         </div>
@@ -69,9 +69,15 @@
         <div class="form-group">
           <label data-i18n="registro.confirm">Confirmar Contraseña</label>
           <div class="password-wrapper">
-            <input type="password" value="password123" class="input-field" />
+            <input type="password" id="reg-confirm-password" class="input-field" />
             <span class="eye-icon">👁️</span>
           </div>
+        </div>
+
+        <div class="form-group">
+          <label>Foto de perfil</label>
+          <input type="file" id="reg-avatar" accept="image/*" class="input-field" />
+          <small style="color: #999; font-size: 0.85rem;">Formatos: JPG, PNG o WEBP</small>
         </div>
 
         <div class="terms-group">
@@ -109,6 +115,8 @@
   <script src="../script/translate.js"></script>
   <script src="../script/daltonismo.js"></script>
   <script src="../script/font-size.js"></script>
+  <script src="../script/auth-system.js"></script>
+  <script src="../script/registro-handler.js"></script>
 </body>
 
 </html>
