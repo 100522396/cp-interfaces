@@ -247,3 +247,52 @@ body.deuteranopia-mode .site-footer {
 body.deuteranopia-mode .footer-links-col a:hover strong {
   color: #e0f0ff;
 }
+
+/* ========================================
+   CONTROL DE TAMAÑO DE FUENTE (ACCESIBILIDAD)
+   ======================================== */
+
+/* Método principal usando zoom en el elemento html para escalar toda la página */
+html.font-size-small {
+  zoom: 0.85;
+}
+
+html.font-size-medium {
+  zoom: 1;
+}
+
+html.font-size-large {
+  zoom: 1.25;
+}
+
+/* Botón de control de tamaño de fuente */
+.btn-font-size {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(51, 51, 51, 0.1);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 8px;
+}
+
+.btn-font-size:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Estados visuales del botón */
+.btn-font-size.active-small {
+  background: rgba(173, 216, 230, 0.3);
+  border-color: rgba(0, 119, 190, 0.3);
+}
+
+.btn-font-size.active-large {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: rgba(242, 169, 0, 0.3);
+  font-weight: bold;
+}
