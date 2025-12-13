@@ -288,7 +288,7 @@
       "</div>" +
       '<div class="comentario-info">' +
       '<span class="comentario-nombre">' +
-      escapeHTML(nombreCompleto) +
+      nombreCompleto +
       "</span>" +
       '<span class="comentario-fecha">' +
       formatearFecha(comentario.fecha) +
@@ -296,7 +296,7 @@
       "</div>" +
       "</div>" +
       '<p class="comentario-texto">' +
-      escapeHTML(comentario.texto) +
+      comentario.texto +
       "</p>" +
       '<div class="comentario-footer">' +
       '<button class="' +
