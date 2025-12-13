@@ -1,186 +1,176 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comunidad | MoSinFron</title>
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/comunidad.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comunidad | MoSinFron</title>
-  <link rel="stylesheet" href="../style/main.css" />
-  <link rel="stylesheet" href="../style/comunidad.css" />
-</head>
-
-<body>
-  <header class="site-header">
-    <div class="logo-container">
-      <a href="index.html" class="logo-link">
-        <img src="../images/black-logo.png" alt="MoSinFron" class="logo-img" />
-      </a>
-    </div>
-
-    <nav class="main-nav">
-      <ul>
-        <li><a href="destinos.html" data-i18n="nav.destinos">Destinos</a></li>
-        <li><a href="otros-rincones.html" data-i18n="nav.otros-rincones">Otros Rincones</a></li>
-        <li><a href="comunidad.html" class="active" data-i18n="nav.comunidad">Comunidad</a></li>
-        <li><a href="mi-cuenta.html" data-i18n="nav.mi-cuenta">Mi Cuenta</a></li>
-        <li><a href="compra.html" data-i18n="nav.compra">Compra</a></li>
-        <li><a href="soporte.html" data-i18n="nav.soporte">Soporte</a></li>
-      </ul>
-    </nav>
-
-    <div class="user-controls logged-in">
-      <span class="icon-btn">💬</span> <span class="icon-btn">🔔</span>
-      <div class="profile-pill">
-        <img src="../images/avatar-kathe.jpg" alt="Kathe" class="avatar-small" />
-        <span>Kathe U.</span>
-        <span class="dropdown-arrow">▼</span>
+  <body>
+    <header class="site-header">
+      <div class="logo-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="../images/black-logo.png"
+            alt="MoSinFron"
+            class="logo-img"
+          />
+        </a>
       </div>
-      <div class="lang-toggle">
-        <button class="lang-btn active" id="lang-es">ES</button>
-        <button class="lang-btn" id="lang-en">EN</button>
-        
-        <button class="btn-font-size" id="btn-font-size" title="Cambiar tamaño de fuente">🔤 A</button>
-      </div>
-    </div>
-  </header>
 
-  <div class="sub-nav">
-    <div class="container">
-      <a href="#" class="active" data-i18n="comunidad.tab1">Explorar</a>
-      <a href="#" data-i18n="comunidad.tab2">Mis Comunidades</a>
-      <a href="#" data-i18n="comunidad.tab3">Ajustes</a>
-    </div>
-  </div>
-
-  <main class="community-grid">
-    <aside class="sidebar-left">
-      <div class="sidebar-section">
-        <h3 data-i18n="comunidad.sidebar1-title">Mis comunidades <span class="arrow">&gt;</span></h3>
-        <ul class="list-items">
-          <li class="item">
-            <img src="../images/thumb-africa.jpg" class="item-img rounded" />
-            <div class="item-info">
-              <span class="meta">PRIVADA</span>
-              <h4>Ruta África</h4>
-              <span class="subtext">72.2k Members</span>
-            </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="destinos.html" data-i18n="nav.destinos">Destinos</a></li>
+          <li>
+            <a href="otros-rincones.html" data-i18n="nav.otros-rincones"
+              >Otros Rincones</a
+            >
           </li>
-          <li class="item">
-            <img src="../images/thumb-malasia.jpg" class="item-img rounded" />
-            <div class="item-info">
-              <span class="meta">PRIVADA</span>
-              <h4>Ruta Malasia</h4>
-              <span class="subtext">193 Members</span>
-            </div>
+          <li>
+            <a href="comunidad.html" class="active" data-i18n="nav.comunidad"
+              >Comunidad</a
+            >
           </li>
-          <li class="item">
-            <img src="../images/thumb-sudamerica.jpg" class="item-img rounded" />
-            <div class="item-info">
-              <span class="meta">PÚBLICA</span>
-              <h4>Ruta Sudamérica</h4>
-              <span class="subtext">130k Members</span>
-            </div>
+          <li>
+            <a href="mi-cuenta.html" data-i18n="nav.mi-cuenta">Mi Cuenta</a>
           </li>
+          <li><a href="compra.html" data-i18n="nav.compra">Compra</a></li>
+          <li><a href="soporte.html" data-i18n="nav.soporte">Soporte</a></li>
         </ul>
+      </nav>
+
+      <div class="user-controls">
+        <a href="login.html" class="btn-login" data-i18n="btn.login"
+          >Iniciar sesión</a
+        >
+        <a href="registro.html" class="btn-signup" data-i18n="btn.signup"
+          >Únete</a
+        >
+
+        <div class="lang-toggle lang-white">
+          <button class="lang-btn active" id="lang-es">ES</button>
+          <button class="lang-btn" id="lang-en">EN</button>
+          <button
+            class="btn-font-size"
+            id="btn-font-size"
+            title="Cambiar tamaño de fuente"
+          >
+            🔤 A
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="comunidad-container">
+      <h1 class="comunidad-titulo" data-i18n="comunidad.titulo">
+        Comunidad Mochilera
+      </h1>
+      <p class="comunidad-subtitulo" data-i18n="comunidad.subtitulo">
+        Comparte tus experiencias y descubre las aventuras de otros viajeros
+      </p>
+
+      <!-- Mensaje para usuarios no logueados -->
+      <div id="mensaje-login" class="mensaje-login" style="display: none">
+        <p data-i18n="comunidad.login-required">
+          Debes <a href="login.html">iniciar sesión</a> para publicar
+          comentarios y dar likes.
+        </p>
       </div>
 
-      <div class="sidebar-section">
-        <h3 data-i18n="comunidad.sidebar2-title">Usuarios <span class="arrow">&gt;</span></h3>
-        <ul class="list-items">
-          <li class="item">
-            <img src="../images/user-emma.jpg" class="item-img circle" />
-            <div class="item-info">
-              <span class="date">12 septiembre, 2023</span>
-              <h4>Emma L.</h4>
-            </div>
-          </li>
-          <li class="item">
-            <img src="../images/user-jack.jpg" class="item-img circle" />
-            <div class="item-info">
-              <span class="date">17 octubre, 2023</span>
-              <h4>Jack T.</h4>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </aside>
-
-    <section class="feed-column">
-      <div class="post-input-box">
-        <img src="../images/avatar-kathe.jpg" class="avatar-medium" />
-        <div class="input-fake">Comparte sus pensamientos ...</div>
-        <div class="input-icons">🖼️ 🎞️ 🙂</div>
-      </div>
-
-      <article class="post-card">
-        <div class="post-header">
-          <img src="../images/thumb-sudamerica.jpg" class="avatar-medium rounded" />
-          <div class="post-meta">
-            <h4>Ruta Sudamérica</h4>
-            <span class="author">Kathe U.</span> •
-            <span class="time">Hace 1 día</span>
+      <!-- Formulario para nuevo comentario (solo visible si logueado) -->
+      <section
+        id="nuevo-comentario-section"
+        class="nuevo-comentario-section"
+        style="display: none"
+      >
+        <div class="nuevo-comentario-box">
+          <div id="usuario-avatar" class="usuario-avatar">
+            <span class="avatar-placeholder">👤</span>
+          </div>
+          <div class="comentario-input-wrapper">
+            <textarea
+              id="comentario-texto"
+              class="comentario-textarea"
+              placeholder="Comparte tu experiencia de viaje..."
+              rows="3"
+            ></textarea>
+            <button
+              id="btn-publicar"
+              class="btn-publicar"
+              data-i18n="comunidad.btn-publicar"
+            >
+              Publicar
+            </button>
           </div>
         </div>
+      </section>
 
-        <div class="post-body">
-          <p>
-            Acabo de volver de mi primer viaje por Sudamérica y la comunidad
-            me ayudó muchísimo con consejos sobre rutas y alojamiento.
-            ¡Gracias por compartir tan buenas experiencias!
+      <!-- Lista de comentarios -->
+      <section class="comentarios-section">
+        <h2 class="comentarios-titulo" data-i18n="comunidad.comentarios-titulo">
+          Experiencias de viajeros
+        </h2>
+        <p class="comentarios-orden" data-i18n="comunidad.orden">
+          Ordenados por popularidad
+        </p>
+
+        <div id="lista-comentarios" class="lista-comentarios">
+          <!-- Los comentarios se generan por JavaScript -->
+          <p
+            id="sin-comentarios"
+            class="sin-comentarios"
+            data-i18n="comunidad.sin-comentarios"
+          >
+            Aún no hay comentarios. ¡Sé el primero en compartir tu experiencia!
           </p>
         </div>
+      </section>
+    </main>
 
-        <div class="post-image-container">
-          <img src="../images/post-city.jpg" alt="Viaje Sudamérica" class="post-img" />
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links-col">
+          <a href="index.html"><strong data-i18n="footer.home">HOME</strong></a>
+          <a href="destinos.html"
+            ><strong data-i18n="footer.destinos">DESTINOS</strong></a
+          >
+          <a href="otros-rincones.html"
+            ><strong data-i18n="footer.otros">OTROS RINCONES</strong></a
+          >
+          <a href="comunidad.html"
+            ><strong data-i18n="footer.comunidad">COMUNIDAD</strong></a
+          >
+          <a href="mi-cuenta.html"
+            ><strong data-i18n="footer.cuenta">MI CUENTA</strong></a
+          >
+          <a href="compra.html"
+            ><strong data-i18n="footer.compra">COMPRA</strong></a
+          >
+          <a href="soporte.html"
+            ><strong data-i18n="footer.soporte">SOPORTE</strong></a
+          >
         </div>
 
-        <div class="post-stats">
-          <span>182 likes</span> • <span>21 comentarios</span>
+        <div class="footer-info-col">
+          <strong>INFO@MOCHILEROSSINFRONTERAS.COM</strong>
+          <p>CALLE SIRIO, N66, 28007 MADRID</p>
+          <p>91-993-3578</p>
+          <div class="socials">
+            <a href="#"><img src="../images/icon-fb.png" alt="Facebook" /></a>
+            <a href="#"><img src="../images/icon-tw.png" alt="Twitter" /></a>
+            <a href="#"><img src="../images/icon-li.png" alt="LinkedIn" /></a>
+          </div>
         </div>
-
-        <div class="post-actions">
-          <button class="action-btn">♡ Like</button>
-          <button class="action-btn">💬 Comentar</button>
-          <button class="action-btn">🔖 Guardar</button>
-          <button class="action-btn share-btn">Share</button>
-        </div>
-      </article>
-    </section>
-
-    <aside class="sidebar-right">
-      <div class="sidebar-section">
-        <h3 data-i18n="comunidad.sidebar3-title">Consejos Mochileros <span class="arrow">&gt;</span></h3>
-        <ul class="list-items">
-          <li class="item">
-            <img src="../images/tip-1.jpg" class="item-img rounded" />
-            <div class="item-info">
-              <h4>Viajar Ligero</h4>
-              <span class="subtext">Nomad Journal</span>
-            </div>
-          </li>
-          <li class="item">
-            <img src="../images/tip-2.jpg" class="item-img rounded" />
-            <div class="item-info">
-              <h4>Rutas del Mundo</h4>
-              <span class="subtext">Trail Tales</span>
-            </div>
-          </li>
-          <li class="item">
-            <img src="../images/tip-3.jpg" class="item-img rounded" />
-            <div class="item-info">
-              <h4>Consejos Carretera</h4>
-              <span class="subtext">Off Track</span>
-            </div>
-          </li>
-        </ul>
       </div>
-    </aside>
-  </main>
-  <script src="../script/translate.js"></script>
-  <script src="../script/daltonismo.js"></script>
-  <script src="../script/font-size.js"></script>
-  <script src="../script/auth-system.js"></script>
-  <script src="../script/session-manager.js"></script>
-</body>
+    </footer>
 
+    <script src="../script/translate.js"></script>
+    <script src="../script/daltonismo.js"></script>
+    <script src="../script/font-size.js"></script>
+    <script src="../script/auth-system.js"></script>
+    <script src="../script/session-manager.js"></script>
+    <script src="../script/comunidad-handler.js"></script>
+  </body>
 </html>
