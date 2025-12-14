@@ -1,176 +1,232 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Completar Reserva | MoSinFron</title>
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/compra.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Completar Reserva | MoSinFron</title>
-  <link rel="stylesheet" href="../style/main.css" />
-  <link rel="stylesheet" href="../style/compra.css" />
-</head>
-
-<body>
-  <header class="checkout-header">
-    <div class="header-left">
-      <a href="#" class="back-link" data-i18n="compra.back"> &lt;&lt; Volver </a>
-      <a href="index.html" class="logo-link">
-        <img src="../images/black-logo.png" alt="MoSinFron" class="logo-img" />
-      </a>
-    </div>
-
-    <div class="header-right">
-      <div class="lang-toggle">
-        <button class="lang-btn active" id="lang-es">ES</button>
-        <button class="lang-btn" id="lang-en">EN</button>
-        
-        <button class="btn-font-size" id="btn-font-size" title="Cambiar tamaño de fuente">🔤 A</button>
+  <body>
+    <header class="checkout-header">
+      <div class="header-left">
+        <a href="#" class="back-link" data-i18n="compra.back">
+          &lt;&lt; Volver
+        </a>
+        <a href="index.html" class="logo-link">
+          <img
+            src="../images/black-logo.png"
+            alt="MoSinFron"
+            class="logo-img"
+          />
+        </a>
       </div>
-    </div>
-  </header>
 
-  <main class="checkout-container">
-    <h1 class="page-title" data-i18n="compra.title">Completa tu reserva</h1>
+      <div class="header-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="lang-es">ES</button>
+          <button class="lang-btn" id="lang-en">EN</button>
 
-    <form action="#" method="POST" class="checkout-form">
-      <section class="form-card">
-        <h2 data-i18n="compra.section1">Datos del viaje</h2>
-
-        <div class="form-group">
-          <label data-i18n="compra.origen">Origen</label>
-          <input type="text" value="Madrid, España" readonly class="input-line" />
+          <button
+            class="btn-font-size"
+            id="btn-font-size"
+            title="Cambiar tamaño de fuente"
+          >
+            🔤 A
+          </button>
         </div>
-
-        <div class="form-group">
-          <label data-i18n="compra.destino">Destino</label>
-          <input type="text" value="Bangkok, Tailandia" readonly class="input-line" />
-        </div>
-
-        <div class="form-row">
-          <div class="form-group half">
-            <label data-i18n="compra.salida">Fecha de salida</label>
-            <input type="text" value="13.11.2025" readonly class="input-line" />
-          </div>
-          <div class="form-group half">
-            <label data-i18n="compra.regreso">Fecha de regreso</label>
-            <input type="text" value="20.11.2025" readonly class="input-line" />
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="compra.pasajeros">Número de pasajeros</label>
-          <input type="text" value="3" readonly class="input-line" />
-        </div>
-      </section>
-
-      <section class="form-card">
-        <h2 data-i18n="compra.section2">Datos personales</h2>
-
-        <div class="form-group">
-          <label data-i18n="compra.nombre">Nombre</label>
-          <input type="text" id="compra-nombre" class="input-bg" />
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="compra.apellidos">Apellidos</label>
-          <input type="text" id="compra-apellidos" class="input-bg" />
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="compra.email">Correo electrónico</label>
-          <input type="email" id="compra-email" class="input-bg" />
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="compra.telefono">Número de teléfono</label>
-          <input type="tel" id="compra-telefono" class="input-bg" />
-        </div>
-
-
-      </section>
-
-      <section class="form-card">
-        <h2 data-i18n="compra.section3">¿Algún pasajero tiene alergias o intolerancias alimentarias?</h2>
-
-        <div class="checkbox-group">
-          <input type="checkbox" id="check-allergies" />
-          <label for="check-allergies" data-i18n="compra.alergias-si">Sí, hay pasajeros con alergias</label>
-        </div>
-
-        <div id="allergies-details" class="conditional-section" style="display: none;">
-          <label class="small-label" data-i18n="compra.alergias-desc">Describe las alergias o intolerancias</label>
-          <textarea class="input-bg" placeholder="Escribe aquí..." rows="4"></textarea>
-        </div>
-      </section>
-
-      <section class="form-card">
-        <h2 data-i18n="compra.section4">¿Viajas con acompañantes?</h2>
-
-        <div class="checkbox-group">
-          <input type="checkbox" id="check-companions" />
-          <label for="check-companions" data-i18n="compra.acompanantes-si">Sí, viajo con acompañantes</label>
-        </div>
-
-        <div id="companions-details" class="conditional-section" style="display: none;">
-          <div class="form-group">
-            <label data-i18n="compra.cuantos">¿Cuantos acompañantes tienes?</label>
-            <input type="number" min="1" max="10" class="input-bg small-input" />
-          </div>
-
-          <hr class="separator" />
-
-          <div class="form-group">
-            <label data-i18n="compra.nombre-acomp">Nombre del acompañante 1</label>
-            <input type="text" class="input-bg" />
-          </div>
-          <div class="form-group">
-            <label data-i18n="compra.apellido-acomp">Apellido del acompañante 1</label>
-            <input type="text" class="input-bg" />
-          </div>
-          <div class="form-group">
-            <label data-i18n="compra.email-acomp">Correo electrónico del acompañante 1</label>
-            <input type="email" class="input-bg" />
-          </div>
-        </div>
-      </section>
-
-      <section class="form-card">
-        <h2 data-i18n="compra.section5">¿Viajas con mascotas?</h2>
-
-        <div class="checkbox-group">
-          <input type="checkbox" id="check-pets" />
-          <label for="check-pets" data-i18n="compra.mascotas-si">Sí, viajo con mascotas</label>
-        </div>
-
-        <div id="pets-details" class="conditional-section" style="display: none;">
-          <div class="form-group">
-            <label data-i18n="compra.num-mascotas">¿Número de mascotas?</label>
-            <input type="number" min="1" max="5" class="input-bg small-input" />
-          </div>
-
-          <div class="form-group">
-            <label data-i18n="compra.tipo-mascota">¿Tipo de mascota?</label>
-            <select class="input-bg">
-              <option value="">Selecciona...</option>
-              <option value="perro">Perro</option>
-              <option value="gato">Gato</option>
-              <option value="otro">Otro</option>
-            </select>
-          </div>
-        </div>
-      </section>
-
-      <div class="pay-button-container">
-        <button type="submit" class="btn-pay" data-i18n="compra.btn-pagar">Realizar pago</button>
       </div>
-    </form>
-  </main>
-  <script src="../script/compra.js"></script>
-  <script src="../script/translate.js"></script>
-  <script src="../script/daltonismo.js"></script>
-  <script src="../script/font-size.js"></script>
-  <script src="../script/auth-system.js"></script>
-  <script src="../script/session-manager.js"></script>
-  <script src="../script/compra-handler.js"></script>
-</body>
+    </header>
 
+    <main class="checkout-container">
+      <h1 class="page-title" data-i18n="compra.title">Completa tu reserva</h1>
+
+      <form action="javascript:void(0);" method="POST" class="checkout-form">
+        <section class="form-card">
+          <h2 data-i18n="compra.section1">Datos del viaje</h2>
+
+          <div class="form-group">
+            <label data-i18n="compra.origen">Origen</label>
+            <input
+              type="text"
+              value="Madrid, España"
+              readonly
+              class="input-line"
+            />
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="compra.destino">Destino</label>
+            <input
+              type="text"
+              value="Bangkok, Tailandia"
+              readonly
+              class="input-line"
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group half">
+              <label data-i18n="compra.salida">Fecha de salida</label>
+              <input
+                type="text"
+                value="13.11.2025"
+                readonly
+                class="input-line"
+              />
+            </div>
+            <div class="form-group half">
+              <label data-i18n="compra.regreso">Fecha de regreso</label>
+              <input
+                type="text"
+                value="20.11.2025"
+                readonly
+                class="input-line"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="compra.pasajeros">Número de pasajeros</label>
+            <input type="text" value="3" readonly class="input-line" />
+          </div>
+        </section>
+
+        <section class="form-card">
+          <h2 data-i18n="compra.section2">Datos personales</h2>
+
+          <div class="form-group">
+            <label data-i18n="compra.nombre">Nombre</label>
+            <input type="text" id="compra-nombre" class="input-bg" />
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="compra.apellidos">Apellidos</label>
+            <input type="text" id="compra-apellidos" class="input-bg" />
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="compra.email">Correo electrónico</label>
+            <input type="email" id="compra-email" class="input-bg" />
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="compra.telefono">Número de teléfono</label>
+            <input type="tel" id="compra-telefono" class="input-bg" />
+          </div>
+        </section>
+
+        <section class="form-card">
+          <h2 data-i18n="compra.section3">
+            ¿Algún pasajero tiene alergias o intolerancias alimentarias?
+          </h2>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="check-allergies" />
+            <label for="check-allergies" data-i18n="compra.alergias-si"
+              >Sí, hay pasajeros con alergias</label
+            >
+          </div>
+
+          <div
+            id="allergies-details"
+            class="conditional-section"
+            style="display: none"
+          >
+            <label class="small-label" data-i18n="compra.alergias-desc"
+              >Describe las alergias o intolerancias</label
+            >
+            <textarea
+              class="input-bg"
+              placeholder="Escribe aquí..."
+              rows="4"
+            ></textarea>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <h2 data-i18n="compra.section4">¿Viajas con acompañantes?</h2>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="check-companions" />
+            <label for="check-companions" data-i18n="compra.acompanantes-si"
+              >Sí, viajo con acompañantes</label
+            >
+          </div>
+
+          <div
+            id="companions-details"
+            class="conditional-section"
+            style="display: none"
+          >
+            <div class="form-group">
+              <label data-i18n="compra.cuantos"
+                >¿Cuantos acompañantes tienes?</label
+              >
+              <input
+                type="number"
+                id="num-companions"
+                min="1"
+                max="10"
+                class="input-bg small-input"
+              />
+            </div>
+
+            <div id="companions-forms-container"></div>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <h2 data-i18n="compra.section5">¿Viajas con mascotas?</h2>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="check-pets" />
+            <label for="check-pets" data-i18n="compra.mascotas-si"
+              >Sí, viajo con mascotas</label
+            >
+          </div>
+
+          <div
+            id="pets-details"
+            class="conditional-section"
+            style="display: none"
+          >
+            <div class="form-group">
+              <label data-i18n="compra.num-mascotas"
+                >¿Número de mascotas?</label
+              >
+              <input
+                type="number"
+                id="num-pets"
+                min="1"
+                max="5"
+                class="input-bg small-input"
+              />
+            </div>
+
+            <div id="pets-forms-container"></div>
+          </div>
+        </section>
+
+        <div class="pay-button-container">
+          <button
+            type="button"
+            id="btn-pay"
+            class="btn-pay"
+            data-i18n="compra.btn-pagar"
+          >
+            Realizar pago
+          </button>
+        </div>
+      </form>
+    </main>
+    <script src="../script/compra.js"></script>
+    <script src="../script/translate.js"></script>
+    <script src="../script/daltonismo.js"></script>
+    <script src="../script/font-size.js"></script>
+    <script src="../script/auth-system.js"></script>
+    <script src="../script/session-manager.js"></script>
+    <script src="../script/compra-handler.js"></script>
+  </body>
 </html>

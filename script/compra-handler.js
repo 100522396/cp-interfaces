@@ -1,37 +1,57 @@
 // script/compra-handler.js
 // Autocompleta los datos del usuario en la página de compra
 
-(function() {
-  'use strict';
+(function () {
+  "use strict";
 
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener("DOMContentLoaded", function () {
     // Obtener usuario actual
     var currentUser = AuthSystem.getCurrentUser();
-    
+
     // Solo autocompletar si hay usuario logueado
     if (!currentUser) {
       return; // No hay usuario, dejar campos vacíos
     }
 
     // Autocompletar campos con datos del usuario
-    var nombreInput = document.getElementById('compra-nombre');
+    var nombreInput = document.getElementById("compra-nombre");
     if (nombreInput && currentUser.nombre) {
       nombreInput.value = currentUser.nombre;
     }
 
-    var apellidosInput = document.getElementById('compra-apellidos');
+    var apellidosInput = document.getElementById("compra-apellidos");
     if (apellidosInput && currentUser.apellidos) {
       apellidosInput.value = currentUser.apellidos;
     }
 
-    var emailInput = document.getElementById('compra-email');
+    var emailInput = document.getElementById("compra-email");
     if (emailInput && currentUser.email) {
       emailInput.value = currentUser.email;
     }
 
-    var telefonoInput = document.getElementById('compra-telefono');
+    var telefonoInput = document.getElementById("compra-telefono");
     if (telefonoInput && currentUser.telefono) {
       telefonoInput.value = currentUser.telefono;
+    }
+
+    // Manejar el botón de pago
+    var payButton = document.getElementById("btn-pay");
+    if (payButton) {
+      payButton.addEventListener("click", function () {
+        // Validar datos del formulario
+        var nombre = document.getElementById("compra-nombre").value;
+        var apellidos = document.getElementById("compra-apellidos").value;
+        var email = document.getElementById("compra-email").value;
+        var telefono = document.getElementById("compra-telefono").value;
+
+        if (!nombre || !apellidos || !email || !telefono) {
+          alert("Por favor, completa todos los campos obligatorios.");
+          return;
+        }
+
+        // Simular procesamiento del pago
+        alert("Pago realizado con éxito. ¡Gracias por tu compra!");
+      });
     }
   });
 })();
