@@ -2,188 +2,190 @@
 
 /* === HERO SECTION === */
 .hero-container {
-    /* Background image settings */
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/main-landing.png');
-    background-size: cover;
-    background-position: center;
-    height: 85vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  /* Background image settings */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/main-landing.png");
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* === HOME HEADER STYLES === */
 .home-header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    background-color: transparent !important;
-    box-shadow: none !important;
-    z-index: 10;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  z-index: 10;
 }
 
 /* White text for logo and language selector */
 .logo-text {
-    font-size: 1.5rem;
-    color: white;
+  font-size: 1.5rem;
+  color: white;
 }
 
 .lang-white {
-    color: white;
+  color: white;
 }
 
 /* Nav links in white */
 .home-header nav a {
-    color: white !important;
-    font-size: 0.8rem;
+  color: white !important;
+  font-size: 0.8rem;
 }
 
 /* Semi-transparent login button */
 .home-header .btn-login {
-    background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /* === HERO TEXT CONTENT === */
 .hero-content {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .hero-subtitle {
-    color: white;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    font-weight: normal;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: normal;
 }
 
 .hero-title {
-    color: white;
-    font-size: 5rem; 
-    line-height: 1;
-    font-weight: 900;
-    font-family: 'Arial Black', 'Impact', sans-serif; 
-    text-transform: uppercase;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  color: white;
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 900;
+  font-family: "Arial Black", "Impact", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* === CONTENT SECTIONS === */
 .content-section {
-    padding: 4rem 2rem;
-    background-color: #ffffff;
+  padding: 4rem 2rem;
+  background-color: #ffffff;
 }
 
 .grey-bg {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 .section-title {
-    color: var(--accent-color);
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 3rem;
+  color: var(--accent-color);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
 }
 
 /* === CARDS GRID === */
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Responsive grid */
 @media (max-width: 900px) {
-    .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* === CARD STYLES === */
 .mini-card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
-    cursor: pointer;
-    height: 100%;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+  cursor: pointer;
+  height: 100%;
 }
 
 .mini-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .mini-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
 }
 
 /* Card link wrapper */
 .card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    height: 100%;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
 }
 
 .card-text {
-    padding: 1.2rem;
+  padding: 1.2rem;
 }
 
 /* Kicker text style */
 .kicker {
-    display: block;
-    color: #ff6b6b;
-    font-size: 0.7rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-    letter-spacing: 1px;
+  display: block;
+  color: #c13030;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
 }
 
 .card-text h3 {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.4;
-    font-weight: 700;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+  font-weight: 700;
 }
 
 /* === FOOTER ADJUSTMENTS === */
 .site-footer .footer-content {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
-.footer-links-col strong, 
+.footer-links-col strong,
 .footer-info-col strong {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-    color: #333;
-    text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  text-transform: uppercase;
 }
 
 .footer-links-col {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
 .footer-info-col p {
-    margin-bottom: 0.2rem;
-    font-size: 0.9rem;
-    font-weight: bold;
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #1a1a1a;
 }
 
 .socials {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    letter-spacing: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
 }

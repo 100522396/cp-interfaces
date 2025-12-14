@@ -17,7 +17,7 @@
 
 .comunidad-subtitulo {
   text-align: center;
-  color: #666;
+  color: #555;
   font-size: 1rem;
   margin-bottom: 2rem;
 }
@@ -33,7 +33,7 @@
 }
 
 .mensaje-login a {
-  color: var(--primary-orange);
+  color: #b37400;
   font-weight: bold;
   text-decoration: none;
 }
@@ -103,10 +103,15 @@
   box-shadow: 0 0 0 3px rgba(242, 169, 0, 0.15);
 }
 
+.comentario-textarea::placeholder {
+  color: #555;
+  opacity: 1; /* Firefox fix */
+}
+
 .btn-publicar {
   align-self: flex-end;
   background: var(--primary-orange);
-  color: white;
+  color: #000000;
   border: none;
   padding: 0.6rem 1.5rem;
   border-radius: 20px;
@@ -134,7 +139,7 @@
 }
 
 .comentarios-orden {
-  color: #888;
+  color: #666;
   font-size: 0.85rem;
   margin-bottom: 1.5rem;
 }
@@ -147,7 +152,7 @@
 
 .sin-comentarios {
   text-align: center;
-  color: #888;
+  color: #666;
   padding: 3rem 1rem;
   background: #f9f9f9;
   border-radius: 10px;
@@ -208,7 +213,7 @@
 
 .comentario-fecha {
   font-size: 0.8rem;
-  color: #999;
+  color: #666;
 }
 
 .comentario-texto {
@@ -293,6 +298,7 @@
 /* === MODO DALTONICO === */
 body.deuteranopia-mode .btn-publicar {
   background: #0077be;
+  color: #ffffff;
 }
 
 body.deuteranopia-mode .btn-publicar:hover {

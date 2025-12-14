@@ -35,7 +35,7 @@ main {
   border-radius: 50px;
   border: 1px solid #ddd;
   background: var(--white);
-  color: #666;
+  color: #555;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.2s ease;
@@ -49,7 +49,7 @@ main {
 /* Active state for selected filter */
 .filter-chip.active {
   background-color: var(--accent-color);
-  color: var(--white);
+  color: #000000;
   border-color: var(--accent-color);
   box-shadow: 0 4px 6px rgba(232, 124, 65, 0.2);
 }
@@ -101,7 +101,7 @@ main {
 
 /* Country tag style */
 .card-tag {
-  color: var(--accent-color);
+  color: #a04010;
   font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -117,7 +117,7 @@ main {
 
 .card-desc {
   font-size: 0.9rem;
-  color: #666;
+  color: #555;
   line-height: 1.5;
   /* Limit text to 3 lines */
   display: -webkit-box;
@@ -146,7 +146,7 @@ main {
 
 .btn-buy {
   background: var(--accent-color);
-  color: var(--white);
+  color: #000000;
   border: none;
   padding: 0.7rem 1.5rem;
   border-radius: 8px;
@@ -175,8 +175,8 @@ main {
 
 .btn-outline {
   background: transparent;
-  border: 2px solid var(--accent-color);
-  color: var(--accent-color);
+  border: 2px solid #a04010;
+  color: #a04010;
   padding: 0.8rem 2rem;
   border-radius: 8px;
   font-weight: bold;
@@ -186,7 +186,7 @@ main {
 
 .btn-outline:hover {
   background: var(--accent-color);
-  color: var(--white);
+  color: #000000;
 }
 
 /* === FOOTER ADJUSTMENTS === */
@@ -199,7 +199,7 @@ main {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
-  color: #333;
+  color: #1a1a1a;
   text-transform: uppercase;
 }
 
@@ -213,10 +213,34 @@ main {
   margin-bottom: 0.2rem;
   font-size: 0.9rem;
   font-weight: bold;
+  color: #1a1a1a;
 }
 
 .socials {
   margin-top: 1rem;
   font-size: 1.5rem;
   letter-spacing: 0.5rem;
+}
+
+/* === MODO DALTONICO === */
+body.deuteranopia-mode .filter-chip.active {
+  color: #ffffff;
+}
+
+body.deuteranopia-mode .btn-buy {
+  color: #ffffff;
+}
+
+body.deuteranopia-mode .btn-outline {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+body.deuteranopia-mode .btn-outline:hover {
+  background: var(--accent-color);
+  color: #ffffff;
+}
+
+body.deuteranopia-mode .card-tag {
+  color: var(--accent-color);
 }

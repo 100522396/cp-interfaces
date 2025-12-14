@@ -4,7 +4,7 @@
   /* Project Colors */
   --primary-orange: #f2a900;
   /* Main orange */
-  --accent-color: #e87c41;
+  --accent-color: #c45a20;
   /* Text accent */
   --dark-text: #333333;
   --light-gray: #f4f4f4;
@@ -54,7 +54,7 @@ body {
 /* Navigation links */
 .main-nav a {
   text-decoration: none;
-  color: #666;
+  color: #555;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.9rem;
@@ -63,7 +63,7 @@ body {
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: var(--primary-orange);
+  color: #a04010;
 }
 
 /* User buttons section */
@@ -92,7 +92,7 @@ body {
 
 .btn-signup {
   background-color: var(--primary-orange);
-  color: var(--white);
+  color: #1a1a1a;
 }
 
 /* --- FOOTER --- */
@@ -164,7 +164,7 @@ body {
   padding: 8px 16px;
   border: none;
   background: transparent;
-  color: #666;
+  color: #555;
   font-weight: 600;
   font-size: 0.85rem;
   cursor: pointer;
@@ -180,7 +180,7 @@ body {
 
 .lang-btn.active {
   background: var(--primary-orange);
-  color: var(--white);
+  color: #000000;
   box-shadow: 0 2px 8px rgba(242, 169, 0, 0.3);
 }
 
@@ -191,12 +191,12 @@ body {
 }
 
 .lang-toggle.lang-white .lang-btn {
-  color: #666;
+  color: #555;
 }
 
 .lang-toggle.lang-white .lang-btn.active {
   background: var(--primary-orange);
-  color: var(--white);
+  color: #000000;
 }
 
 /* ========================================
@@ -225,18 +225,18 @@ body.deuteranopia-mode .main-nav a.active {
 /* Botones en modo deuteranopia */
 body.deuteranopia-mode .btn-signup {
   background-color: #0077be;
-  color: var(--white);
+  color: #ffffff;
 }
 
 body.deuteranopia-mode .lang-btn.active {
   background: #0077be;
-  color: var(--white);
+  color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 119, 190, 0.3);
 }
 
 body.deuteranopia-mode .lang-toggle.lang-white .lang-btn.active {
   background: #0077be;
-  color: var(--white);
+  color: #ffffff;
 }
 
 /* Footer en modo deuteranopia */
@@ -282,7 +282,7 @@ html.font-size-large {
 
 .welcome-text {
   font-size: 0.9rem;
-  color: #666;
+  color: #555;
 }
 
 .welcome-text strong {
@@ -295,7 +295,7 @@ html.font-size-large {
   border: none;
   padding: 0.4rem 0.9rem;
   border-radius: 5px;
-  color: white;
+  color: #000000;
   font-weight: 600;
   font-size: 0.85rem;
   cursor: pointer;

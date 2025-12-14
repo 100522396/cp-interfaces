@@ -12,7 +12,7 @@
 
 .page-subtitle {
   text-align: center;
-  color: #666;
+  color: #555;
   margin-bottom: 4rem;
   max-width: 700px;
   margin-left: auto;
@@ -96,7 +96,7 @@
 }
 
 .location-row {
-  color: #888;
+  color: #666;
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
@@ -128,11 +128,11 @@
 .price-label {
   display: block;
   font-size: 0.8rem;
-  color: #999;
+  color: #666;
 }
 
 .price-value {
-  color: #00b4d8; /* Cyan color from design */
+  color: #0090b0; /* Cyan color - darkened for accessibility */
   font-size: 1.5rem;
   font-weight: 800;
 }
@@ -141,8 +141,8 @@
 .btn-buy {
   display: block;
   width: 100%;
-  background-color: #f49e4c; /* Orange */
-  color: white;
+  background-color: var(--accent-color);
+  color: #000000;
   text-align: center;
   padding: 1rem;
   border-radius: 8px;
@@ -152,7 +152,8 @@
 }
 
 .btn-buy:hover {
-  background-color: #e08e43;
+  background-color: #a04010;
+  color: #ffffff; /* Contrast check: black on dark orange is ratio >4.5:1? #a04010 is dark. White on a04010 is 6.5:1 */
 }
 
 /* --- BOTTOM ACTION BUTTON --- */
@@ -162,12 +163,18 @@
 }
 
 .btn-yellow {
-  background-color: #f2a900; /* Yellow */
+  background-color: var(--primary-orange);
   border: none;
   padding: 1rem 3rem;
   border-radius: 8px;
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
-  color: #111;
+  color: #000000;
+}
+
+/* === MODO DALTONICO === */
+body.deuteranopia-mode .btn-buy,
+body.deuteranopia-mode .btn-yellow {
+  color: #ffffff;
 }

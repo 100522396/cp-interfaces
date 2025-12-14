@@ -75,12 +75,12 @@
   position: absolute;
   bottom: 5px;
   right: 5px;
-  background: #ff6b6b; /* Salmon color */
+  background: var(--accent-color);
   border: none;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  color: white;
+  color: #000000;
   cursor: pointer;
   border: 2px solid white;
 }
@@ -92,7 +92,7 @@
 }
 
 .profile-info p {
-  color: #666;
+  color: #555;
   font-size: 0.9rem;
 }
 
@@ -160,7 +160,7 @@
 
 .label {
   font-size: 0.8rem;
-  color: #999;
+  color: #666;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -230,7 +230,8 @@ body.deuteranopia-mode .tab-link.active {
 
 /* Botón de editar avatar */
 body.deuteranopia-mode .btn-edit-avatar {
-  background: #9b59b6; /* Púrpura para mejor contraste */
+  background: #0077be; /* Azul consistente */
+  color: #ffffff;
 }
 
 /* Botones de acción */

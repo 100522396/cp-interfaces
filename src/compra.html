@@ -47,9 +47,10 @@
           <h2 data-i18n="compra.section1">Datos del viaje</h2>
 
           <div class="form-group">
-            <label data-i18n="compra.origen">Origen</label>
+            <label for="origen-input" data-i18n="compra.origen">Origen</label>
             <input
               type="text"
+              id="origen-input"
               value="Madrid, España"
               readonly
               class="input-line"
@@ -57,9 +58,12 @@
           </div>
 
           <div class="form-group">
-            <label data-i18n="compra.destino">Destino</label>
+            <label for="destino-input" data-i18n="compra.destino"
+              >Destino</label
+            >
             <input
               type="text"
+              id="destino-input"
               value="Bangkok, Tailandia"
               readonly
               class="input-line"
@@ -68,18 +72,24 @@
 
           <div class="form-row">
             <div class="form-group half">
-              <label data-i18n="compra.salida">Fecha de salida</label>
+              <label for="fecha-salida-input" data-i18n="compra.salida"
+                >Fecha de salida</label
+              >
               <input
                 type="text"
+                id="fecha-salida-input"
                 value="13.11.2025"
                 readonly
                 class="input-line"
               />
             </div>
             <div class="form-group half">
-              <label data-i18n="compra.regreso">Fecha de regreso</label>
+              <label for="fecha-regreso-input" data-i18n="compra.regreso"
+                >Fecha de regreso</label
+              >
               <input
                 type="text"
+                id="fecha-regreso-input"
                 value="20.11.2025"
                 readonly
                 class="input-line"
@@ -88,8 +98,16 @@
           </div>
 
           <div class="form-group">
-            <label data-i18n="compra.pasajeros">Número de pasajeros</label>
-            <input type="text" value="3" readonly class="input-line" />
+            <label for="pasajeros-input" data-i18n="compra.pasajeros"
+              >Número de pasajeros</label
+            >
+            <input
+              type="text"
+              id="pasajeros-input"
+              value="3"
+              readonly
+              class="input-line"
+            />
           </div>
         </section>
 
@@ -97,22 +115,28 @@
           <h2 data-i18n="compra.section2">Datos personales</h2>
 
           <div class="form-group">
-            <label data-i18n="compra.nombre">Nombre</label>
+            <label for="compra-nombre" data-i18n="compra.nombre">Nombre</label>
             <input type="text" id="compra-nombre" class="input-bg" />
           </div>
 
           <div class="form-group">
-            <label data-i18n="compra.apellidos">Apellidos</label>
+            <label for="compra-apellidos" data-i18n="compra.apellidos"
+              >Apellidos</label
+            >
             <input type="text" id="compra-apellidos" class="input-bg" />
           </div>
 
           <div class="form-group">
-            <label data-i18n="compra.email">Correo electrónico</label>
+            <label for="compra-email" data-i18n="compra.email"
+              >Correo electrónico</label
+            >
             <input type="email" id="compra-email" class="input-bg" />
           </div>
 
           <div class="form-group">
-            <label data-i18n="compra.telefono">Número de teléfono</label>
+            <label for="compra-telefono" data-i18n="compra.telefono"
+              >Número de teléfono</label
+            >
             <input type="tel" id="compra-telefono" class="input-bg" />
           </div>
         </section>
@@ -161,7 +185,7 @@
             style="display: none"
           >
             <div class="form-group">
-              <label data-i18n="compra.cuantos"
+              <label for="num-companions" data-i18n="compra.cuantos"
                 >¿Cuantos acompañantes tienes?</label
               >
               <input
@@ -193,7 +217,7 @@
             style="display: none"
           >
             <div class="form-group">
-              <label data-i18n="compra.num-mascotas"
+              <label for="num-pets" data-i18n="compra.num-mascotas"
                 >¿Número de mascotas?</label
               >
               <input

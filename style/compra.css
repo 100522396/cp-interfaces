@@ -74,7 +74,7 @@ body {
 .form-group label {
   display: block;
   font-size: 0.8rem;
-  color: #666;
+  color: #555;
   margin-bottom: 0.3rem;
   font-weight: 600;
 }
@@ -138,7 +138,7 @@ body {
 
 .small-label {
   font-size: 0.8rem;
-  color: #666;
+  color: #555;
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -178,8 +178,8 @@ body {
 }
 
 .btn-pay {
-  background-color: #f2a900;
-  color: #111;
+  background-color: var(--primary-orange);
+  color: #000000;
   border: none;
   padding: 1rem 4rem;
   font-size: 1rem;
@@ -192,4 +192,9 @@ body {
 
 .btn-pay:hover {
   transform: scale(1.05);
+}
+
+/* === MODO DALTONICO === */
+body.deuteranopia-mode .btn-pay {
+  color: #ffffff;
 }

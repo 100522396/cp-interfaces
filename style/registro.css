@@ -55,7 +55,7 @@ body {
 }
 
 .auth-subtitle {
-  color: #666;
+  color: #555;
   margin-bottom: 2rem;
   font-size: 0.95rem;
 }
@@ -78,7 +78,7 @@ body {
 .form-group label {
   display: block;
   font-size: 0.8rem;
-  color: #666;
+  color: #555;
   margin-bottom: 0.3rem;
   background: white;
   width: fit-content;
@@ -124,7 +124,7 @@ body {
 }
 
 .terms-group a {
-  color: #ff6b6b; /* Red/Salmon color for links */
+  color: #c13030; /* Darkened coral for accessibility */
   text-decoration: none;
 }
 
@@ -154,7 +154,7 @@ body {
 }
 
 .login-redirect a {
-  color: #ff6b6b;
+  color: #c13030;
   text-decoration: none;
   font-weight: bold;
 }
@@ -170,7 +170,7 @@ body {
 .divider span {
   background: #fff;
   padding: 0 10px;
-  color: #999;
+  color: #666;
   font-size: 0.8rem;
 }
 
