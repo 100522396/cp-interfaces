@@ -194,27 +194,14 @@ main {
   align-items: flex-start;
 }
 
-.footer-links-col strong,
-.footer-info-col strong {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  color: #1a1a1a;
-  text-transform: uppercase;
-}
-
+/* .footer-links-col strong styles moved to main.css */
 .footer-links-col {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
 
-.footer-info-col p {
-  margin-bottom: 0.2rem;
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #1a1a1a;
-}
+/* .footer-info-col p styles moved to main.css */
 
 .socials {
   margin-top: 1rem;

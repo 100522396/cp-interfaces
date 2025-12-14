@@ -141,7 +141,7 @@
 .btn-buy {
   display: block;
   width: 100%;
-  background-color: var(--accent-color);
+  background-color: var(--primary-orange);
   color: #000000;
   text-align: center;
   padding: 1rem;

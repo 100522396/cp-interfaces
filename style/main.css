@@ -141,6 +141,24 @@ body {
   opacity: 0.8;
 }
 
+/* Centralized Footer Typography */
+.footer-links-col strong,
+.footer-info-col strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.footer-info-col p {
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+
 /* --- LANGUAGE TOGGLE BUTTON --- */
 .lang-toggle {
   display: inline-flex;
