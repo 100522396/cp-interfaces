@@ -1,137 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Cuenta | MoSinFron</title>
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/mi-cuenta.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Cuenta | MoSinFron</title>
-  <link rel="stylesheet" href="../style/main.css" />
-  <link rel="stylesheet" href="../style/mi-cuenta.css" />
-</head>
-
-<body>
-  <header class="site-header home-header">
-    <div class="logo-container">
-      <a href="index.html" class="logo-link">
-        <img src="../images/black-logo.png" alt="Volver al inicio" class="logo-img" />
-      </a>
-    </div>
-
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html" data-i18n="nav.destinos">Destinos</a></li>
-        <li><a href="otros-rincones.html" data-i18n="nav.otros-rincones">Otros Rincones</a></li>
-        <li><a href="comunidad.html" data-i18n="nav.comunidad">Comunidad</a></li>
-        <li><a href="mi-cuenta.html" data-i18n="nav.mi-cuenta">Mi Cuenta</a></li>
-        <li><a href="compra.html" data-i18n="nav.compra">Compra</a></li>
-        <li><a href="soporte.html" data-i18n="nav.soporte">Soporte</a></li>
-      </ul>
-    </nav>
-
-    <div class="user-controls">
-      <a href="login.html" class="btn-login" data-i18n="btn.login">Iniciar sesión</a>
-
-      <a href="registro.html" class="btn-signup" data-i18n="btn.signup">Únete</a>
-
-      <div class="lang-toggle lang-white">
-        <button class="lang-btn active" id="lang-es">ES</button>
-        <button class="lang-btn" id="lang-en">EN</button>
-        
-        <button class="btn-font-size" id="btn-font-size" title="Cambiar tamaño de fuente">🔤 A</button>
-      </div>
-    </div>
-  </header>
-
-  <main class="account-container">
-    <div class="profile-header">
-      <div class="banner-bg">
-        <button class="btn-accessibility" data-i18n="cuenta.btn-daltonico">👁️ Modo Daltónico</button>
+  <body>
+    <header class="site-header home-header">
+      <div class="logo-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="../images/black-logo.png"
+            alt="Volver al inicio"
+            class="logo-img"
+          />
+        </a>
       </div>
 
-      <div class="profile-info">
-        <div class="avatar-wrapper">
-          <img id="profile-avatar" src="../images/avatar-john.jpg" alt="Avatar" class="avatar-large" />
-          <button class="btn-edit-avatar" id="btn-edit-avatar">✏️</button>
-          <input type="file" id="avatar-file-input" accept="image/*" style="display: none;" />
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.destinos">Destinos</a></li>
+          <li>
+            <a href="otros-rincones.html" data-i18n="nav.otros-rincones"
+              >Otros Rincones</a
+            >
+          </li>
+          <li>
+            <a href="comunidad.html" data-i18n="nav.comunidad">Comunidad</a>
+          </li>
+          <li>
+            <a href="mi-cuenta.html" data-i18n="nav.mi-cuenta">Mi Cuenta</a>
+          </li>
+          <li><a href="compra.html" data-i18n="nav.compra">Compra</a></li>
+          <li><a href="soporte.html" data-i18n="nav.soporte">Soporte</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-controls">
+        <a href="login.html" class="btn-login" data-i18n="btn.login"
+          >Iniciar sesión</a
+        >
+
+        <a href="registro.html" class="btn-signup" data-i18n="btn.signup"
+          >Únete</a
+        >
+
+        <div class="lang-toggle lang-white">
+          <button class="lang-btn active" id="lang-es">ES</button>
+          <button class="lang-btn" id="lang-en">EN</button>
+
+          <button
+            class="btn-font-size"
+            id="btn-font-size"
+            title="Cambiar tamaño de fuente"
+          >
+            🔤 A
+          </button>
         </div>
-        <h1 id="profile-name">Usuario</h1>
-        <p id="profile-email">email@example.com</p>
       </div>
-    </div>
+    </header>
 
-    <div class="tabs-nav">
-      <a href="#" class="tab-link active" data-i18n="cuenta.tab1">Cuenta</a>
-      <a href="#" class="tab-link" data-i18n="cuenta.tab2">Historial</a>
-      <a href="#" class="tab-link" data-i18n="cuenta.tab3">Métodos de pago</a>
-    </div>
+    <main class="account-container">
+      <div class="profile-header">
+        <div class="banner-bg">
+          <button class="btn-accessibility" data-i18n="cuenta.btn-daltonico">
+            👁️ Modo Daltónico
+          </button>
+        </div>
 
-    <section class="tab-content">
-      <h2 class="section-title" data-i18n="cuenta.section-title">Cuenta</h2>
+        <div class="profile-info">
+          <div class="avatar-wrapper">
+            <img
+              id="profile-avatar"
+              src="../images/lago-baikal.png"
+              alt="Avatar"
+              class="avatar-large"
+            />
+            <button class="btn-edit-avatar" id="btn-edit-avatar">✏️</button>
+            <input
+              type="file"
+              id="avatar-file-input"
+              accept="image/*"
+              style="display: none"
+            />
+          </div>
+          <h1 id="profile-name">Usuario</h1>
+          <p id="profile-email">email@example.com</p>
+        </div>
+      </div>
 
-      <div class="details-list">
-        <div class="detail-row">
-          <div class="detail-info">
-            <span class="label" data-i18n="cuenta.nombre">Nombre</span>
-            <span class="value" id="detail-nombre">-</span>
+      <div class="tabs-nav">
+        <a href="#" class="tab-link active" data-i18n="cuenta.tab1">Cuenta</a>
+      </div>
+
+      <section class="tab-content">
+        <h2 class="section-title" data-i18n="cuenta.section-title">Cuenta</h2>
+
+        <div class="details-list">
+          <div class="detail-row">
+            <div class="detail-info">
+              <span class="label" data-i18n="cuenta.nombre">Nombre</span>
+              <span class="value" id="detail-nombre">-</span>
+            </div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-info">
+              <span class="label" data-i18n="cuenta.email">Email</span>
+              <span class="value" id="detail-email">-</span>
+            </div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-info">
+              <span class="label" data-i18n="cuenta.password">Contraseña</span>
+              <span class="value">••••••••••••</span>
+            </div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-info">
+              <span class="label" data-i18n="cuenta.telefono"
+                >Número de teléfono</span
+              >
+              <span class="value" id="detail-telefono">-</span>
+            </div>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="detail-row">
-          <div class="detail-info">
-            <span class="label" data-i18n="cuenta.email">Email</span>
-            <span class="value" id="detail-email">-</span>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links-col">
+          <a href="index.html"><strong data-i18n="footer.home">HOME</strong></a>
+          <a href="index.html"
+            ><strong data-i18n="footer.destinos">DESTINOS</strong></a
+          >
+          <a href="otros-rincones.html"
+            ><strong data-i18n="footer.otros">OTROS RINCONES</strong></a
+          >
+          <a href="comunidad.html"
+            ><strong data-i18n="footer.comunidad">COMUNIDAD</strong></a
+          >
+          <a href="mi-cuenta.html"
+            ><strong data-i18n="footer.cuenta">MI CUENTA</strong></a
+          >
+          <a href="compra.html"
+            ><strong data-i18n="footer.compra">COMPRA</strong></a
+          >
+          <a href="soporte.html"
+            ><strong data-i18n="footer.soporte">SOPORTE</strong></a
+          >
+        </div>
+
+        <div class="footer-info-col">
+          <strong>INFO@MOCHILEROSSINFRONTERAS.COM</strong>
+          <p>CALLE SIRIO, N66, 28007 MADRID</p>
+          <p>91-993-3578</p>
+          <div class="socials">
+            <a href="#"><img src="../images/icon-fb.png" alt="Facebook" /></a>
+            <a href="#"><img src="../images/icon-tw.png" alt="Twitter" /></a>
+            <a href="#"><img src="../images/icon-li.png" alt="LinkedIn" /></a>
           </div>
         </div>
-
-        <div class="detail-row">
-          <div class="detail-info">
-            <span class="label" data-i18n="cuenta.password">Contraseña</span>
-            <span class="value">••••••••••••</span>
-          </div>
-        </div>
-
-        <div class="detail-row">
-          <div class="detail-info">
-            <span class="label" data-i18n="cuenta.telefono">Número de teléfono</span>
-            <span class="value" id="detail-telefono">-</span>
-          </div>
-        </div>
-
-
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-links-col">
-        <a href="index.html"><strong data-i18n="footer.home">HOME</strong></a>
-        <a href="index.html"><strong data-i18n="footer.destinos">DESTINOS</strong></a>
-        <a href="otros-rincones.html"><strong data-i18n="footer.otros">OTROS RINCONES</strong></a>
-        <a href="comunidad.html"><strong data-i18n="footer.comunidad">COMUNIDAD</strong></a>
-        <a href="mi-cuenta.html"><strong data-i18n="footer.cuenta">MI CUENTA</strong></a>
-        <a href="compra.html"><strong data-i18n="footer.compra">COMPRA</strong></a>
-        <a href="soporte.html"><strong data-i18n="footer.soporte">SOPORTE</strong></a>
-      </div>
-
-      <div class="footer-info-col">
-        <strong>INFO@MOCHILEROSSINFRONTERAS.COM</strong>
-        <p>CALLE SIRIO, N66, 28007 MADRID</p>
-        <p>91-993-3578</p>
-        <div class="socials">
-          <a href="#"><img src="../images/icon-fb.png" alt="Facebook" /></a>
-          <a href="#"><img src="../images/icon-tw.png" alt="Twitter" /></a>
-          <a href="#"><img src="../images/icon-li.png" alt="LinkedIn" /></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="../script/translate.js"></script>
-  <script src="../script/daltonismo.js"></script>
-  <script src="../script/font-size.js"></script>
-  <script src="../script/auth-system.js"></script>
-  <script src="../script/session-manager.js"></script>
-  <script src="../script/mi-cuenta-handler.js"></script>
-</body>
-
+    </footer>
+    <script src="../script/translate.js"></script>
+    <script src="../script/daltonismo.js"></script>
+    <script src="../script/font-size.js"></script>
+    <script src="../script/auth-system.js"></script>
+    <script src="../script/session-manager.js"></script>
+    <script src="../script/mi-cuenta-handler.js"></script>
+  </body>
 </html>
