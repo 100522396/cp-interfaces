@@ -92,7 +92,7 @@
           ? avatarInput.files[0]
           : null;
 
-      // Validate avatar (optional)
+      // Validate avatar
       if (avatarFile) {
         var validTypes = ["image/jpeg", "image/png", "image/webp"];
         if (validTypes.indexOf(avatarFile.type) === -1) {

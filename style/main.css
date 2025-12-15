@@ -1,7 +1,7 @@
 /* style/main.css */
 
 :root {
-  /* Project Colors */
+  /* Project colors */
   --primary-orange: #f2a900;
   /* Main orange */
   --accent-color: #c45a20;
@@ -13,7 +13,7 @@
   /* Footer background */
 }
 
-/* Global Reset */
+/* Global reset */
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +30,7 @@ body {
   min-height: 100vh;
 }
 
-/* --- HEADER & NAVIGATION --- */
+/* Header and navigation */
 .site-header {
   background-color: var(--white);
   padding: 1rem 2rem;
@@ -95,7 +95,7 @@ body {
   color: #1a1a1a;
 }
 
-/* --- FOOTER --- */
+/* Footer */
 .site-footer {
   background-color: var(--footer-bg);
   padding: 3rem 2rem;
@@ -111,7 +111,7 @@ body {
   gap: 2rem;
 }
 
-/* --- FOOTER LINKS --- */
+/* Footer links */
 
 .footer-links-col a {
   text-decoration: none;
@@ -129,7 +129,7 @@ body {
   color: var(--white);
 }
 
-/* -- LOGO -- */
+/* Logo */
 .logo-container a {
   text-decoration: none;
   display: flex;
@@ -141,7 +141,7 @@ body {
   opacity: 0.8;
 }
 
-/* Centralized Footer Typography */
+/* Footer typography */
 .footer-links-col strong,
 .footer-info-col strong {
   display: block;
@@ -159,7 +159,7 @@ body {
   color: #1a1a1a;
 }
 
-/* --- LANGUAGE TOGGLE BUTTON --- */
+/* Language toggle button */
 .lang-toggle {
   display: inline-flex;
   align-items: center;
@@ -202,7 +202,7 @@ body {
   box-shadow: 0 2px 8px rgba(242, 169, 0, 0.3);
 }
 
-/* White theme for specific headers */
+/* White theme for headers */
 .lang-toggle.lang-white {
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(51, 51, 51, 0.1);
@@ -217,7 +217,7 @@ body {
   color: #000000;
 }
 
-/* Colorblind mode styles */
+/* Colorblind mode */
 
 body.deuteranopia-mode {
   --primary-orange: #0077be;
@@ -225,13 +225,13 @@ body.deuteranopia-mode {
   --footer-bg: #4a9eff;
 }
 
-/* Nav colorblind mode */
+/* Nav colorblind */
 body.deuteranopia-mode .main-nav a:hover,
 body.deuteranopia-mode .main-nav a.active {
   color: #0077be;
 }
 
-/* Buttons colorblind mode */
+/* Buttons colorblind */
 body.deuteranopia-mode .btn-signup {
   background-color: #0077be;
   color: #ffffff;
@@ -248,7 +248,7 @@ body.deuteranopia-mode .lang-toggle.lang-white .lang-btn.active {
   color: #ffffff;
 }
 
-/* Footer colorblind mode */
+/* Footer colorblind */
 body.deuteranopia-mode .site-footer {
   background-color: #4a9eff;
 }
