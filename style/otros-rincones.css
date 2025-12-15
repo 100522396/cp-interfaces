@@ -1,6 +1,6 @@
 /* style/otros-rincones.css */
 
-/* Main layout wrapper */
+/* Main layout */
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -8,7 +8,7 @@ main {
   width: 100%;
 }
 
-/* Page header style */
+/* Page header */
 .page-title {
   text-align: center;
   color: var(--accent-color);
@@ -16,12 +16,12 @@ main {
   font-size: 2.5rem;
 }
 
-/* --- FILTERS SECTION --- */
+/* Filters section */
 .filters-section {
   margin-bottom: 3rem;
 }
 
-/* Flex container for chips */
+/* Filter chips container */
 .filters-wrapper {
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@ main {
   gap: 1rem;
 }
 
-/* Filter button style */
+/* Filter button */
 .filter-chip {
   padding: 0.6rem 1.5rem;
   border-radius: 50px;
@@ -46,7 +46,7 @@ main {
   color: var(--accent-color);
 }
 
-/* Active state for selected filter */
+/* Active filter */
 .filter-chip.active {
   background-color: var(--accent-color);
   color: #000000;
@@ -54,16 +54,15 @@ main {
   box-shadow: 0 4px 6px rgba(232, 124, 65, 0.2);
 }
 
-/* --- RESULTS GRID --- */
+/* Results grid */
 .results-grid {
   display: grid;
-  /* Automatic responsive columns */
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
 }
 
-/* --- CARD STYLES --- */
+/* Card styles */
 .card {
   background: var(--white);
   border-radius: 12px;
@@ -74,7 +73,7 @@ main {
   flex-direction: column;
 }
 
-/* Lift effect on hover */
+/* Hover effect */
 .card:hover {
   transform: translateY(-5px);
 }
@@ -89,7 +88,6 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Prevent image distortion */
 }
 
 .card-content {
@@ -99,7 +97,7 @@ main {
   flex: 1;
 }
 
-/* Country tag style */
+/* Country tag */
 .card-tag {
   color: #a04010;
   font-size: 0.75rem;
@@ -119,7 +117,7 @@ main {
   font-size: 0.9rem;
   color: #555;
   line-height: 1.5;
-  /* Limit text to 3 lines */
+  /* Limit to 3 lines */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;
@@ -128,7 +126,7 @@ main {
   margin-bottom: 1rem;
 }
 
-/* Card footer with price and button */
+/* Card footer */
 .card-footer {
   display: flex;
   justify-content: space-between;
@@ -167,7 +165,7 @@ main {
   transform: translateY(0);
 }
 
-/* --- LOAD MORE BUTTON --- */
+/* Load more button */
 .load-more-wrapper {
   text-align: center;
   margin-top: 2rem;
@@ -189,7 +187,7 @@ main {
   color: #000000;
 }
 
-/* === FOOTER ADJUSTMENTS === */
+/* Footer */
 .site-footer .footer-content {
   align-items: flex-start;
 }
@@ -209,7 +207,7 @@ main {
   letter-spacing: 0.5rem;
 }
 
-/* === MODO DALTONICO === */
+/* Colorblind mode */
 body.deuteranopia-mode .filter-chip.active {
   color: #ffffff;
 }

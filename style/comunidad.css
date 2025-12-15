@@ -1,7 +1,7 @@
 /* style/comunidad.css */
-/* Estilos simplificados para la página de comunidad */
+/* Community page styles */
 
-/* === CONTENEDOR PRINCIPAL === */
+/* Main container */
 .comunidad-container {
   max-width: 800px;
   margin: 0 auto;
@@ -22,7 +22,7 @@
   margin-bottom: 2rem;
 }
 
-/* === MENSAJE LOGIN === */
+/* Login message */
 .mensaje-login {
   background: #fff3cd;
   border: 1px solid #ffc107;
@@ -42,7 +42,7 @@
   text-decoration: underline;
 }
 
-/* === SECCION NUEVO COMENTARIO === */
+/* New comment section */
 .nuevo-comentario-section {
   margin-bottom: 2rem;
 }
@@ -105,7 +105,7 @@
 
 .comentario-textarea::placeholder {
   color: #555;
-  opacity: 1; /* Firefox fix */
+  opacity: 1;
 }
 
 .btn-publicar {
@@ -127,7 +127,7 @@
   box-shadow: 0 4px 12px rgba(242, 169, 0, 0.3);
 }
 
-/* === SECCION LISTA COMENTARIOS === */
+/* Comments list */
 .comentarios-section {
   margin-top: 1rem;
 }
@@ -159,7 +159,7 @@
   font-style: italic;
 }
 
-/* === TARJETA DE COMENTARIO === */
+/* Comment card */
 .comentario-card {
   background: white;
   border-radius: 12px;
@@ -223,7 +223,7 @@
   margin-bottom: 1rem;
 }
 
-/* === FOOTER DEL COMENTARIO (LIKES) === */
+/* Comment footer and likes */
 .comentario-footer {
   display: flex;
   align-items: center;
@@ -269,7 +269,7 @@
   font-weight: 600;
 }
 
-/* === RESPONSIVE === */
+/* Responsive */
 @media (max-width: 600px) {
   .comunidad-container {
     padding: 1rem;
@@ -295,7 +295,7 @@
   }
 }
 
-/* === MODO DALTONICO === */
+/* Colorblind mode */
 body.deuteranopia-mode .btn-publicar {
   background: #0077be;
   color: #ffffff;

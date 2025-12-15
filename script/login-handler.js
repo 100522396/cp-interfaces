@@ -1,52 +1,52 @@
 // script/login-handler.js
-// Manejo del formulario de login
+// Login form handler
 
-(function() {
-  'use strict';
+(function () {
+  "use strict";
 
-  // Esperar a que el DOM esté listo
-  document.addEventListener('DOMContentLoaded', function() {
-    var form = document.querySelector('.login-form');
-    if (!form) return; // Si no estamos en la página de login, salir
+  // Wait for DOM to be ready
+  document.addEventListener("DOMContentLoaded", function () {
+    var form = document.querySelector(".login-form");
+    if (!form) return;
 
-    // Elementos del formulario
-    var emailInput = document.getElementById('login-email');
-    var passwordInput = document.getElementById('login-password');
-    var rememberCheckbox = document.getElementById('remember');
+    // Form elements
+    var emailInput = document.getElementById("login-email");
+    var passwordInput = document.getElementById("login-password");
+    var rememberCheckbox = document.getElementById("remember");
 
-    // Manejo del envío del formulario
-    form.addEventListener('submit', function(e) {
+    // Handle form submit
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // Obtener valores
-      var email = emailInput ? emailInput.value.trim() : '';
-      var password = passwordInput ? passwordInput.value : '';
+      // Get values
+      var email = emailInput ? emailInput.value.trim() : "";
+      var password = passwordInput ? passwordInput.value : "";
 
-      // Validaciones básicas
+      // Basic validations
       if (!email) {
-        alert('Por favor, introduce tu email');
+        alert("Por favor, introduce tu email");
         if (emailInput) emailInput.focus();
         return;
       }
 
       if (!password) {
-        alert('Por favor, introduce tu contraseña');
+        alert("Por favor, introduce tu contraseña");
         if (passwordInput) passwordInput.focus();
         return;
       }
 
-      // Intentar iniciar sesión
+      // Try to login
       var result = AuthSystem.login(email, password);
 
       if (result.success) {
-        alert('¡Bienvenido/a de nuevo!');
-        // Redirigir a la página principal
-        window.location.href = 'index.html';
+        alert("¡Bienvenido/a de nuevo!");
+        // Redirect to home page
+        window.location.href = "index.html";
       } else {
-        alert('Error: ' + result.error);
-        // Limpiar contraseña
+        alert("Error: " + result.error);
+        // Clear password
         if (passwordInput) {
-          passwordInput.value = '';
+          passwordInput.value = "";
           passwordInput.focus();
         }
       }

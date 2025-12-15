@@ -5,10 +5,10 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 3rem 2rem;
-  min-height: 60vh; /* Ensure footer stays down if little content */
+  min-height: 60vh;
 }
 
-/* Title style */
+/* Title */
 .page-title {
   font-size: 2.5rem;
   font-weight: 800;
@@ -16,26 +16,26 @@
   color: #000;
 }
 
-/* FAQ List wrapper */
+/* FAQ list */
 .faq-list {
   display: flex;
   flex-direction: column;
 }
 
-/* Individual FAQ item */
+/* FAQ item */
 .faq-item {
-  border-top: 1px solid #d0d7de; /* Light blue-grey line */
+  border-top: 1px solid #d0d7de;
   padding: 1.5rem 0;
 }
 
-/* Last item needs bottom border too */
+/* Last item border */
 .faq-item:last-child {
   border-bottom: 1px solid #d0d7de;
 }
 
-/* The clickable question part */
+/* Question part */
 .faq-question {
-  list-style: none; /* Hide default triangle */
+  list-style: none;
   font-size: 1.2rem;
   font-weight: 700;
   color: #111;
@@ -46,30 +46,42 @@
   outline: none;
 }
 
-/* Remove default marker in some browsers */
+/* Remove default marker */
 .faq-question::-webkit-details-marker {
   display: none;
 }
 
-/* The "X" or "+" icon */
+/* Icon */
 .icon {
-  color: var(--accent-color); /* Darker orange for accessibility */
+  color: var(--accent-color);
   font-size: 1.2rem;
   font-weight: bold;
   transition: transform 0.3s;
 }
 
-/* Rotate icon when closed (optional effect) */
+/* Rotate icon when closed */
 details:not([open]) .icon {
-  transform: rotate(
-    45deg
-  ); /* Make it look like a + if you want, or just static X */
+  transform: rotate(45deg);
 }
 
-/* The answer text */
+/* Answer text */
 .faq-answer {
   margin-top: 1rem;
   color: #555;
   line-height: 1.6;
   font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .faq-question {
+    font-size: 1rem;
+  }
+  .support-container {
+    padding: 2rem 1rem;
+  }
 }

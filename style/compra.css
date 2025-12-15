@@ -1,15 +1,15 @@
 /* style/compra.css */
 
-/* === PAGE BACKGROUND === */
+/* Page background */
 body {
-  /* Background image configuration */
+  /* Background image */
   background-image: url("../images/checkout-bg.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
 }
 
-/* === HEADER STYLES === */
+/* Header styles */
 .checkout-header {
   display: flex;
   justify-content: space-between;
@@ -23,7 +23,7 @@ body {
   gap: 2rem;
 }
 
-/* Back link style */
+/* Back link */
 .back-link {
   text-decoration: none;
   color: #111;
@@ -36,7 +36,7 @@ body {
   height: 30px;
 }
 
-/* === MAIN CONTAINER === */
+/* Main container */
 .checkout-container {
   max-width: 600px;
   margin: 0 auto;
@@ -51,7 +51,7 @@ body {
   color: #111;
 }
 
-/* === FORM CARDS === */
+/* Form cards */
 .form-card {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 8px;
@@ -66,7 +66,7 @@ body {
   color: #222;
 }
 
-/* === INPUT FIELDS === */
+/* Input fields */
 .form-group {
   margin-bottom: 1.2rem;
 }
@@ -79,7 +79,7 @@ body {
   font-weight: 600;
 }
 
-/* Read-only inputs (line style) */
+/* Read-only inputs */
 .input-line {
   width: 100%;
   border: none;
@@ -90,7 +90,7 @@ body {
   color: #333;
 }
 
-/* Editable inputs (box style) */
+/* Editable inputs */
 .input-bg {
   width: 100%;
   border: none;
@@ -101,7 +101,7 @@ body {
   color: #333;
 }
 
-/* Date row layout */
+/* Date row */
 .form-row {
   display: flex;
   gap: 2rem;
@@ -111,7 +111,7 @@ body {
   width: 50%;
 }
 
-/* === CHECKBOX STYLES === */
+/* Checkbox styles */
 .checkbox-group {
   display: flex;
   align-items: center;
@@ -130,7 +130,7 @@ body {
   cursor: pointer;
 }
 
-/* Hidden/Conditional sections */
+/* Conditional sections */
 .conditional-section {
   padding-left: 1.5rem;
   border-left: 2px solid #eee;
@@ -171,7 +171,7 @@ body {
   font-weight: 500;
 }
 
-/* === PAYMENT BUTTON === */
+/* Payment button */
 .pay-button-container {
   text-align: center;
   margin-top: 2rem;
@@ -194,7 +194,29 @@ body {
   transform: scale(1.05);
 }
 
-/* === MODO DALTONICO === */
+/* Colorblind mode */
 body.deuteranopia-mode .btn-pay {
   color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .checkout-header {
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .header-left {
+    gap: 1rem;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .half {
+    width: 100%;
+  }
+  .page-title {
+    font-size: 1.5rem;
+  }
 }

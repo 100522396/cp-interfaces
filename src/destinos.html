@@ -1,166 +1,215 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destinos | MoSinFron</title>
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/destinos.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Destinos | MoSinFron</title>
-  <link rel="stylesheet" href="../style/main.css" />
-  <link rel="stylesheet" href="../style/destinos.css" />
-</head>
-
-<body>
-  <header class="site-header home-header">
-    <div class="logo-container">
-      <a href="index.html" class="logo-link">
-        <img src="../images/black-logo.png" alt="Volver al inicio" class="logo-img" />
-      </a>
-    </div>
-
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html" data-i18n="nav.destinos">Destinos</a></li>
-        <li><a href="otros-rincones.html" data-i18n="nav.otros-rincones">Otros Rincones</a></li>
-        <li><a href="comunidad.html" data-i18n="nav.comunidad">Comunidad</a></li>
-        <li><a href="mi-cuenta.html" data-i18n="nav.mi-cuenta">Mi Cuenta</a></li>
-        <li><a href="compra.html" data-i18n="nav.compra">Compra</a></li>
-        <li><a href="soporte.html" data-i18n="nav.soporte">Soporte</a></li>
-      </ul>
-    </nav>
-
-    <div class="user-controls">
-      <a href="login.html" class="btn-login" data-i18n="btn.login">Iniciar sesión</a>
-
-      <a href="registro.html" class="btn-signup" data-i18n="btn.signup">Únete</a>
-
-      <div class="lang-toggle lang-white">
-        <button class="lang-btn active" id="lang-es">ES</button>
-        <button class="lang-btn" id="lang-en">EN</button>
-        
-        <button class="btn-font-size" id="btn-font-size" title="Cambiar tamaño de fuente">🔤 A</button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <h1 class="page-title" data-i18n="destinos.title">Destinos Populares</h1>
-    <p class="page-subtitle" data-i18n="destinos.subtitle">
-      Explora los lugares más increíbles del Mundo con nuestras experiencias
-      cuidadosamente diseñadas
-    </p>
-
-    <div class="destinations-grid">
-      <article class="rich-card">
-        <div class="card-header">
-          <img src="../images/madrid.png" alt="Madrid, España" />
-          <span class="rating-pill">⭐ 4.8</span>
-        </div>
-        <div class="card-body">
-          <h2 data-i18n="destinos.continent1">Europa</h2>
-          <div class="location-row" data-i18n="destinos.location1">📍 España</div>
-          <p class="card-desc" data-i18n="destinos.desc1">
-            Playas de arena blanca y aguas cristalinas en el paraíso caribeño
-          </p>
-
-          <div class="card-footer">
-            <div class="info-col">
-              <span class="duration">📅 5 <span data-i18n="destinos.duration">días</span></span>
-            </div>
-            <div class="price-col">
-              <span class="price-label" data-i18n="destinos.from">desde</span>
-              <span class="price-value">899€</span>
-            </div>
-          </div>
-          <a href="#" class="btn-buy" data-i18n="destinos.btn-buy">Comprar</a>
-        </div>
-      </article>
-
-      <article class="rich-card">
-        <div class="card-header">
-          <img src="../images/hongkong.png" alt="Hong Kong" />
-          <span class="rating-pill">⭐ 4.9</span>
-        </div>
-        <div class="card-body">
-          <h2 data-i18n="destinos.continent2">Asia</h2>
-          <div class="location-row" data-i18n="destinos.location2">📍 Hong Kong</div>
-          <p class="card-desc" data-i18n="destinos.desc2">
-            Excursión en catamarán a la isla más hermosa del Caribe
-          </p>
-
-          <div class="card-footer">
-            <div class="info-col">
-              <span class="duration">📅 1 <span data-i18n="destinos.duration">día</span></span>
-            </div>
-            <div class="price-col">
-              <span class="price-label" data-i18n="destinos.from">desde</span>
-              <span class="price-value">299€</span>
-            </div>
-          </div>
-          <a href="#" class="btn-buy" data-i18n="destinos.btn-buy">Comprar</a>
-        </div>
-      </article>
-
-      <article class="rich-card">
-        <div class="card-header">
-          <img src="../images/ny.png" alt="Nueva York" />
-          <span class="rating-pill">⭐ 4.7</span>
-        </div>
-        <div class="card-body">
-          <h2 data-i18n="destinos.continent3">América</h2>
-          <div class="location-row" data-i18n="destinos.location3">📍 Nueva York</div>
-          <p class="card-desc" data-i18n="destinos.desc3">
-            Descubre la historia y cultura en la primera ciudad de América
-          </p>
-
-          <div class="card-footer">
-            <div class="info-col">
-              <span class="duration">📅 3 <span data-i18n="destinos.duration">días</span></span>
-            </div>
-            <div class="price-col">
-              <span class="price-label" data-i18n="destinos.from">desde</span>
-              <span class="price-value">599€</span>
-            </div>
-          </div>
-          <a href="#" class="btn-buy" data-i18n="destinos.btn-buy">Comprar</a>
-        </div>
-      </article>
-    </div>
-
-    <div class="action-wrapper">
-      <a href="otros-rincones.html" class="btn-yellow" data-i18n="destinos.btn-all">Ver Todos los Destinos</a>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-links-col">
-        <a href="index.html"><strong data-i18n="footer.home">HOME</strong></a>
-        <a href="index.html"><strong data-i18n="footer.destinos">DESTINOS</strong></a>
-        <a href="otros-rincones.html"><strong data-i18n="footer.otros">OTROS RINCONES</strong></a>
-        <a href="comunidad.html"><strong data-i18n="footer.comunidad">COMUNIDAD</strong></a>
-        <a href="mi-cuenta.html"><strong data-i18n="footer.cuenta">MI CUENTA</strong></a>
-        <a href="compra.html"><strong data-i18n="footer.compra">COMPRA</strong></a>
-        <a href="soporte.html"><strong data-i18n="footer.soporte">SOPORTE</strong></a>
+  <body>
+    <header class="site-header home-header">
+      <div class="logo-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="../images/black-logo.png"
+            alt="Volver al inicio"
+            class="logo-img"
+          />
+        </a>
       </div>
 
-      <div class="footer-info-col">
-        <strong>INFO@MOCHILEROSSINFRONTERAS.COM</strong>
-        <p>CALLE SIRIO, N66, 28007 MADRID</p>
-        <p>91-993-3578</p>
-        <div class="socials">
-          <a href="#"><img src="../images/icon-fb.png" alt="Facebook" /></a>
-          <a href="#"><img src="../images/icon-tw.png" alt="Twitter" /></a>
-          <a href="#"><img src="../images/icon-li.png" alt="LinkedIn" /></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.destinos">Destinos</a></li>
+          <li>
+            <a href="otros-rincones.html" data-i18n="nav.otros-rincones"
+              >Otros Rincones</a
+            >
+          </li>
+          <li>
+            <a href="comunidad.html" data-i18n="nav.comunidad">Comunidad</a>
+          </li>
+          <li>
+            <a href="mi-cuenta.html" data-i18n="nav.mi-cuenta">Mi Cuenta</a>
+          </li>
+          <li><a href="compra.html" data-i18n="nav.compra">Compra</a></li>
+          <li><a href="soporte.html" data-i18n="nav.soporte">Soporte</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-controls">
+        <a href="login.html" class="btn-login" data-i18n="btn.login"
+          >Iniciar sesión</a
+        >
+
+        <a href="registro.html" class="btn-signup" data-i18n="btn.signup"
+          >Únete</a
+        >
+
+        <div class="lang-toggle lang-white">
+          <button class="lang-btn active" id="lang-es">ES</button>
+          <button class="lang-btn" id="lang-en">EN</button>
+
+          <button
+            class="btn-font-size"
+            id="btn-font-size"
+            title="Cambiar tamaño de fuente"
+          >
+            🔤 A
+          </button>
         </div>
       </div>
-    </div>
-  </footer>
-  <script src="../script/destinos.js"></script>
-  <script src="../script/translate.js"></script>
-  <script src="../script/daltonismo.js"></script>
-  <script src="../script/font-size.js"></script>
-  <script src="../script/auth-system.js"></script>
-  <script src="../script/session-manager.js"></script>
-</body>
+    </header>
 
+    <main>
+      <h1 class="page-title" data-i18n="destinos.title">Destinos Populares</h1>
+      <p class="page-subtitle" data-i18n="destinos.subtitle">
+        Explora los lugares más increíbles del Mundo con nuestras experiencias
+        cuidadosamente diseñadas
+      </p>
+
+      <div class="destinations-grid">
+        <article class="rich-card">
+          <div class="card-header">
+            <img src="../images/madrid.png" alt="Madrid, España" />
+            <span class="rating-pill">⭐ 4.8</span>
+          </div>
+          <div class="card-body">
+            <h2 data-i18n="destinos.continent1">Europa</h2>
+            <div class="location-row" data-i18n="destinos.location1">
+              📍 España
+            </div>
+            <p class="card-desc" data-i18n="destinos.desc1">
+              Playas de arena blanca y aguas cristalinas en el paraíso caribeño
+            </p>
+
+            <div class="card-footer">
+              <div class="info-col">
+                <span class="duration"
+                  >📅 5 <span data-i18n="destinos.duration">días</span></span
+                >
+              </div>
+              <div class="price-col">
+                <span class="price-label" data-i18n="destinos.from">desde</span>
+                <span class="price-value">899€</span>
+              </div>
+            </div>
+            <a href="#" class="btn-buy" data-i18n="destinos.btn-buy">Comprar</a>
+          </div>
+        </article>
+
+        <article class="rich-card">
+          <div class="card-header">
+            <img src="../images/hongkong.png" alt="Hong Kong" />
+            <span class="rating-pill">⭐ 4.9</span>
+          </div>
+          <div class="card-body">
+            <h2 data-i18n="destinos.continent2">Asia</h2>
+            <div class="location-row" data-i18n="destinos.location2">
+              📍 Hong Kong
+            </div>
+            <p class="card-desc" data-i18n="destinos.desc2">
+              Excursión en catamarán a la isla más hermosa del Caribe
+            </p>
+
+            <div class="card-footer">
+              <div class="info-col">
+                <span class="duration"
+                  >📅 1 <span data-i18n="destinos.duration">día</span></span
+                >
+              </div>
+              <div class="price-col">
+                <span class="price-label" data-i18n="destinos.from">desde</span>
+                <span class="price-value">299€</span>
+              </div>
+            </div>
+            <a href="#" class="btn-buy" data-i18n="destinos.btn-buy">Comprar</a>
+          </div>
+        </article>
+
+        <article class="rich-card">
+          <div class="card-header">
+            <img src="../images/ny.png" alt="Nueva York" />
+            <span class="rating-pill">⭐ 4.7</span>
+          </div>
+          <div class="card-body">
+            <h2 data-i18n="destinos.continent3">América</h2>
+            <div class="location-row" data-i18n="destinos.location3">
+              📍 Nueva York
+            </div>
+            <p class="card-desc" data-i18n="destinos.desc3">
+              Descubre la historia y cultura en la primera ciudad de América
+            </p>
+
+            <div class="card-footer">
+              <div class="info-col">
+                <span class="duration"
+                  >📅 3 <span data-i18n="destinos.duration">días</span></span
+                >
+              </div>
+              <div class="price-col">
+                <span class="price-label" data-i18n="destinos.from">desde</span>
+                <span class="price-value">599€</span>
+              </div>
+            </div>
+            <a href="#" class="btn-buy" data-i18n="destinos.btn-buy">Comprar</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="action-wrapper">
+        <a
+          href="otros-rincones.html"
+          class="btn-yellow"
+          data-i18n="destinos.btn-all"
+          >Ver Todos los Destinos</a
+        >
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links-col">
+          <a href="index.html"><strong data-i18n="footer.home">HOME</strong></a>
+          <a href="destinos.html"
+            ><strong data-i18n="footer.destinos">DESTINOS</strong></a
+          >
+          <a href="otros-rincones.html"
+            ><strong data-i18n="footer.otros">OTROS RINCONES</strong></a
+          >
+          <a href="comunidad.html"
+            ><strong data-i18n="footer.comunidad">COMUNIDAD</strong></a
+          >
+          <a href="mi-cuenta.html"
+            ><strong data-i18n="footer.cuenta">MI CUENTA</strong></a
+          >
+          <a href="compra.html"
+            ><strong data-i18n="footer.compra">COMPRA</strong></a
+          >
+          <a href="soporte.html"
+            ><strong data-i18n="footer.soporte">SOPORTE</strong></a
+          >
+        </div>
+
+        <div class="footer-info-col">
+          <strong>INFO@MOCHILEROSSINFRONTERAS.COM</strong>
+          <p>CALLE SIRIO, N66, 28007 MADRID</p>
+          <p>91-993-3578</p>
+          <div class="socials">
+            <a href="#"><img src="../images/icon-fb.png" alt="Facebook" /></a>
+            <a href="#"><img src="../images/icon-tw.png" alt="Twitter" /></a>
+            <a href="#"><img src="../images/icon-li.png" alt="LinkedIn" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../script/destinos.js"></script>
+    <script src="../script/translate.js"></script>
+    <script src="../script/daltonismo.js"></script>
+    <script src="../script/font-size.js"></script>
+    <script src="../script/auth-system.js"></script>
+    <script src="../script/session-manager.js"></script>
+  </body>
 </html>

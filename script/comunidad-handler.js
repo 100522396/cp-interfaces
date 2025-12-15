@@ -1,14 +1,14 @@
 // script/comunidad-handler.js
-// Sistema de comentarios con likes para la comunidad
-// Usa localStorage para persistencia
+// Community comments system with likes
+// Uses localStorage for data
 
 (function () {
   "use strict";
 
-  // Clave para localStorage
+  // LocalStorage key
   var COMENTARIOS_KEY = "comunidadComentarios";
 
-  // Elementos del DOM
+  // DOM elements
   var mensajeLogin;
   var nuevoComentarioSection;
   var listaComentarios;
@@ -17,9 +17,9 @@
   var btnPublicar;
   var usuarioAvatar;
 
-  // Inicializar cuando el DOM esté listo
+  // Init when DOM ready
   document.addEventListener("DOMContentLoaded", function () {
-    // Obtener referencias a elementos
+    // Get element references
     mensajeLogin = document.getElementById("mensaje-login");
     nuevoComentarioSection = document.getElementById(
       "nuevo-comentario-section"
@@ -30,29 +30,29 @@
     btnPublicar = document.getElementById("btn-publicar");
     usuarioAvatar = document.getElementById("usuario-avatar");
 
-    // Verificar que estamos en la página correcta
+    // Check we are on the right page
     if (!listaComentarios) {
       return;
     }
 
-    // Configurar UI según estado de sesión
+    // Setup UI based on session
     configurarUI();
 
-    // Cargar y mostrar comentarios
+    // Load and show comments
     renderizarComentarios();
 
-    // Configurar eventos
+    // Setup events
     if (btnPublicar) {
       btnPublicar.addEventListener("click", publicarComentario);
     }
   });
 
-  // Configurar UI según si el usuario está logueado o no
+  // Setup UI based on login status
   function configurarUI() {
     var currentUser = AuthSystem.getCurrentUser();
 
     if (currentUser) {
-      // Usuario logueado - mostrar formulario
+      // Logged in - show form
       if (nuevoComentarioSection) {
         nuevoComentarioSection.style.display = "block";
       }
@@ -60,13 +60,13 @@
         mensajeLogin.style.display = "none";
       }
 
-      // Mostrar avatar del usuario si tiene
+      // Show user avatar if available
       if (usuarioAvatar && currentUser.avatarDataUrl) {
         usuarioAvatar.innerHTML =
           '<img src="' + currentUser.avatarDataUrl + '" alt="Avatar">';
       }
     } else {
-      // Usuario no logueado - mostrar mensaje
+      // Not logged in - show message
       if (nuevoComentarioSection) {
         nuevoComentarioSection.style.display = "none";
       }
@@ -76,84 +76,84 @@
     }
   }
 
-  // Obtener comentarios de localStorage
+  // Get comments from localStorage
   function obtenerComentarios() {
     try {
       var data = localStorage.getItem(COMENTARIOS_KEY);
       return data ? JSON.parse(data) : [];
     } catch (e) {
-      console.error("Error al leer comentarios:", e);
+      console.error("Error reading comments:", e);
       return [];
     }
   }
 
-  // Guardar comentarios en localStorage
+  // Save comments to localStorage
   function guardarComentarios(comentarios) {
     try {
       localStorage.setItem(COMENTARIOS_KEY, JSON.stringify(comentarios));
       return true;
     } catch (e) {
-      console.error("Error al guardar comentarios:", e);
+      console.error("Error saving comments:", e);
       return false;
     }
   }
 
-  // Generar ID único simple
+  // Generate unique ID
   function generarId() {
     return Date.now().toString() + Math.random().toString(36).substr(2, 9);
   }
 
-  // Formatear fecha de forma legible
+  // Format date readable
   function formatearFecha(fechaISO) {
     var fecha = new Date(fechaISO);
     var ahora = new Date();
     var diff = ahora - fecha;
 
-    // Menos de 1 minuto
+    // Less than 1 minute
     if (diff < 60000) {
       return "Hace un momento";
     }
-    // Menos de 1 hora
+    // Less than 1 hour
     if (diff < 3600000) {
       var minutos = Math.floor(diff / 60000);
       return "Hace " + minutos + (minutos === 1 ? " minuto" : " minutos");
     }
-    // Menos de 24 horas
+    // Less than 24 hours
     if (diff < 86400000) {
       var horas = Math.floor(diff / 3600000);
       return "Hace " + horas + (horas === 1 ? " hora" : " horas");
     }
-    // Menos de 7 días
+    // Less than 7 days
     if (diff < 604800000) {
       var dias = Math.floor(diff / 86400000);
       return "Hace " + dias + (dias === 1 ? " día" : " días");
     }
-    // Más de 7 días - mostrar fecha
+    // More than 7 days - show date
     var opciones = { day: "numeric", month: "long", year: "numeric" };
     return fecha.toLocaleDateString("es-ES", opciones);
   }
 
-  // Publicar nuevo comentario
+  // Publish new comment
   function publicarComentario() {
     var currentUser = AuthSystem.getCurrentUser();
 
-    // Verificar que hay usuario logueado
+    // Check user is logged in
     if (!currentUser) {
       alert("Debes iniciar sesión para publicar comentarios");
       return;
     }
 
-    // Obtener texto del comentario
+    // Get comment text
     var texto = comentarioTexto.value.trim();
 
-    // Validar que no esté vacío
+    // Validate not empty
     if (texto === "") {
       alert("Por favor, escribe algo antes de publicar");
       comentarioTexto.focus();
       return;
     }
 
-    // Crear nuevo comentario
+    // Create new comment
     var nuevoComentario = {
       id: generarId(),
       email: currentUser.email,
@@ -162,30 +162,30 @@
       avatarDataUrl: currentUser.avatarDataUrl || null,
       texto: texto,
       fecha: new Date().toISOString(),
-      likes: [], // Array de emails que han dado like
+      likes: [],
     };
 
-    // Obtener comentarios existentes y añadir el nuevo
+    // Get existing comments and add new one
     var comentarios = obtenerComentarios();
     comentarios.push(nuevoComentario);
 
-    // Guardar en localStorage
+    // Save to localStorage
     if (guardarComentarios(comentarios)) {
-      // Limpiar textarea
+      // Clear textarea
       comentarioTexto.value = "";
 
-      // Renderizar comentarios actualizados
+      // Render updated comments
       renderizarComentarios();
     } else {
       alert("Error al guardar el comentario. Inténtalo de nuevo.");
     }
   }
 
-  // Dar o quitar like a un comentario
+  // Toggle like on comment
   function toggleLike(comentarioId) {
     var currentUser = AuthSystem.getCurrentUser();
 
-    // Verificar que hay usuario logueado
+    // Check user is logged in
     if (!currentUser) {
       alert("Debes iniciar sesión para dar likes");
       return;
@@ -194,21 +194,21 @@
     var comentarios = obtenerComentarios();
     var userEmail = currentUser.email;
 
-    // Buscar el comentario
+    // Find the comment
     for (var i = 0; i < comentarios.length; i++) {
       if (comentarios[i].id === comentarioId) {
         var likes = comentarios[i].likes;
         var indexLike = likes.indexOf(userEmail);
 
         if (indexLike === -1) {
-          // No ha dado like - añadir
+          // Has not liked - add
           likes.push(userEmail);
         } else {
-          // Ya ha dado like - quitar
+          // Already liked - remove
           likes.splice(indexLike, 1);
         }
 
-        // Guardar y renderizar
+        // Save and render
         guardarComentarios(comentarios);
         renderizarComentarios();
         return;
@@ -216,38 +216,38 @@
     }
   }
 
-  // Ordenar comentarios por número de likes (más likes primero)
+  // Sort comments by likes (most likes first)
   function ordenarPorLikes(comentarios) {
     return comentarios.sort(function (a, b) {
       return b.likes.length - a.likes.length;
     });
   }
 
-  // Renderizar todos los comentarios
+  // Render all comments
   function renderizarComentarios() {
     var comentarios = obtenerComentarios();
     var currentUser = AuthSystem.getCurrentUser();
     var userEmail = currentUser ? currentUser.email : null;
 
-    // Ordenar por likes
+    // Sort by likes
     comentarios = ordenarPorLikes(comentarios);
 
-    // Limpiar lista (excepto mensaje sin comentarios)
+    // Clear list (except no comments message)
     var cards = listaComentarios.querySelectorAll(".comentario-card");
     for (var i = 0; i < cards.length; i++) {
       cards[i].remove();
     }
 
-    // Mostrar mensaje si no hay comentarios
+    // Show message if no comments
     if (comentarios.length === 0) {
       sinComentarios.style.display = "block";
       return;
     }
 
-    // Ocultar mensaje sin comentarios
+    // Hide no comments message
     sinComentarios.style.display = "none";
 
-    // Crear card para cada comentario
+    // Create card for each comment
     for (var j = 0; j < comentarios.length; j++) {
       var com = comentarios[j];
       var card = crearComentarioCard(com, userEmail);
@@ -255,18 +255,18 @@
     }
   }
 
-  // Crear elemento HTML para un comentario
+  // Create HTML element for comment
   function crearComentarioCard(comentario, userEmail) {
     var card = document.createElement("div");
     card.className = "comentario-card";
     card.setAttribute("data-id", comentario.id);
 
-    // Determinar si el usuario actual ha dado like
+    // Check if current user has liked
     var hasDadoLike = userEmail && comentario.likes.indexOf(userEmail) !== -1;
     var likeClass = hasDadoLike ? "btn-like liked" : "btn-like";
     var likeIcon = hasDadoLike ? "❤️" : "🤍";
 
-    // Crear avatar
+    // Create avatar
     var avatarHTML;
     if (comentario.avatarDataUrl) {
       avatarHTML = '<img src="' + comentario.avatarDataUrl + '" alt="Avatar">';
@@ -274,13 +274,13 @@
       avatarHTML = '<span class="comentario-avatar-placeholder">👤</span>';
     }
 
-    // Nombre completo
+    // Full name
     var nombreCompleto = comentario.nombre;
     if (comentario.apellidos) {
       nombreCompleto += " " + comentario.apellidos;
     }
 
-    // HTML del comentario
+    // Comment HTML
     card.innerHTML =
       '<div class="comentario-header">' +
       '<div class="comentario-avatar">' +
@@ -313,7 +313,7 @@
       "</button>" +
       "</div>";
 
-    // Añadir evento de click al botón de like
+    // Add click event to like button
     var btnLike = card.querySelector(".btn-like");
     btnLike.addEventListener("click", function () {
       toggleLike(comentario.id);

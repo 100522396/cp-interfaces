@@ -1,19 +1,19 @@
 // script/compra-handler.js
-// Autocompleta los datos del usuario en la página de compra
+// Autocomplete user data in purchase page
 
 (function () {
   "use strict";
 
   document.addEventListener("DOMContentLoaded", function () {
-    // Obtener usuario actual
+    // Get current user
     var currentUser = AuthSystem.getCurrentUser();
 
-    // Solo autocompletar si hay usuario logueado
+    // Only autocomplete if user is logged in
     if (!currentUser) {
-      return; // No hay usuario, dejar campos vacíos
+      return;
     }
 
-    // Autocompletar campos con datos del usuario
+    // Autocomplete fields with user data
     var nombreInput = document.getElementById("compra-nombre");
     if (nombreInput && currentUser.nombre) {
       nombreInput.value = currentUser.nombre;
@@ -34,11 +34,11 @@
       telefonoInput.value = currentUser.telefono;
     }
 
-    // Manejar el botón de pago
+    // Handle payment button
     var payButton = document.getElementById("btn-pay");
     if (payButton) {
       payButton.addEventListener("click", function () {
-        // Validar datos del formulario
+        // Validate form data
         var nombre = document.getElementById("compra-nombre").value;
         var apellidos = document.getElementById("compra-apellidos").value;
         var email = document.getElementById("compra-email").value;
@@ -49,7 +49,7 @@
           return;
         }
 
-        // Simular procesamiento del pago
+        // Simulate payment
         alert("Pago realizado con éxito. ¡Gracias por tu compra!");
       });
     }

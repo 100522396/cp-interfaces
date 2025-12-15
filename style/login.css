@@ -1,11 +1,11 @@
 /* style/login.css */
 
-/* === PAGE SETUP === */
+/* Page setup */
 body {
   background-color: #ffffff;
 }
 
-/* Header style */
+/* Header */
 .auth-header {
   padding: 1rem 5%;
   display: flex;
@@ -13,7 +13,7 @@ body {
   align-items: center;
 }
 
-/* === MAIN LAYOUT === */
+/* Main layout */
 .auth-container {
   display: flex;
   max-width: 1200px;
@@ -24,18 +24,18 @@ body {
   min-height: 80vh;
 }
 
-/* Left Side: Form */
+/* Form side */
 .auth-form-side {
   flex: 1;
-  max-width: 450px; /* Slightly narrower for login */
+  max-width: 450px;
 }
 
-/* Right Side: Image */
+/* Image side */
 .auth-image-side {
   flex: 1;
   display: flex;
   justify-content: center;
-  position: relative; /* For carousel dots positioning */
+  position: relative;
 }
 
 .side-img {
@@ -61,7 +61,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* === FORM STYLES === */
+/* Form styles */
 .form-group {
   margin-bottom: 1.2rem;
 }
@@ -90,7 +90,7 @@ body {
   border-color: var(--primary-orange);
 }
 
-/* Password eye icon */
+/* Password icon */
 .password-wrapper {
   position: relative;
 }
@@ -104,10 +104,10 @@ body {
   opacity: 0.5;
 }
 
-/* Options Row: Remember & Forgot Password */
+/* Options row */
 .options-row {
   display: flex;
-  justify-content: space-between; /* Pushes items to edges */
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
@@ -121,12 +121,12 @@ body {
 }
 
 .forgot-link {
-  color: #c13030; /* Darkened coral for accessibility */
+  color: #c13030;
   text-decoration: none;
   font-weight: 500;
 }
 
-/* Main Button */
+/* Main button */
 .btn-auth {
   width: 100%;
   background-color: #f2a900;
@@ -144,7 +144,7 @@ body {
   background-color: #e08e43;
 }
 
-/* Register Redirect Link */
+/* Register link */
 .register-redirect {
   text-align: center;
   font-size: 0.9rem;
@@ -157,7 +157,7 @@ body {
   font-weight: bold;
 }
 
-/* Divider style */
+/* Divider */
 .divider {
   text-align: center;
   border-bottom: 1px solid #eee;
@@ -172,7 +172,7 @@ body {
   font-size: 0.8rem;
 }
 
-/* Social Buttons */
+/* Social buttons */
 .social-auth {
   display: flex;
   justify-content: space-between;
@@ -199,7 +199,7 @@ body {
   height: 20px;
 }
 
-/* === CAROUSEL DOTS (Decorative) === */
+/* Carousel dots */
 .carousel-dots {
   position: absolute;
   bottom: 20px;
@@ -215,8 +215,8 @@ body {
 }
 
 .dot.active {
-  background-color: #f2a900; /* Active dot is orange */
-  width: 20px; /* Active dot is wider */
+  background-color: #f2a900;
+  width: 20px;
   border-radius: 4px;
 }
 

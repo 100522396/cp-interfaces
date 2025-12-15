@@ -1,6 +1,6 @@
 /* style/mi-cuenta.css */
 
-/* === BUTTON STYLES (Header) === */
+/* Button styles */
 .btn-yellow {
   background-color: #f2a900;
   border: none;
@@ -11,14 +11,14 @@
   color: #111;
 }
 
-/* === BANNER SECTION === */
+/* Banner section */
 .profile-header {
   text-align: center;
   margin-bottom: 2rem;
 }
 
 .banner-bg {
-  /* Geometric gradient to mimic the design */
+  /* Gradient background */
   background: linear-gradient(
     135deg,
     #114b5f 30%,
@@ -29,10 +29,10 @@
   height: 250px;
   width: 100%;
   position: relative;
-  border-radius: 0 0 10px 10px; /* Optional rounded bottom */
+  border-radius: 0 0 10px 10px;
 }
 
-/* Accessibility Button styling */
+/* Accessibility button */
 .btn-accessibility {
   position: absolute;
   bottom: 20px;
@@ -47,13 +47,13 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  z-index: 10; /* Ensure button is clickable above other elements */
+  z-index: 10;
 }
 
-/* === PROFILE INFO (Overlapping) === */
+/* Profile info */
 .profile-info {
   position: relative;
-  margin-top: -60px; /* Pull content up over the banner */
+  margin-top: -60px;
   padding-bottom: 1rem;
 }
 
@@ -96,7 +96,7 @@
   font-size: 0.9rem;
 }
 
-/* === TABS NAVIGATION === */
+/* Tabs navigation */
 .tabs-nav {
   display: flex;
   gap: 3rem;
@@ -117,10 +117,10 @@
 }
 
 .tab-link.active {
-  border-bottom-color: #b2d866; /* Lime green from design */
+  border-bottom-color: #b2d866;
 }
 
-/* === CONTENT SECTION === */
+/* Content section */
 .tab-content {
   max-width: 1000px;
   margin: 0 auto 4rem;
@@ -171,7 +171,7 @@
   font-weight: 600;
 }
 
-/* Action Buttons */
+/* Action buttons */
 .actions {
   display: flex;
   gap: 1rem;
@@ -194,18 +194,16 @@
   background: #f9f9f9;
 }
 
-/* Specific styling for Add button */
+/* Add button */
 .btn-add {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-/* ========================================
-   MODO DALTÓNICO (DEUTERANOPIA) - MI CUENTA
-   ======================================== */
+/* Colorblind mode */
 
-/* Banner con gradiente adaptado */
+/* Banner colorblind */
 body.deuteranopia-mode .banner-bg {
   background: linear-gradient(
     135deg,
@@ -216,26 +214,51 @@ body.deuteranopia-mode .banner-bg {
   );
 }
 
-/* Botón de accesibilidad en modo activo */
+/* Accessibility button colorblind */
 body.deuteranopia-mode .btn-accessibility {
   background: #0077be;
   color: white;
   font-weight: bold;
 }
 
-/* Pestaña activa con amarillo en lugar de verde */
+/* Active tab colorblind */
 body.deuteranopia-mode .tab-link.active {
-  border-bottom-color: #ffd700; /* Amarillo dorado */
+  border-bottom-color: #ffd700;
 }
 
-/* Botón de editar avatar */
+/* Edit avatar button colorblind */
 body.deuteranopia-mode .btn-edit-avatar {
-  background: #0077be; /* Azul consistente */
+  background: #0077be;
   color: #ffffff;
 }
 
-/* Botones de acción */
+/* Action buttons colorblind */
 body.deuteranopia-mode .btn-yellow {
   background-color: #0077be;
   color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tabs-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  .tab-link {
+    padding-bottom: 0.5rem;
+  }
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .banner-bg {
+    height: 180px;
+  }
+  .avatar-large {
+    width: 100px;
+    height: 100px;
+  }
 }

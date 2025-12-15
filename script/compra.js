@@ -1,24 +1,24 @@
-// Script para la página de compra
+// Purchase page script
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Funcionalidad del botón de volver
+  // Back button functionality
   const backButton = document.querySelector(".back-link");
 
   if (backButton) {
     backButton.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevenir comportamiento por defecto del enlace
-      window.history.back(); // Volver a la página anterior
+      event.preventDefault();
+      window.history.back();
     });
   }
 
-  // Leer parámetros de URL y rellenar el formulario
+  // Read URL params and fill form
   const urlParams = new URLSearchParams(window.location.search);
   const destino = urlParams.get("destino");
   const pais = urlParams.get("pais");
   const precio = urlParams.get("precio");
 
   if (destino && pais) {
-    // Rellenar campo de destino
+    // Fill destination field
     const destinoInput = document.querySelector(
       'input[value="Bangkok, Tailandia"]'
     );
@@ -26,15 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
       destinoInput.value = `${destino}, ${pais}`;
     }
 
-    // Opcional: Mostrar el precio en algún lugar del formulario
-    // Por ahora, el precio se puede usar para cálculos futuros
+    // Log the selected trip
     console.log(`Viaje seleccionado: ${destino}, ${pais} - €${precio}`);
   }
 });
 
-// Toggle functionality for conditional sections
+// Toggle for conditional sections
 document.addEventListener("DOMContentLoaded", function () {
-  // Alergias
+  // Allergies
   var checkAllergies = document.getElementById("check-allergies");
   var allergiesDetails = document.getElementById("allergies-details");
   if (checkAllergies && allergiesDetails) {
@@ -43,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Acompañantes
+  // Companions
   var checkCompanions = document.getElementById("check-companions");
   var companionsDetails = document.getElementById("companions-details");
   if (checkCompanions && companionsDetails) {
@@ -52,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Mascotas
+  // Pets
   var checkPets = document.getElementById("check-pets");
   var petsDetails = document.getElementById("pets-details");
   if (checkPets && petsDetails) {
@@ -61,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Dinámico para acompañantes
+  // Dynamic companions forms
   var numCompanionsInput = document.getElementById("num-companions");
   var companionsFormsContainer = document.getElementById(
     "companions-forms-container"
@@ -95,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Dinámico para mascotas
+  // Dynamic pets forms
   var numPetsInput = document.getElementById("num-pets");
   var petsFormsContainer = document.getElementById("pets-forms-container");
 

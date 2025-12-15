@@ -1,143 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soporte | MoSinFron</title>
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/soporte.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soporte | MoSinFron</title>
-  <link rel="stylesheet" href="../style/main.css" />
-  <link rel="stylesheet" href="../style/soporte.css" />
-</head>
-
-<body>
-  <header class="site-header">
-    <div class="logo-container">
-      <a href="index.html" class="logo-link">
-        <img src="../images/black-logo.png" alt="MoSinFron" class="logo-img" />
-      </a>
-    </div>
-
-    <nav class="main-nav">
-      <ul>
-        <li><a href="destinos.html" data-i18n="nav.destinos">Destinos</a></li>
-        <li><a href="otros-rincones.html" data-i18n="nav.otros-rincones">Otros Rincones</a></li>
-        <li><a href="comunidad.html" data-i18n="nav.comunidad">Comunidad</a></li>
-        <li><a href="mi-cuenta.html" data-i18n="nav.mi-cuenta">Mi Cuenta</a></li>
-        <li><a href="compra.html" data-i18n="nav.compra">Compra</a></li>
-        <li><a href="soporte.html" class="active" data-i18n="nav.soporte">Soporte</a></li>
-      </ul>
-    </nav>
-
-    <div class="user-controls">
-      <a href="login.html" class="btn-login" data-i18n="btn.login">Iniciar sesión</a>
-      <a href="registro.html" class="btn-signup" data-i18n="btn.signup">Únete</a>
-      <div class="lang-toggle">
-        <button class="lang-btn active" id="lang-es">ES</button>
-        <button class="lang-btn" id="lang-en">EN</button>
-        
-        <button class="btn-font-size" id="btn-font-size" title="Cambiar tamaño de fuente">🔤 A</button>
-      </div>
-    </div>
-  </header>
-
-  <main class="support-container">
-    <h1 class="page-title" data-i18n="soporte.title">Preguntas frecuentes</h1>
-
-    <div class="faq-list">
-      <details class="faq-item" open>
-        <summary class="faq-question">
-          <span data-i18n="soporte.q1">¿Cuál es vuestra política de cancelación?</span>
-          <span class="icon">✕</span>
-        </summary>
-        <div class="faq-answer">
-          <p data-i18n="soporte.a1">
-            Las cancelaciones realizadas con más de 15 días de antelación
-            tienen reembolso del 100%. Entre 7-15 días: reembolso del 50%.
-            Menos de 7 días: no hay reembolso. Las cancelaciones por causa de
-            fuerza mayor se evalúan caso por caso. Te recomendamos contratar
-            seguro de cancelación.
-          </p>
-        </div>
-      </details>
-
-      <details class="faq-item" open>
-        <summary class="faq-question">
-          <span data-i18n="soporte.q2">¿Cómo puedo modificar mi reserva?</span>
-          <span class="icon">✕</span>
-        </summary>
-        <div class="faq-answer">
-          <p data-i18n="soporte.a2">
-            Puedes modificar tu reserva hasta 48 horas antes de la fecha de
-            salida sin coste adicional. Accede a "Mi cuenta" > "Mis reservas"
-            y selecciona la opción "Modificar". Los cambios de fecha o destino
-            están sujetos a disponibilidad y posibles diferencias de precio.
-          </p>
-        </div>
-      </details>
-
-      <details class="faq-item" open>
-        <summary class="faq-question">
-          <span data-i18n="soporte.q3">¿Qué documentación necesito para viajar?</span>
-          <span class="icon">✕</span>
-        </summary>
-        <div class="faq-answer">
-          <p data-i18n="soporte.a3">
-            Para viajes internacionales necesitas pasaporte con validez mínima
-            de 6 meses. Algunos destinos requieren visado - consulta los
-            requisitos específicos en nuestra sección de destinos. Para viajes
-            nacionales, el DNI es suficiente. Revisa también si necesitas
-            certificados de vacunación según el destino.
-          </p>
-        </div>
-      </details>
-
-      <details class="faq-item" open>
-        <summary class="faq-question">
-          <span data-i18n="soporte.q4">¿Ofrecéis seguro de viaje?</span>
-          <span class="icon">✕</span>
-        </summary>
-        <div class="faq-answer">
-          <p data-i18n="soporte.a4">
-            Recomendamos encarecidamente contratar un seguro de viaje.
-            Trabajamos con varias aseguradoras que ofrecen cobertura médica,
-            de equipaje y cancelación. Puedes añadirlo durante el proceso de
-            reserva o contratarlo por tu cuenta. El seguro no está incluido en
-            el precio base del viaje.
-          </p>
-        </div>
-      </details>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-links-col">
-        <a href="index.html"><strong data-i18n="footer.home">HOME</strong></a>
-        <a href="index.html"><strong data-i18n="footer.destinos">DESTINOS</strong></a>
-        <a href="otros-rincones.html"><strong data-i18n="footer.otros">OTROS RINCONES</strong></a>
-        <a href="comunidad.html"><strong data-i18n="footer.comunidad">COMUNIDAD</strong></a>
-        <a href="mi-cuenta.html"><strong data-i18n="footer.cuenta">MI CUENTA</strong></a>
-        <a href="compra.html"><strong data-i18n="footer.compra">COMPRA</strong></a>
-        <a href="soporte.html"><strong data-i18n="footer.soporte">SOPORTE</strong></a>
+  <body>
+    <header class="site-header">
+      <div class="logo-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="../images/black-logo.png"
+            alt="MoSinFron"
+            class="logo-img"
+          />
+        </a>
       </div>
 
-      <div class="footer-info-col">
-        <strong>INFO@MOCHILEROSSINFRONTERAS.COM</strong>
-        <p>CALLE SIRIO, N66, 28007 MADRID</p>
-        <p>91-993-3578</p>
-        <div class="socials">
-          <a href="#"><img src="../images/icon-fb.png" alt="Facebook" /></a>
-          <a href="#"><img src="../images/icon-tw.png" alt="Twitter" /></a>
-          <a href="#"><img src="../images/icon-li.png" alt="LinkedIn" /></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="destinos.html" data-i18n="nav.destinos">Destinos</a></li>
+          <li>
+            <a href="otros-rincones.html" data-i18n="nav.otros-rincones"
+              >Otros Rincones</a
+            >
+          </li>
+          <li>
+            <a href="comunidad.html" data-i18n="nav.comunidad">Comunidad</a>
+          </li>
+          <li>
+            <a href="mi-cuenta.html" data-i18n="nav.mi-cuenta">Mi Cuenta</a>
+          </li>
+          <li><a href="compra.html" data-i18n="nav.compra">Compra</a></li>
+          <li>
+            <a href="soporte.html" class="active" data-i18n="nav.soporte"
+              >Soporte</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="user-controls">
+        <a href="login.html" class="btn-login" data-i18n="btn.login"
+          >Iniciar sesión</a
+        >
+        <a href="registro.html" class="btn-signup" data-i18n="btn.signup"
+          >Únete</a
+        >
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="lang-es">ES</button>
+          <button class="lang-btn" id="lang-en">EN</button>
+
+          <button
+            class="btn-font-size"
+            id="btn-font-size"
+            title="Cambiar tamaño de fuente"
+          >
+            🔤 A
+          </button>
         </div>
       </div>
-    </div>
-  </footer>
-  <script src="../script/translate.js"></script>
-  <script src="../script/daltonismo.js"></script>
-  <script src="../script/font-size.js"></script>
-  <script src="../script/auth-system.js"></script>
-  <script src="../script/session-manager.js"></script>
-</body>
+    </header>
 
+    <main class="support-container">
+      <h1 class="page-title" data-i18n="soporte.title">Preguntas frecuentes</h1>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span data-i18n="soporte.q1"
+              >¿Cuál es vuestra política de cancelación?</span
+            >
+            <span class="icon">✕</span>
+          </summary>
+          <div class="faq-answer">
+            <p data-i18n="soporte.a1">
+              Las cancelaciones realizadas con más de 15 días de antelación
+              tienen reembolso del 100%. Entre 7-15 días: reembolso del 50%.
+              Menos de 7 días: no hay reembolso. Las cancelaciones por causa de
+              fuerza mayor se evalúan caso por caso. Te recomendamos contratar
+              seguro de cancelación.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span data-i18n="soporte.q2"
+              >¿Cómo puedo modificar mi reserva?</span
+            >
+            <span class="icon">✕</span>
+          </summary>
+          <div class="faq-answer">
+            <p data-i18n="soporte.a2">
+              Puedes modificar tu reserva hasta 48 horas antes de la fecha de
+              salida sin coste adicional. Accede a "Mi cuenta" > "Mis reservas"
+              y selecciona la opción "Modificar". Los cambios de fecha o destino
+              están sujetos a disponibilidad y posibles diferencias de precio.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span data-i18n="soporte.q3"
+              >¿Qué documentación necesito para viajar?</span
+            >
+            <span class="icon">✕</span>
+          </summary>
+          <div class="faq-answer">
+            <p data-i18n="soporte.a3">
+              Para viajes internacionales necesitas pasaporte con validez mínima
+              de 6 meses. Algunos destinos requieren visado - consulta los
+              requisitos específicos en nuestra sección de destinos. Para viajes
+              nacionales, el DNI es suficiente. Revisa también si necesitas
+              certificados de vacunación según el destino.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span data-i18n="soporte.q4">¿Ofrecéis seguro de viaje?</span>
+            <span class="icon">✕</span>
+          </summary>
+          <div class="faq-answer">
+            <p data-i18n="soporte.a4">
+              Recomendamos encarecidamente contratar un seguro de viaje.
+              Trabajamos con varias aseguradoras que ofrecen cobertura médica,
+              de equipaje y cancelación. Puedes añadirlo durante el proceso de
+              reserva o contratarlo por tu cuenta. El seguro no está incluido en
+              el precio base del viaje.
+            </p>
+          </div>
+        </details>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links-col">
+          <a href="index.html"><strong data-i18n="footer.home">HOME</strong></a>
+          <a href="destinos.html"
+            ><strong data-i18n="footer.destinos">DESTINOS</strong></a
+          >
+          <a href="otros-rincones.html"
+            ><strong data-i18n="footer.otros">OTROS RINCONES</strong></a
+          >
+          <a href="comunidad.html"
+            ><strong data-i18n="footer.comunidad">COMUNIDAD</strong></a
+          >
+          <a href="mi-cuenta.html"
+            ><strong data-i18n="footer.cuenta">MI CUENTA</strong></a
+          >
+          <a href="compra.html"
+            ><strong data-i18n="footer.compra">COMPRA</strong></a
+          >
+          <a href="soporte.html"
+            ><strong data-i18n="footer.soporte">SOPORTE</strong></a
+          >
+        </div>
+
+        <div class="footer-info-col">
+          <strong>INFO@MOCHILEROSSINFRONTERAS.COM</strong>
+          <p>CALLE SIRIO, N66, 28007 MADRID</p>
+          <p>91-993-3578</p>
+          <div class="socials">
+            <a href="#"><img src="../images/icon-fb.png" alt="Facebook" /></a>
+            <a href="#"><img src="../images/icon-tw.png" alt="Twitter" /></a>
+            <a href="#"><img src="../images/icon-li.png" alt="LinkedIn" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../script/translate.js"></script>
+    <script src="../script/daltonismo.js"></script>
+    <script src="../script/font-size.js"></script>
+    <script src="../script/auth-system.js"></script>
+    <script src="../script/session-manager.js"></script>
+  </body>
 </html>

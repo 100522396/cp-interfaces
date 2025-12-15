@@ -1,17 +1,17 @@
 // script/session-manager.js
-// Gestión de sesión global - se ejecuta en todas las páginas
+// Global session management - runs on all pages
 
 (function () {
   "use strict";
 
-  // Esperar a que el DOM esté listo
+  // Wait for DOM to be ready
   document.addEventListener("DOMContentLoaded", function () {
     updateUIBasedOnSession();
     setupLogoutButton();
     protectPrivatePages();
   });
 
-  // Actualizar la UI según el estado de sesión
+  // Update UI based on session state
   function updateUIBasedOnSession() {
     var currentUser = AuthSystem.getCurrentUser();
     var userControls = document.querySelector(".user-controls");
@@ -19,27 +19,27 @@
     if (!userControls) return;
 
     if (currentUser) {
-      // Usuario logueado - mostrar nombre y botón de logout
+      // Logged in - show name and logout button
       updateLoggedInUI(userControls, currentUser);
     } else {
-      // Usuario no logueado - mostrar botones de Login/Registro
+      // Not logged in - show Login/Register buttons
       updateLoggedOutUI(userControls);
     }
   }
 
-  // UI cuando está logueado
+  // UI when logged in
   function updateLoggedInUI(container, user) {
-    // Buscar botones de login/signup
+    // Find login/signup buttons
     var btnLogin = container.querySelector(".btn-login");
     var btnSignup = container.querySelector(".btn-signup");
 
-    // Crear elemento de bienvenida si no existe
+    // Create welcome element if not exists
     var welcomeElement = container.querySelector(".user-welcome");
     if (!welcomeElement) {
       welcomeElement = document.createElement("div");
       welcomeElement.className = "user-welcome";
 
-      // Insertar antes del toggle de idioma
+      // Insert before language toggle
       var langToggle = container.querySelector(".lang-toggle");
       if (langToggle) {
         container.insertBefore(welcomeElement, langToggle);
@@ -48,27 +48,27 @@
       }
     }
 
-    // Actualizar contenido
+    // Update content
     welcomeElement.innerHTML =
       '<span class="welcome-text">Hola, <strong>' +
       user.nombre +
       "</strong></span>" +
       '<button class="btn-logout" id="btn-logout">Cerrar sesión</button>';
 
-    // Ocultar botones de login/registro
+    // Hide login/register buttons
     if (btnLogin) btnLogin.style.display = "none";
     if (btnSignup) btnSignup.style.display = "none";
   }
 
-  // UI cuando NO está logueado
+  // UI when NOT logged in
   function updateLoggedOutUI(container) {
-    // Buscar y eliminar elemento de bienvenida si existe
+    // Find and remove welcome element if exists
     var welcomeElement = container.querySelector(".user-welcome");
     if (welcomeElement) {
       welcomeElement.remove();
     }
 
-    // Mostrar botones de login/registro
+    // Show login/register buttons
     var btnLogin = container.querySelector(".btn-login");
     var btnSignup = container.querySelector(".btn-signup");
 
@@ -76,9 +76,9 @@
     if (btnSignup) btnSignup.style.display = "";
   }
 
-  // Configurar botón de logout
+  // Setup logout button
   function setupLogoutButton() {
-    // Usar delegación de eventos para el botón de logout
+    // Use event delegation for logout button
     document.addEventListener("click", function (e) {
       if (e.target && e.target.id === "btn-logout") {
         e.preventDefault();
@@ -86,20 +86,20 @@
         if (confirm("¿Seguro que quieres cerrar sesión?")) {
           AuthSystem.logout();
           alert("Sesión cerrada correctamente");
-          // Recargar la página para actualizar la UI
+          // Reload page to update UI
           window.location.reload();
         }
       }
     });
   }
 
-  // Proteger páginas privadas (mi-cuenta)
+  // Protect private pages (mi-cuenta)
   function protectPrivatePages() {
-    // Lista de páginas que requieren autenticación
+    // List of pages that require authentication
     var privatePaths = ["mi-cuenta.html"];
     var currentPage = window.location.pathname.split("/").pop();
 
-    // Si estamos en una página privada y no hay sesión
+    // If on private page and no session
     if (privatePaths.indexOf(currentPage) !== -1 && !AuthSystem.isLoggedIn()) {
       alert("Debes iniciar sesión para acceder a esta página");
       window.location.href = "login.html";

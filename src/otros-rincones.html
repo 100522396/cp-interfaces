@@ -1,108 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Otros Rincones | MoSinFron</title>
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/otros-rincones.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Otros Rincones | MoSinFron</title>
-  <link rel="stylesheet" href="../style/main.css" />
-  <link rel="stylesheet" href="../style/otros-rincones.css" />
-</head>
-
-<body>
-  <header class="site-header">
-    <div class="logo-container">
-      <a href="index.html" class="logo-link">
-        <img src="../images/black-logo.png" alt="Volver al inicio" class="logo-img" />
-      </a>
-    </div>
-
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html" data-i18n="nav.destinos">Destinos</a></li>
-        <li>
-          <a href="otros-rincones.html" class="active" data-i18n="nav.otros-rincones">Otros Rincones</a>
-        </li>
-        <li><a href="comunidad.html" data-i18n="nav.comunidad">Comunidad</a></li>
-        <li><a href="mi-cuenta.html" data-i18n="nav.mi-cuenta">Mi Cuenta</a></li>
-        <li><a href="compra.html" data-i18n="nav.compra">Compra</a></li>
-        <li><a href="soporte.html" data-i18n="nav.soporte">Soporte</a></li>
-      </ul>
-    </nav>
-
-    <div class="user-controls">
-      <a href="login.html" class="btn-login" data-i18n="btn.login">Iniciar sesión</a>
-
-      <a href="registro.html" class="btn-signup" data-i18n="btn.signup">Únete</a>
-
-      <div class="lang-toggle lang-white">
-        <button class="lang-btn active" id="lang-es">ES</button>
-        <button class="lang-btn" id="lang-en">EN</button>
-        
-        <button class="btn-font-size" id="btn-font-size" title="Cambiar tamaño de fuente">🔤 A</button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <h1 class="page-title" data-i18n="otros.title">Otros Rincones</h1>
-
-    <section class="filters-section" aria-label="Filtros de búsqueda">
-      <div id="filters-container" class="filters-wrapper">
-        <button class="filter-chip active" data-category="all" data-i18n="otros.filter-all">Todos</button>
-        <button class="filter-chip" data-category="Europa" data-i18n="otros.filter-europa">Europa</button>
-        <button class="filter-chip" data-category="Asia" data-i18n="otros.filter-asia">Asia</button>
-        <button class="filter-chip" data-category="África" data-i18n="otros.filter-africa">África</button>
-        <button class="filter-chip" data-category="Oceanía" data-i18n="otros.filter-oceania">Oceanía</button>
-        <button class="filter-chip" data-category="América del Norte" data-i18n="otros.filter-norte">
-          América del Norte
-        </button>
-        <button class="filter-chip" data-category="América del Sur" data-i18n="otros.filter-sur">
-          América del Sur
-        </button>
-      </div>
-    </section>
-
-    <section class="results-grid" id="destinations-grid"></section>
-
-    <div class="load-more-wrapper">
-      <button id="btn-load-more" class="btn-outline" data-i18n="otros.btn-load">
-        Cargar más destinos
-      </button>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-links-col">
-        <a href="index.html"><strong data-i18n="footer.home">HOME</strong></a>
-        <a href="index.html"><strong data-i18n="footer.destinos">DESTINOS</strong></a>
-        <a href="otros-rincones.html"><strong data-i18n="footer.otros">OTROS RINCONES</strong></a>
-        <a href="comunidad.html"><strong data-i18n="footer.comunidad">COMUNIDAD</strong></a>
-        <a href="mi-cuenta.html"><strong data-i18n="footer.cuenta">MI CUENTA</strong></a>
-        <a href="compra.html"><strong data-i18n="footer.compra">COMPRA</strong></a>
-        <a href="soporte.html"><strong data-i18n="footer.soporte">SOPORTE</strong></a>
+  <body>
+    <header class="site-header">
+      <div class="logo-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="../images/black-logo.png"
+            alt="Volver al inicio"
+            class="logo-img"
+          />
+        </a>
       </div>
 
-      <div class="footer-info-col">
-        <strong>INFO@MOCHILEROSSINFRONTERAS.COM</strong>
-        <p>CALLE SIRIO, N66, 28007 MADRID</p>
-        <p>91-993-3578</p>
-        <div class="socials">
-          <a href="#"><img src="../images/icon-fb.png" alt="Facebook" /></a>
-          <a href="#"><img src="../images/icon-tw.png" alt="Twitter" /></a>
-          <a href="#"><img src="../images/icon-li.png" alt="LinkedIn" /></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.destinos">Destinos</a></li>
+          <li>
+            <a
+              href="otros-rincones.html"
+              class="active"
+              data-i18n="nav.otros-rincones"
+              >Otros Rincones</a
+            >
+          </li>
+          <li>
+            <a href="comunidad.html" data-i18n="nav.comunidad">Comunidad</a>
+          </li>
+          <li>
+            <a href="mi-cuenta.html" data-i18n="nav.mi-cuenta">Mi Cuenta</a>
+          </li>
+          <li><a href="compra.html" data-i18n="nav.compra">Compra</a></li>
+          <li><a href="soporte.html" data-i18n="nav.soporte">Soporte</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-controls">
+        <a href="login.html" class="btn-login" data-i18n="btn.login"
+          >Iniciar sesión</a
+        >
+
+        <a href="registro.html" class="btn-signup" data-i18n="btn.signup"
+          >Únete</a
+        >
+
+        <div class="lang-toggle lang-white">
+          <button class="lang-btn active" id="lang-es">ES</button>
+          <button class="lang-btn" id="lang-en">EN</button>
+
+          <button
+            class="btn-font-size"
+            id="btn-font-size"
+            title="Cambiar tamaño de fuente"
+          >
+            🔤 A
+          </button>
         </div>
       </div>
-    </div>
-  </footer>
+    </header>
 
-  <script src="../script/otros-rincones.js"></script>
-  <script src="../script/translate.js"></script>
-  <script src="../script/daltonismo.js"></script>
-  <script src="../script/font-size.js"></script>
-  <script src="../script/auth-system.js"></script>
-  <script src="../script/session-manager.js"></script>
-</body>
+    <main>
+      <h1 class="page-title" data-i18n="otros.title">Otros Rincones</h1>
 
+      <section class="filters-section" aria-label="Filtros de búsqueda">
+        <div id="filters-container" class="filters-wrapper">
+          <button
+            class="filter-chip active"
+            data-category="all"
+            data-i18n="otros.filter-all"
+          >
+            Todos
+          </button>
+          <button
+            class="filter-chip"
+            data-category="Europa"
+            data-i18n="otros.filter-europa"
+          >
+            Europa
+          </button>
+          <button
+            class="filter-chip"
+            data-category="Asia"
+            data-i18n="otros.filter-asia"
+          >
+            Asia
+          </button>
+          <button
+            class="filter-chip"
+            data-category="África"
+            data-i18n="otros.filter-africa"
+          >
+            África
+          </button>
+          <button
+            class="filter-chip"
+            data-category="Oceanía"
+            data-i18n="otros.filter-oceania"
+          >
+            Oceanía
+          </button>
+          <button
+            class="filter-chip"
+            data-category="América del Norte"
+            data-i18n="otros.filter-norte"
+          >
+            América del Norte
+          </button>
+          <button
+            class="filter-chip"
+            data-category="América del Sur"
+            data-i18n="otros.filter-sur"
+          >
+            América del Sur
+          </button>
+        </div>
+      </section>
+
+      <section class="results-grid" id="destinations-grid"></section>
+
+      <div class="load-more-wrapper">
+        <button
+          id="btn-load-more"
+          class="btn-outline"
+          data-i18n="otros.btn-load"
+        >
+          Cargar más destinos
+        </button>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links-col">
+          <a href="index.html"><strong data-i18n="footer.home">HOME</strong></a>
+          <a href="destinos.html"
+            ><strong data-i18n="footer.destinos">DESTINOS</strong></a
+          >
+          <a href="otros-rincones.html"
+            ><strong data-i18n="footer.otros">OTROS RINCONES</strong></a
+          >
+          <a href="comunidad.html"
+            ><strong data-i18n="footer.comunidad">COMUNIDAD</strong></a
+          >
+          <a href="mi-cuenta.html"
+            ><strong data-i18n="footer.cuenta">MI CUENTA</strong></a
+          >
+          <a href="compra.html"
+            ><strong data-i18n="footer.compra">COMPRA</strong></a
+          >
+          <a href="soporte.html"
+            ><strong data-i18n="footer.soporte">SOPORTE</strong></a
+          >
+        </div>
+
+        <div class="footer-info-col">
+          <strong>INFO@MOCHILEROSSINFRONTERAS.COM</strong>
+          <p>CALLE SIRIO, N66, 28007 MADRID</p>
+          <p>91-993-3578</p>
+          <div class="socials">
+            <a href="#"><img src="../images/icon-fb.png" alt="Facebook" /></a>
+            <a href="#"><img src="../images/icon-tw.png" alt="Twitter" /></a>
+            <a href="#"><img src="../images/icon-li.png" alt="LinkedIn" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script/otros-rincones.js"></script>
+    <script src="../script/translate.js"></script>
+    <script src="../script/daltonismo.js"></script>
+    <script src="../script/font-size.js"></script>
+    <script src="../script/auth-system.js"></script>
+    <script src="../script/session-manager.js"></script>
+  </body>
 </html>

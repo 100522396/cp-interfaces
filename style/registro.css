@@ -1,11 +1,11 @@
 /* style/registro.css */
 
-/* === PAGE SETUP === */
+/* Page setup */
 body {
-  background-color: #ffffff; /* White background as seen in image */
+  background-color: #ffffff;
 }
 
-/* Header with Logo only */
+/* Header */
 .auth-header {
   padding: 1rem 5%;
   display: flex;
@@ -13,18 +13,18 @@ body {
   align-items: center;
 }
 
-/* === MAIN LAYOUT (Split Screen) === */
+/* Main layout */
 .auth-container {
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 5%;
   gap: 4rem;
-  align-items: center; /* Center vertically */
+  align-items: center;
   min-height: 80vh;
 }
 
-/* Left Side: Image */
+/* Image side */
 .auth-image-side {
   flex: 1;
   display: flex;
@@ -35,12 +35,12 @@ body {
   width: 100%;
   max-width: 500px;
   height: auto;
-  border-radius: 20px; /* Rounded corners for the image */
+  border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   object-fit: cover;
 }
 
-/* Right Side: Form */
+/* Form side */
 .auth-form-side {
   flex: 1;
   max-width: 550px;
@@ -49,7 +49,7 @@ body {
 /* Titles */
 .auth-title {
   font-size: 2.5rem;
-  font-weight: 400; /* Thinner font like in design */
+  font-weight: 400;
   margin-bottom: 0.5rem;
   color: #111;
 }
@@ -60,7 +60,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* === FORM STYLES === */
+/* Form styles */
 .form-row {
   display: flex;
   gap: 1.5rem;
@@ -99,7 +99,7 @@ body {
   border-color: var(--primary-orange);
 }
 
-/* Password eye icon */
+/* Password icon */
 .password-wrapper {
   position: relative;
 }
@@ -113,7 +113,7 @@ body {
   opacity: 0.5;
 }
 
-/* Terms Checkbox */
+/* Terms checkbox */
 .terms-group {
   display: flex;
   align-items: center;
@@ -124,14 +124,14 @@ body {
 }
 
 .terms-group a {
-  color: #c13030; /* Darkened coral for accessibility */
+  color: #c13030;
   text-decoration: none;
 }
 
-/* Main Button */
+/* Main button */
 .btn-auth {
   width: 100%;
-  background-color: #f2a900; /* Yellow/Orange */
+  background-color: #f2a900;
   color: #111;
   border: none;
   padding: 1rem;
@@ -146,7 +146,7 @@ body {
   background-color: #e08e43;
 }
 
-/* Login Redirect Link */
+/* Login link */
 .login-redirect {
   text-align: center;
   font-size: 0.9rem;
@@ -159,7 +159,7 @@ body {
   font-weight: bold;
 }
 
-/* Divider "O regístrate con" */
+/* Divider */
 .divider {
   text-align: center;
   border-bottom: 1px solid #eee;
@@ -174,7 +174,7 @@ body {
   font-size: 0.8rem;
 }
 
-/* Social Buttons Row */
+/* Social buttons */
 .social-auth {
   display: flex;
   justify-content: space-between;
@@ -208,7 +208,7 @@ body {
   }
 
   .auth-image-side {
-    display: none; /* Hide image on mobile for simplicity */
+    display: none;
   }
 
   .auth-form-side {

@@ -1,75 +1,71 @@
 /* script/otros-rincones.js */
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Variables de estado
-    let allCities = [];       // Aquí guardaremos todas las ciudades "aplanadas"
-    let currentCities = [];   // Las ciudades que se muestran actualmente (filtradas)
-    let itemsToShow = 8;      // Cuántas tarjetas mostramos inicialmente
+document.addEventListener("DOMContentLoaded", () => {
+  // State variables
+  let allCities = [];
+  let currentCities = [];
+  let itemsToShow = 8;
 
-    // Referencias al DOM (HTML)
-    const gridContainer = document.getElementById('destinations-grid');
-    const loadMoreBtn = document.getElementById('btn-load-more');
-    const filterButtons = document.querySelectorAll('.filter-chip');
+  // DOM references
+  const gridContainer = document.getElementById("destinations-grid");
+  const loadMoreBtn = document.getElementById("btn-load-more");
+  const filterButtons = document.querySelectorAll(".filter-chip");
 
-    // 1. CARGAR DATOS DEL JSON
-    // Usamos fetch para leer el archivo que está en la misma carpeta 'src' (o relativo a ella)
-    fetch('ciudades-del-mundo.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Error al cargar el JSON');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // El JSON viene anidado (Continente -> País -> Ciudad)
-            // Necesitamos "aplanarlo" para tener una lista simple de ciudades
-            allCities = flattenData(data);
+  // 1. LOAD JSON DATA
+  fetch("ciudades-del-mundo.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Error al cargar el JSON");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      // JSON is nested, need to flatten it
+      allCities = flattenData(data);
 
-            // Inicialmente mostramos todas
-            currentCities = allCities;
-            renderGrid();
-        })
-        .catch(error => console.error('Error:', error));
+      // Initially show all
+      currentCities = allCities;
+      renderGrid();
+    })
+    .catch((error) => console.error("Error:", error));
 
+  // 2. FLATTEN JSON FUNCTION
+  function flattenData(data) {
+    const citiesArray = [];
 
-    // 2. FUNCIÓN PARA APLANAR EL JSON (Helper)
-    // Transforma la estructura compleja en un array simple de objetos ciudad
-    function flattenData(data) {
-        const citiesArray = [];
-
-        // Recorremos continentes
-        data.continents.forEach(continent => {
-            // Recorremos países
-            continent.countries.forEach(country => {
-                // Recorremos ciudades
-                country.cities.forEach(city => {
-                    // Creamos un objeto nuevo con todo lo necesario
-                    citiesArray.push({
-                        name: city.name,
-                        description: city.description,
-                        image: city.image.url, // URL de la imagen
-                        country: country.name, // Añadimos el país
-                        continent: continent.name, // Añadimos el continente para filtrar
-                        price: city.price // Añadimos el precio
-                    });
-                });
-            });
+    // Loop continents
+    data.continents.forEach((continent) => {
+      // Loop countries
+      continent.countries.forEach((country) => {
+        // Loop cities
+        country.cities.forEach((city) => {
+          // Create new object with all needed data
+          citiesArray.push({
+            name: city.name,
+            description: city.description,
+            image: city.image.url,
+            country: country.name,
+            continent: continent.name,
+            price: city.price,
+          });
         });
+      });
+    });
 
-        return citiesArray;
-    }
+    return citiesArray;
+  }
 
-    // 3. FUNCIÓN PARA PINTAR LAS TARJETAS (Render)
-    function renderGrid() {
-        // Limpiamos el grid actual
-        gridContainer.innerHTML = '';
+  // 3. RENDER CARDS FUNCTION
+  function renderGrid() {
+    // Clear current grid
+    gridContainer.innerHTML = "";
 
-        // Cogemos solo las que toquen según el límite (paginación)
-        const visibleCities = currentCities.slice(0, itemsToShow);
+    // Get visible cities based on limit (pagination)
+    const visibleCities = currentCities.slice(0, itemsToShow);
 
-        // Generamos el HTML de cada tarjeta
-        visibleCities.forEach(city => {
-            const cardHTML = `
+    // Generate HTML for each card
+    visibleCities.forEach((city) => {
+      const cardHTML = `
                 <article class="card">
                     <div class="card-img-container">
                         <img src="${city.image}" class="card-img" alt="${city.name}">
@@ -85,64 +81,66 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </article>
             `;
-            // Insertamos el HTML en el grid
-            gridContainer.insertAdjacentHTML('beforeend', cardHTML);
-        });
+      // Insert HTML in grid
+      gridContainer.insertAdjacentHTML("beforeend", cardHTML);
+    });
 
-        // Agregar event listeners a los botones de compra
-        const buyButtons = gridContainer.querySelectorAll('.btn-buy');
-        buyButtons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                const city = e.target.getAttribute('data-city');
-                const country = e.target.getAttribute('data-country');
-                const price = e.target.getAttribute('data-price');
+    // Add event listeners to buy buttons
+    const buyButtons = gridContainer.querySelectorAll(".btn-buy");
+    buyButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const city = e.target.getAttribute("data-city");
+        const country = e.target.getAttribute("data-country");
+        const price = e.target.getAttribute("data-price");
 
-                // Navegar a compra.html con parámetros
-                window.location.href = `compra.html?destino=${encodeURIComponent(city)}&pais=${encodeURIComponent(country)}&precio=${price}`;
-            });
-        });
+        // Navigate to purchase page with params
+        window.location.href = `compra.html?destino=${encodeURIComponent(
+          city
+        )}&pais=${encodeURIComponent(country)}&precio=${price}`;
+      });
+    });
 
-        // Re-aplicar traducciones a los botones recién generados
-        if (typeof translatePage === 'function') {
-            const currentLang = localStorage.getItem('language') || 'es';
-            translatePage(currentLang);
-        }
-
-        // Lógica del botón "Cargar más"
-        // Si mostramos todas las que hay, ocultamos el botón
-        if (visibleCities.length >= currentCities.length) {
-            loadMoreBtn.style.display = 'none';
-        } else {
-            loadMoreBtn.style.display = 'inline-block';
-        }
+    // Re-apply translations to new buttons
+    if (typeof translatePage === "function") {
+      const currentLang = localStorage.getItem("language") || "es";
+      translatePage(currentLang);
     }
 
-    // 4. LÓGICA DE LOS FILTROS
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Gestión visual de la clase 'active'
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+    // Load more button logic
+    // If showing all, hide button
+    if (visibleCities.length >= currentCities.length) {
+      loadMoreBtn.style.display = "none";
+    } else {
+      loadMoreBtn.style.display = "inline-block";
+    }
+  }
 
-            const category = button.getAttribute('data-category');
+  // 4. FILTERS LOGIC
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Handle active class
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
 
-            // Reiniciamos el contador de "ver más" al cambiar de filtro
-            itemsToShow = 8;
+      const category = button.getAttribute("data-category");
 
-            if (category === 'all') {
-                currentCities = allCities;
-            } else {
-                // Filtramos por la propiedad 'continent' que añadimos al aplanar
-                currentCities = allCities.filter(city => city.continent === category);
-            }
+      // Reset counter when changing filter
+      itemsToShow = 8;
 
-            renderGrid();
-        });
+      if (category === "all") {
+        currentCities = allCities;
+      } else {
+        // Filter by continent property we added when flattening
+        currentCities = allCities.filter((city) => city.continent === category);
+      }
+
+      renderGrid();
     });
+  });
 
-    // 5. LÓGICA DEL BOTÓN CARGAR MÁS
-    loadMoreBtn.addEventListener('click', () => {
-        itemsToShow += 4; // Mostramos 4 más
-        renderGrid();     // Volvemos a pintar
-    });
+  // 5. LOAD MORE BUTTON LOGIC
+  loadMoreBtn.addEventListener("click", () => {
+    itemsToShow += 4;
+    renderGrid();
+  });
 });

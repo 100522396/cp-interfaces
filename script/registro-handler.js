@@ -1,15 +1,15 @@
 // script/registro-handler.js
-// Manejo del formulario de registro
+// Register form handler
 
 (function () {
   "use strict";
 
-  // Esperar a que el DOM esté listo
+  // Wait for DOM to be ready
   document.addEventListener("DOMContentLoaded", function () {
     var form = document.querySelector(".register-form");
-    if (!form) return; // Si no estamos en la página de registro, salir
+    if (!form) return;
 
-    // Elementos del formulario
+    // Form elements
     var nombreInput = document.getElementById("reg-nombre");
     var apellidosInput = document.getElementById("reg-apellidos");
     var emailInput = document.getElementById("reg-email");
@@ -19,20 +19,20 @@
     var termsCheckbox = document.getElementById("terms");
     var submitButton = form.querySelector('button[type="submit"]');
 
-    // Ya no deshabilitamos el botón, la validación se hace al enviar el formulario
+    // Button is enabled, validation on submit
 
-    // Manejo del envío del formulario
+    // Handle form submit
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // PRIMERO: Validar términos y condiciones
+      // FIRST: Validate terms and conditions
       if (termsCheckbox && !termsCheckbox.checked) {
         alert("Debes aceptar los términos y condiciones para crear tu cuenta");
         termsCheckbox.focus();
         return;
       }
 
-      // Obtener valores
+      // Get values
       var nombre = nombreInput ? nombreInput.value.trim() : "";
       var apellidos = apellidosInput ? apellidosInput.value.trim() : "";
       var email = emailInput ? emailInput.value.trim() : "";
@@ -42,7 +42,7 @@
         ? confirmPasswordInput.value
         : "";
 
-      // Validaciones básicas
+      // Basic validations
       if (!nombre) {
         alert("Por favor, introduce tu nombre");
         if (nombreInput) nombreInput.focus();
@@ -85,14 +85,14 @@
         return;
       }
 
-      // Obtener avatar
+      // Get avatar
       var avatarInput = document.getElementById("reg-avatar");
       var avatarFile =
         avatarInput && avatarInput.files && avatarInput.files.length > 0
           ? avatarInput.files[0]
           : null;
 
-      // Validar avatar (opcional pero recomendado)
+      // Validate avatar (optional)
       if (avatarFile) {
         var validTypes = ["image/jpeg", "image/png", "image/webp"];
         if (validTypes.indexOf(avatarFile.type) === -1) {
@@ -100,14 +100,14 @@
           return;
         }
 
-        // Limite de tamaño: 5MB
+        // Size limit: 5MB
         if (avatarFile.size > 5 * 1024 * 1024) {
           alert("La imagen es demasiado grande. Máximo 5MB");
           return;
         }
       }
 
-      // Función para registrar con o sin avatar
+      // Function to register with or without avatar
       function performRegistration(avatarDataUrl) {
         var result = AuthSystem.registerUser({
           email: email,
@@ -126,7 +126,7 @@
         }
       }
 
-      // Si hay avatar, convertir a base64 primero
+      // If avatar, convert to base64 first
       if (avatarFile) {
         var reader = new FileReader();
         reader.onload = function (e) {
@@ -137,7 +137,7 @@
         };
         reader.readAsDataURL(avatarFile);
       } else {
-        // Sin avatar, registrar directamente
+        // No avatar, register directly
         performRegistration(null);
       }
     });

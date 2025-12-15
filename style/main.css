@@ -217,30 +217,21 @@ body {
   color: #000000;
 }
 
-/* ========================================
-   MODO DALTÓNICO (DEUTERANOPIA)
-   ======================================== */
-/* 
-  Paleta de colores adaptada para personas con deuteranopia
-  - Reemplaza naranjas/rojos con azules
-  - Reemplaza verdes con amarillos/cian
-  - Mantiene alto contraste y legibilidad
-*/
+/* Colorblind mode styles */
 
 body.deuteranopia-mode {
-  /* Reemplazar variables de color primarias */
-  --primary-orange: #0077be; /* Azul brillante */
-  --accent-color: #005a8c; /* Azul oscuro */
-  --footer-bg: #4a9eff; /* Azul claro */
+  --primary-orange: #0077be;
+  --accent-color: #005a8c;
+  --footer-bg: #4a9eff;
 }
 
-/* Navegación en modo deuteranopia */
+/* Nav colorblind mode */
 body.deuteranopia-mode .main-nav a:hover,
 body.deuteranopia-mode .main-nav a.active {
   color: #0077be;
 }
 
-/* Botones en modo deuteranopia */
+/* Buttons colorblind mode */
 body.deuteranopia-mode .btn-signup {
   background-color: #0077be;
   color: #ffffff;
@@ -257,7 +248,7 @@ body.deuteranopia-mode .lang-toggle.lang-white .lang-btn.active {
   color: #ffffff;
 }
 
-/* Footer en modo deuteranopia */
+/* Footer colorblind mode */
 body.deuteranopia-mode .site-footer {
   background-color: #4a9eff;
 }
@@ -266,11 +257,7 @@ body.deuteranopia-mode .footer-links-col a:hover strong {
   color: #e0f0ff;
 }
 
-/* ========================================
-   CONTROL DE TAMAÑO DE FUENTE (ACCESIBILIDAD)
-   ======================================== */
-
-/* Método principal usando zoom en el elemento html para escalar toda la página */
+/* Font size control */
 html.font-size-small {
   zoom: 0.85;
 }
@@ -283,9 +270,7 @@ html.font-size-large {
   zoom: 1.25;
 }
 
-/* ========================================
-   USUARIO LOGUEADO (UI)
-   ======================================== */
+/* Logged in user UI */
 
 .user-welcome {
   display: flex;
@@ -326,7 +311,7 @@ html.font-size-large {
   box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
 }
 
-/* Botón de control de tamaño de fuente */
+/* Font size button */
 .btn-font-size {
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(51, 51, 51, 0.1);
@@ -346,7 +331,7 @@ html.font-size-large {
   transform: translateY(-1px);
 }
 
-/* Estados visuales del botón */
+/* Button active states */
 .btn-font-size.active-small {
   background: rgba(173, 216, 230, 0.3);
   border-color: rgba(0, 119, 190, 0.3);
@@ -356,4 +341,52 @@ html.font-size-large {
   background: rgba(255, 215, 0, 0.2);
   border-color: rgba(242, 169, 0, 0.3);
   font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Header */
+  .site-header {
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  /* Navigation */
+  .main-nav ul {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-nav a {
+    font-size: 0.75rem;
+  }
+
+  /* User controls */
+  .user-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Logged in user */
+  .user-welcome {
+    padding: 6px 12px;
+    margin-right: 0;
+  }
+
+  .welcome-text {
+    font-size: 0.8rem;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .footer-links-col {
+    align-items: center;
+  }
 }

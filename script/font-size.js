@@ -1,105 +1,108 @@
 // script/font-size.js
-// Control del tamaño de fuente para accesibilidad
+// Font size control for accessibility
 
-(function() {
-  'use strict';
+(function () {
+  "use strict";
 
-  const STORAGE_KEY = 'font-size-preference';
+  const STORAGE_KEY = "font-size-preference";
   const FONT_SIZES = {
-    small: 'font-size-small',
-    medium: 'font-size-medium',
-    large: 'font-size-large'
+    small: "font-size-small",
+    medium: "font-size-medium",
+    large: "font-size-large",
   };
-  
-  // El orden de ciclado: pequeño -> mediano -> grande -> pequeño
-  const SIZE_ORDER = ['small', 'medium', 'large'];
-  
-  // Inicializar el tamaño de fuente al cargar la página
+
+  // Cycle order: small -> medium -> large -> small
+  const SIZE_ORDER = ["small", "medium", "large"];
+
+  // Init font size on page load
   function initFontSize() {
-    // Obtener preferencia guardada o usar 'medium' por defecto
-    const savedSize = localStorage.getItem(STORAGE_KEY) || 'medium';
-    
-    // Aplicar el tamaño guardado
+    // Get saved preference or use 'medium' by default
+    const savedSize = localStorage.getItem(STORAGE_KEY) || "medium";
+
+    // Apply saved size
     applyFontSize(savedSize);
-    
-    // Agregar event listener al botón si existe
-    const btnFontSize = document.getElementById('btn-font-size');
+
+    // Add event listener to button if it exists
+    const btnFontSize = document.getElementById("btn-font-size");
     if (btnFontSize) {
-      btnFontSize.addEventListener('click', cycleFontSize);
+      btnFontSize.addEventListener("click", cycleFontSize);
     }
   }
-  
-  // Ciclar entre los 3 tamaños de fuente
+
+  // Cycle through 3 font sizes
   function cycleFontSize() {
-    // Obtener tamaño actual
-    const currentSize = localStorage.getItem(STORAGE_KEY) || 'medium';
-    
-    // Obtener índice actual en el array
+    // Get current size
+    const currentSize = localStorage.getItem(STORAGE_KEY) || "medium";
+
+    // Get current index in array
     const currentIndex = SIZE_ORDER.indexOf(currentSize);
-    
-    // Calcular siguiente índice (volver a 0 si llegamos al final)
+
+    // Calculate next index (go back to 0 at end)
     const nextIndex = (currentIndex + 1) % SIZE_ORDER.length;
     const nextSize = SIZE_ORDER[nextIndex];
-    
-    // Aplicar y guardar nuevo tamaño
+
+    // Apply and save new size
     applyFontSize(nextSize);
     localStorage.setItem(STORAGE_KEY, nextSize);
   }
-  
-  // Aplicar tamaño de fuente al html y body
+
+  // Apply font size to html and body
   function applyFontSize(size) {
     const html = document.documentElement;
     const body = document.body;
-    
-    // Remover todas las clases de tamaño de ambos elementos
-    Object.values(FONT_SIZES).forEach(className => {
+
+    // Remove all size classes from both elements
+    Object.values(FONT_SIZES).forEach((className) => {
       html.classList.remove(className);
       body.classList.remove(className);
     });
-    
-    // Añadir la clase del tamaño seleccionado a html (para zoom)
+
+    // Add selected size class to html (for zoom)
     if (FONT_SIZES[size]) {
       html.classList.add(FONT_SIZES[size]);
     }
-    
-    // Actualizar el botón visualmente
+
+    // Update button visually
     updateButton(size);
   }
-  
-  // Actualizar apariencia del botón según el tamaño actual
+
+  // Update button appearance based on current size
   function updateButton(size) {
-    const btnFontSize = document.getElementById('btn-font-size');
+    const btnFontSize = document.getElementById("btn-font-size");
     if (!btnFontSize) return;
-    
-    // Cambiar el texto del botón según el tamaño
+
+    // Change button text based on size
     const sizeLabels = {
-      small: '🔤 A',
-      medium: '🔤 A',
-      large: '🔤 A'
+      small: "🔤 A",
+      medium: "🔤 A",
+      large: "🔤 A",
     };
-    
-    // Cambiar título descriptivo
+
+    // Change descriptive title
     const sizeTitles = {
-      small: 'Tamaño pequeño - Clic para mediano',
-      medium: 'Tamaño mediano - Clic para grande',
-      large: 'Tamaño grande - Clic para pequeño'
+      small: "Tamaño pequeño - Clic para mediano",
+      medium: "Tamaño mediano - Clic para grande",
+      large: "Tamaño grande - Clic para pequeño",
     };
-    
-    btnFontSize.innerHTML = sizeLabels[size] || '🔤 A';
-    btnFontSize.setAttribute('title', sizeTitles[size] || 'Cambiar tamaño de fuente');
-    
-    // Añadir clase visual al botón para indicar estado
-    btnFontSize.className = 'btn-font-size';
-    if (size === 'large') {
-      btnFontSize.classList.add('active-large');
-    } else if (size === 'small') {
-      btnFontSize.classList.add('active-small');
+
+    btnFontSize.innerHTML = sizeLabels[size] || "🔤 A";
+    btnFontSize.setAttribute(
+      "title",
+      sizeTitles[size] || "Cambiar tamaño de fuente"
+    );
+
+    // Add visual class to button to indicate state
+    btnFontSize.className = "btn-font-size";
+    if (size === "large") {
+      btnFontSize.classList.add("active-large");
+    } else if (size === "small") {
+      btnFontSize.classList.add("active-small");
     }
   }
-  
-  // Ejecutar al cargar el DOM
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initFontSize);
+
+  // Run when DOM loads
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initFontSize);
   } else {
     initFontSize();
   }
