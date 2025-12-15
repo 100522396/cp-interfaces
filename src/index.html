@@ -1,169 +1,250 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | MoSinFron</title>
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/home.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | MoSinFron</title>
-  <link rel="stylesheet" href="./style/main.css" />
-  <link rel="stylesheet" href="./style/home.css" />
-</head>
-
-<body>
-  <div class="hero-container">
-    <header class="site-header home-header">
-      <div class="logo-container">
-        <a href="index.html" class="logo-link">
-          <img src="./images/white-logo.png" alt="Volver al inicio" class="logo-img" />
-        </a>
-      </div>
-
-      <nav class="main-nav">
-        <ul>
-          <li><a href="destinos.html" data-i18n="nav.destinos">Destinos</a></li>
-          <li><a href="otros-rincones.html" data-i18n="nav.otros-rincones">Otros Rincones</a></li>
-          <li><a href="comunidad.html" data-i18n="nav.comunidad">Comunidad</a></li>
-          <li><a href="mi-cuenta.html" data-i18n="nav.mi-cuenta">Mi Cuenta</a></li>
-          <li><a href="compra.html" data-i18n="nav.compra">Compra</a></li>
-          <li><a href="soporte.html" data-i18n="nav.soporte">Soporte</a></li>
-        </ul>
-      </nav>
-
-      <div class="user-controls">
-        <a href="login.html" class="btn-login" data-i18n="btn.login">Iniciar sesión</a>
-
-        <a href="registro.html" class="btn-signup" data-i18n="btn.signup">Únete</a>
-
-        <div class="lang-toggle lang-white">
-          <button class="lang-btn active" id="lang-es">ES</button>
-          <button class="lang-btn" id="lang-en">EN</button>
-        </div>
-        
-        <button class="btn-font-size" id="btn-font-size" title="Cambiar tamaño de fuente">🔤 A</button>
-      </div>
-    </header>
-
-    <div class="hero-content">
-      <h2 class="hero-subtitle" data-i18n="home.subtitle">¿MOCHILERO?</h2>
-      <h1 class="hero-title" data-i18n="home.title" data-i18n-html="true">LA AVENTURA<br />TE ESPERA</h1>
-    </div>
-  </div>
-
-  <main>
-    <section class="content-section">
-      <h2 class="section-title" data-i18n="home.section1-title">Destinos Populares</h2>
-
-      <div class="cards-grid">
-        <article class="mini-card">
-          <img src="./images/alpes.png" alt="Alpes Nocturnos" />
-          <div class="card-text">
-            <small class="kicker" data-i18n="home.card1-kicker">ALPES NOCTURNOS</small>
-            <h3 data-i18n="home.card1-text">
-              Descubre los mejores sitios para ver las estrellas en los Alpes
-            </h3>
-          </div>
-        </article>
-
-        <article class="mini-card">
-          <img src="./images/tropical.png" alt="Aventura Tropical" />
-          <div class="card-text">
-            <small class="kicker" data-i18n="home.card2-kicker">COSAS QUE HACER</small>
-            <h3 data-i18n="home.card2-text">Embárcate en una aventura tropical</h3>
-          </div>
-        </article>
-
-        <article class="mini-card">
-          <img src="./images/norte-europa.png" alt="Norte de Europa" />
-          <div class="card-text">
-            <small class="kicker" data-i18n="home.card3-kicker">GUÍA DE VIAJE</small>
-            <h3 data-i18n="home.card3-text">
-              No te pierdas este destino increíble en el norte de Europa
-            </h3>
-          </div>
-        </article>
-
-        <article class="mini-card">
-          <img src="./images/tibet.png" alt="Montañas Tibetanas" />
-          <div class="card-text">
-            <small class="kicker" data-i18n="home.card4-kicker">ALTA MONTAÑA</small>
-            <h3 data-i18n="home.card4-text">Acampa en lo alto de las montañas Tibetanas</h3>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <h2 class="section-title" data-i18n="home.section2-title">Otros Rincones</h2>
-
-      <div class="cards-grid">
-        <article class="mini-card">
-          <a href="otros-rincones.html" class="card-link">
-            <img src="./images/himalaya.png" alt="Himalaya" />
-            <div class="card-text">
-              <small class="kicker" data-i18n="home.card5-kicker">HIMALAYA</small>
-              <h3 data-i18n="home.card5-text">Gastronomía y mochileo por la cordillera del Himalaya</h3>
-            </div>
+  <body>
+    <div class="hero-container">
+      <header class="site-header home-header">
+        <div class="logo-container">
+          <a href="index.html" class="logo-link">
+            <img
+              src="./images/white-logo.png"
+              alt="Volver al inicio"
+              class="logo-img"
+            />
           </a>
-        </article>
-
-        <article class="mini-card">
-          <img src="./images/noruega.png" alt="Noruega" />
-          <div class="card-text">
-            <small class="kicker" data-i18n="home.card6-kicker">COSAS QUE HACER</small>
-            <h3 data-i18n="home.card6-text">Senderismo en las montañas noruegas</h3>
-          </div>
-        </article>
-
-        <article class="mini-card">
-          <img src="./images/asia-city.png" alt="Ciudad Asia" />
-          <div class="card-text">
-            <small class="kicker" data-i18n="home.card7-kicker">GUÍA DE VIAJE</small>
-            <h3 data-i18n="home.card7-text">
-              Descubre la extraña ciudad con más mochileros de todo Asia
-            </h3>
-          </div>
-        </article>
-
-        <article class="mini-card">
-          <img src="./images/lago-baikal.png" alt="Lago Baikal" />
-          <div class="card-text">
-            <small class="kicker" data-i18n="home.card8-kicker">LUGARES</small>
-            <h3 data-i18n="home.card8-text">Aborda una aventura en canoa por el Lago Baikal</h3>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-links-col">
-        <a href="index.html"><strong data-i18n="footer.home">HOME</strong></a>
-        <a href="destinos.html"><strong data-i18n="footer.destinos">DESTINOS</strong></a>
-        <a href="otros-rincones.html"><strong data-i18n="footer.otros">OTROS RINCONES</strong></a>
-        <a href="comunidad.html"><strong data-i18n="footer.comunidad">COMUNIDAD</strong></a>
-        <a href="mi-cuenta.html"><strong data-i18n="footer.cuenta">MI CUENTA</strong></a>
-        <a href="compra.html"><strong data-i18n="footer.compra">COMPRA</strong></a>
-        <a href="soporte.html"><strong data-i18n="footer.soporte">SOPORTE</strong></a>
-      </div>
-
-      <div class="footer-info-col">
-        <strong>INFO@MOCHILEROSSINFRONTERAS.COM</strong>
-        <p>CALLE SIRIO, N66, 28007 MADRID</p>
-        <p>91-993-3578</p>
-        <div class="socials">
-          <a href="#"><img src="./images/icon-fb.png" alt="Facebook" /></a>
-          <a href="#"><img src="./images/icon-tw.png" alt="Twitter" /></a>
-          <a href="#"><img src="./images/icon-li.png" alt="LinkedIn" /></a>
         </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li>
+              <a href="destinos.html" data-i18n="nav.destinos">Destinos</a>
+            </li>
+            <li>
+              <a href="otros-rincones.html" data-i18n="nav.otros-rincones"
+                >Otros Rincones</a
+              >
+            </li>
+            <li>
+              <a href="comunidad.html" data-i18n="nav.comunidad">Comunidad</a>
+            </li>
+            <li>
+              <a href="mi-cuenta.html" data-i18n="nav.mi-cuenta">Mi Cuenta</a>
+            </li>
+            <li><a href="compra.html" data-i18n="nav.compra">Compra</a></li>
+            <li><a href="soporte.html" data-i18n="nav.soporte">Soporte</a></li>
+          </ul>
+        </nav>
+
+        <div class="user-controls">
+          <a href="login.html" class="btn-login" data-i18n="btn.login"
+            >Iniciar sesión</a
+          >
+
+          <a href="registro.html" class="btn-signup" data-i18n="btn.signup"
+            >Únete</a
+          >
+
+          <div class="lang-toggle lang-white">
+            <button class="lang-btn active" id="lang-es">ES</button>
+            <button class="lang-btn" id="lang-en">EN</button>
+          </div>
+
+          <button
+            class="btn-font-size"
+            id="btn-font-size"
+            title="Cambiar tamaño de fuente"
+          >
+            🔤 A
+          </button>
+        </div>
+      </header>
+
+      <div class="hero-content">
+        <h2 class="hero-subtitle" data-i18n="home.subtitle">¿MOCHILERO?</h2>
+        <h1 class="hero-title" data-i18n="home.title" data-i18n-html="true">
+          LA AVENTURA<br />TE ESPERA
+        </h1>
       </div>
     </div>
-  </footer>
-  <script src="./script/translate.js"></script>
-  <script src="./script/daltonismo.js"></script>
-  <script src="./script/font-size.js"></script>
-  <script src="./script/auth-system.js"></script>
-  <script src="./script/session-manager.js"></script>
-</body>
 
+    <main>
+      <section class="content-section">
+        <h2 class="section-title" data-i18n="home.section1-title">
+          Destinos Populares
+        </h2>
+
+        <div class="cards-grid">
+          <article class="mini-card">
+            <a href="destinos.html" class="card-link">
+              <img src="./images/alpes.png" alt="Alpes Nocturnos" />
+              <div class="card-text">
+                <small class="kicker" data-i18n="home.card1-kicker"
+                  >ALPES NOCTURNOS</small
+                >
+                <h3 data-i18n="home.card1-text">
+                  Descubre los mejores sitios para ver las estrellas en los
+                  Alpes
+                </h3>
+              </div>
+            </a>
+          </article>
+
+          <article class="mini-card">
+            <a href="destinos.html" class="card-link">
+              <img src="./images/tropical.png" alt="Aventura Tropical" />
+              <div class="card-text">
+                <small class="kicker" data-i18n="home.card2-kicker"
+                  >COSAS QUE HACER</small
+                >
+                <h3 data-i18n="home.card2-text">
+                  Embárcate en una aventura tropical
+                </h3>
+              </div>
+            </a>
+          </article>
+
+          <article class="mini-card">
+            <a href="destinos.html" class="card-link">
+              <img src="./images/norte-europa.png" alt="Norte de Europa" />
+              <div class="card-text">
+                <small class="kicker" data-i18n="home.card3-kicker"
+                  >GUÍA DE VIAJE</small
+                >
+                <h3 data-i18n="home.card3-text">
+                  No te pierdas este destino increíble en el norte de Europa
+                </h3>
+              </div>
+            </a>
+          </article>
+
+          <article class="mini-card">
+            <a href="destinos.html" class="card-link">
+              <img src="./images/tibet.png" alt="Montañas Tibetanas" />
+              <div class="card-text">
+                <small class="kicker" data-i18n="home.card4-kicker"
+                  >ALTA MONTAÑA</small
+                >
+                <h3 data-i18n="home.card4-text">
+                  Acampa en lo alto de las montañas Tibetanas
+                </h3>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title" data-i18n="home.section2-title">
+          Otros Rincones
+        </h2>
+
+        <div class="cards-grid">
+          <article class="mini-card">
+            <a href="otros-rincones.html" class="card-link">
+              <img src="./images/himalaya.png" alt="Himalaya" />
+              <div class="card-text">
+                <small class="kicker" data-i18n="home.card5-kicker"
+                  >HIMALAYA</small
+                >
+                <h3 data-i18n="home.card5-text">
+                  Gastronomía y mochileo por la cordillera del Himalaya
+                </h3>
+              </div>
+            </a>
+          </article>
+
+          <article class="mini-card">
+            <a href="otros-rincones.html" class="card-link">
+              <img src="./images/noruega.png" alt="Noruega" />
+              <div class="card-text">
+                <small class="kicker" data-i18n="home.card6-kicker"
+                  >COSAS QUE HACER</small
+                >
+                <h3 data-i18n="home.card6-text">
+                  Senderismo en las montañas noruegas
+                </h3>
+              </div>
+            </a>
+          </article>
+
+          <article class="mini-card">
+            <a href="otros-rincones.html" class="card-link">
+              <img src="./images/asia-city.png" alt="Ciudad Asia" />
+              <div class="card-text">
+                <small class="kicker" data-i18n="home.card7-kicker"
+                  >GUÍA DE VIAJE</small
+                >
+                <h3 data-i18n="home.card7-text">
+                  Descubre la extraña ciudad con más mochileros de todo Asia
+                </h3>
+              </div>
+            </a>
+          </article>
+
+          <article class="mini-card">
+            <a href="otros-rincones.html" class="card-link">
+              <img src="./images/lago-baikal.png" alt="Lago Baikal" />
+              <div class="card-text">
+                <small class="kicker" data-i18n="home.card8-kicker"
+                  >LUGARES</small
+                >
+                <h3 data-i18n="home.card8-text">
+                  Aborda una aventura en canoa por el Lago Baikal
+                </h3>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links-col">
+          <a href="index.html"><strong data-i18n="footer.home">HOME</strong></a>
+          <a href="destinos.html"
+            ><strong data-i18n="footer.destinos">DESTINOS</strong></a
+          >
+          <a href="otros-rincones.html"
+            ><strong data-i18n="footer.otros">OTROS RINCONES</strong></a
+          >
+          <a href="comunidad.html"
+            ><strong data-i18n="footer.comunidad">COMUNIDAD</strong></a
+          >
+          <a href="mi-cuenta.html"
+            ><strong data-i18n="footer.cuenta">MI CUENTA</strong></a
+          >
+          <a href="compra.html"
+            ><strong data-i18n="footer.compra">COMPRA</strong></a
+          >
+          <a href="soporte.html"
+            ><strong data-i18n="footer.soporte">SOPORTE</strong></a
+          >
+        </div>
+
+        <div class="footer-info-col">
+          <strong>INFO@MOCHILEROSSINFRONTERAS.COM</strong>
+          <p>CALLE SIRIO, N66, 28007 MADRID</p>
+          <p>91-993-3578</p>
+          <div class="socials">
+            <a href="#"><img src="./images/icon-fb.png" alt="Facebook" /></a>
+            <a href="#"><img src="./images/icon-tw.png" alt="Twitter" /></a>
+            <a href="#"><img src="./images/icon-li.png" alt="LinkedIn" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./script/translate.js"></script>
+    <script src="./script/daltonismo.js"></script>
+    <script src="./script/font-size.js"></script>
+    <script src="./script/auth-system.js"></script>
+    <script src="./script/session-manager.js"></script>
+  </body>
 </html>
